@@ -10,6 +10,8 @@ const PrivateRoutes = (): JSX.Element => {
     profile: any;
   } = useAuth();
 
+  console.log(profile);
+
   if (profile.role === 'specialist') {
     return <Specialist />;
   }

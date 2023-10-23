@@ -15,7 +15,7 @@ export default function useUserProfile({
   const client = useClient();
 
   const getUserProfile = () => {
-    return client.get(`auth/profile`);
+    return client.get(`profile`);
   };
 
   return useQuery(['userProfile', enabled], getUserProfile, {

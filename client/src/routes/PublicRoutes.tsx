@@ -11,8 +11,8 @@ export const publicRoutesMap: RoutesMap = {
   '/login': <LoginRoleSelect />,
   '/login/specialist': <LoginSpecialist />,
   '/login/parent': <LoginParent />,
-  '/register/specialist': <RegisterParent />,
-  '/register/parent': <RegisterSpecialist />,
+  '/register/specialist': <RegisterSpecialist />,
+  '/register/parent': <RegisterParent />,
   '*': <Navigate to='/login' />,
 };
 
