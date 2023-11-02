@@ -25,6 +25,14 @@ register_model = api.model('Register', {
     'role': fields.String(required=True, description='User role (e.g., specialist or parent)')
 })
 
+children_model = api.model('Children', {
+    'name': fields.String(required=True, description='Child name'),
+    'surname': fields.String(required=True, description='Child surname'),
+    'age': fields.Integer(required=True, description='Child age'),
+    'gender': fields.String(required=True, description='Child gender'),
+    'school': fields.String(required=True, description='Child school')
+})
+
 users = {}
 
 @api.route('/register')
@@ -95,6 +103,47 @@ def get():
         user_data.pop('jwt_required', None)
         return jsonify(user_data)
     return {"message": "User not found"}, 404
+
+@api.route('/get-children')
+class GetChildrenResource(Resource):
+    @jwt_required()
+    def get(self):
+        current_user = get_jwt_identity()
+        user_data = users.get(current_user)
+        if user_data and 'children' in user_data:
+            children = user_data['children']
+            return jsonify(children)
+        else:
+            return {"message": "No children found for the user"}, 404
+
+@api.route('/add-children')
+class AddChildrenResource(Resource):
+    @api.expect(children_model, validate=True)
+    @jwt_required()
+    def post(self):
+        current_user = get_jwt_identity()
+        data = request.get_json()
+        name = data.get('name')
+        surname = data.get('surname')
+        age = data.get('age')
+        gender = data.get('gender')
+        school = data.get('school')
+
+        user_data = users.get(current_user)
+        if user_data:
+            if 'children' not in user_data:
+                user_data['children'] = []
+            child = {
+                'name': name,
+                'surname': surname,
+                'age': age,
+                'gender': gender,
+                'school': school
+            }
+            user_data['children'].append(child)
+            return {"message": "Child added successfully"}, 201
+        else:
+            return {"message": "User not found"}, 404
 
 
 if __name__ == '__main__':
