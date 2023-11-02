@@ -3,8 +3,6 @@ import {
   createStyles,
   getStylesRef,
   Group,
-  Image,
-  MediaQuery,
   Navbar as MantineNavbar,
   rem,
   Stack,
@@ -112,16 +110,6 @@ const Navbar = ({ opened }: NavbarProps) => {
       withBorder={false}
     >
       <MantineNavbar.Section grow>
-        <MediaQuery smallerThan='md' styles={{ display: 'none' }}>
-          <Image
-            src='/images/logo/logo-green.png'
-            alt='fresh-market-logo'
-            height={28}
-            my='xl'
-            fit='contain'
-          />
-        </MediaQuery>
-
         <Stack pt='xl' spacing='xs'>
           {links}
         </Stack>

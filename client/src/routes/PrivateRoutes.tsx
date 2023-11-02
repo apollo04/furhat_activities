@@ -1,6 +1,7 @@
 import { Alert, Center, Text, Title } from '@mantine/core';
 import { useAuth } from 'contexts/AuthContext';
 
+import Parent from './roles/Parent.tsx';
 import Specialist from './roles/Specialist.tsx';
 
 const PrivateRoutes = (): JSX.Element => {
@@ -10,10 +11,11 @@ const PrivateRoutes = (): JSX.Element => {
     profile: any;
   } = useAuth();
 
-  console.log(profile);
-
   if (profile.role === 'specialist') {
     return <Specialist />;
+  }
+  if (profile.role === 'parent') {
+    return <Parent />;
   }
 
   return (

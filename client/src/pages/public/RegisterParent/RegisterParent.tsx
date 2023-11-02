@@ -88,7 +88,7 @@ const RegisterParent = () => {
           <ActionIcon component={Link} to='/login'>
             <IconChevronLeft size={theme.fontSizes.lg} />
           </ActionIcon>
-          <Title order={4}>Specialist Registration</Title>
+          <Title order={4}>Parent Registration</Title>
         </div>
 
         <form onSubmit={form.onSubmit(handleSubmit)}>
