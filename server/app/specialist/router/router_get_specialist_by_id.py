@@ -10,25 +10,14 @@ from app.utils import AppModel
 from ..service import Service, get_service
 from . import router
 
-
-class GetSpecialistById(AppModel):
-    id: Any = Field(alias="_id")
-    school: str
-    children: List[str]
+from ..models import Specialist
 
 
-class GetSpecialistByIdResponse(AppModel):
-    specialist: GetSpecialistById
-
-
-@router.get("/", response_model=GetSpecialistByIdResponse)
+@router.get("/", response_model=Specialist)
 def get_specialist_by_user_id(
         jwt_data: JWTData = Depends(parse_jwt_user_data),
         svc: Service = Depends(get_service),
-) -> dict[str, dict]:
+) -> Specialist:
     user_id = jwt_data.user_id
     specialist = svc.repository.get_specialist_by_user_id(user_id)
-
-    resp = {"specialist": specialist}
-
-    return resp
+    return specialist

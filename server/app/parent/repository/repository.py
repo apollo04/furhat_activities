@@ -1,8 +1,11 @@
 from datetime import datetime
+from typing import List
 
 from bson.objectid import ObjectId
 from pymongo.database import Database
-from pymongo.results import UpdateResult, DeleteResult
+from pymongo.results import UpdateResult
+
+from ..models import Child, Parent
 
 
 class ParentRepository:
@@ -37,7 +40,7 @@ class ParentRepository:
             update_query
         )
 
-    def get_parent_by_user_id(self, user_id: str) -> dict:
+    def get_parent_by_user_id(self, user_id: str) -> Parent:
         parent = self.database["parents"].find_one(
             {
                 "user_id": ObjectId(user_id),
@@ -45,10 +48,14 @@ class ParentRepository:
         )
         return parent
 
-    def get_children(self, user_id: str) -> dict:
+    def get_children(self, user_id: str) -> List[Child]:
         parent = self.database["parents"].find_one(
             {
                 "user_id": ObjectId(user_id),
             }
         )
-        return parent['children']
+        children = []
+
+        if parent:
+            children = parent.get("children", [])
+        return children

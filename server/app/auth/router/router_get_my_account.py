@@ -10,18 +10,8 @@ from ..adapters.jwt_service import JWTData
 from ..service import Service, get_service
 from . import router
 from .dependencies import parse_jwt_user_data
-
-
-class SpecialistResponse(AppModel):
-    id: Any = Field(alias="_id")
-    school: str
-    children: List[str]
-
-
-class ParentResponse(AppModel):
-    id: Any = Field(alias="_id")
-    center: str
-    children: List[str]
+from app.parent.models import Parent
+from app.specialist.models import Specialist
 
 
 class GetMyAccountResponse(AppModel):
@@ -30,7 +20,7 @@ class GetMyAccountResponse(AppModel):
     name: str
     surname: str
     role: str
-    role_info: Union[SpecialistResponse, ParentResponse]
+    role_info: Union[Specialist, Parent, None]
 
 
 @router.get("/users/me", response_model=GetMyAccountResponse)
@@ -47,5 +37,7 @@ def get_my_account(
         user['role_info'] = svc.specialistRepository.get_specialist_by_user_id(user_id=user['_id'])
     if user["role"] == "parent":
         user['role_info'] = svc.parentRepository.get_parent_by_user_id(user_id=user['_id'])
+    if user["role"] == "admin":
+        user['role_info'] = None
 
     return user

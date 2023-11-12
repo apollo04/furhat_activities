@@ -10,8 +10,8 @@ class Service:
             parent_repository: ParentRepository,
             child_repository: ChildRepository,
     ):
-        self.parentRepository = parent_repository
-        self.childRepository = child_repository
+        self.parent_repository = parent_repository
+        self.child_repository = child_repository
 
 
 def get_service():

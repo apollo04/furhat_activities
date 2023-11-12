@@ -15,8 +15,8 @@ def delete_child(
         svc: Service = Depends(get_service),
 ) -> Response:
     user_id = jwt_data.user_id
-    delete_result = svc.childRepository.delete_child_by_id(child_id=child_id)
-    parent_delete_result = svc.parentRepository.delete_parents_child(user_id=user_id, child_id=child_id)
+    delete_result = svc.child_repository.delete_child_by_id(child_id=child_id)
+    parent_delete_result = svc.parent_repository.delete_parents_child(user_id=user_id, child_id=child_id)
 
     if delete_result.deleted_count == 1 and parent_delete_result.modified_count == 1:
         return Response(status_code=200)
