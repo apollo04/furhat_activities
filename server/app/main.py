@@ -7,9 +7,11 @@ from app.auth.router import router as auth_router
 from app.specialist.router import router as specialist_router
 from app.parent.router import router as parent_router
 from app.admin.router import router as admin_router
+from app.schema.router import router as schema_router
 from app.config import client, env, fastapi_config, database
 
 from app.auth.repository.repository import AuthRepository
+
 
 app = FastAPI(**fastapi_config)
 
@@ -27,6 +29,7 @@ app.add_middleware(
     allow_credentials=True,
 )
 
+app.include_router(schema_router, prefix="/schema", tags=["Schema"])
 app.include_router(auth_router, prefix="/auth", tags=["Auth"])
 app.include_router(specialist_router, prefix="/specialists", tags=["Specialist"])
 app.include_router(admin_router, prefix="/admins", tags=["Admin"])

@@ -6,35 +6,29 @@ import {
   AutocompleteProps,
   Loader,
 } from '@mantine/core';
-import { useDebouncedValue } from '@mantine/hooks';
-import useAutoCompleteSorts from 'hooks/sort/useAutoCompleteSorts';
+import useCenter from 'hooks/center/useCenters';
 import { DynamicAutoCompleteValue } from 'types';
+import { Center } from 'types/generated';
 
-interface ProductSortSelectProps
+interface CenterAutocompleteProps
   extends Omit<AutocompleteProps, 'data' | 'value' | 'onChange'> {
-  productId?: string;
   value: DynamicAutoCompleteValue;
   onChange: (item: DynamicAutoCompleteValue | null) => void;
 }
 
-const ProductSortAutocomplete = ({
-  productId,
+const CenterAutocomplete = ({
   icon,
   disabled,
   error,
   value,
   onChange,
   ...autocompleteProps
-}: ProductSortSelectProps) => {
+}: CenterAutocompleteProps) => {
   const [options, setOptions] = useState<AutocompleteItem[]>([]);
   const [search, setSearch] = useState(value.label);
-  const [debouncedSearch] = useDebouncedValue(search, 250);
 
-  const { data, isLoading, isSuccess, isError } = useAutoCompleteSorts({
-    productId,
-    exists: false,
-    search: debouncedSearch,
-  });
+  const { data, isLoading, isSuccess, isError } = useCenter();
+
   const handleSearchChange = (query: string): void => {
     setSearch(query);
     onChange(null);
@@ -50,21 +44,16 @@ const ProductSortAutocomplete = ({
   useEffect(() => {
     if (isSuccess && data?.data) {
       setOptions(
-        data.data.results.map((sort) => ({
-          value: sort.id,
-          label: sort.name,
+        data.data.map((center: Center) => ({
+          // eslint-disable-next-line no-underscore-dangle
+          value: center._id,
+          label: [center.name, center.street, center.city, center.country].join(
+            ', ',
+          ),
         })),
       );
     }
   }, [isSuccess, data?.data]);
-
-  useEffect(() => {
-    if (!productId) {
-      onChange(null);
-      setSearch('');
-      setOptions([]);
-    }
-  }, [productId]);
 
   return (
     <Autocomplete
@@ -73,20 +62,20 @@ const ProductSortAutocomplete = ({
       onChange={handleSearchChange}
       onItemSubmit={handleItemSubmit}
       onDropdownClose={handleClearSearch}
-      maxDropdownHeight={200}
-      limit={1000}
       filter={(_value, _item) =>
         _item.label.toLowerCase().includes(_value.toLowerCase().trim())
       }
       icon={isLoading ? <Loader size='sm' /> : icon}
       disabled={isError || disabled}
-      nothingFound={
-        !productId ? 'Product is not selected' : 'No available sorts'
-      }
       error={isError ? 'Something went wrong while fetching' : error}
+      nothingFound={
+        isLoading
+          ? 'Centers are loading'
+          : `Centers with name "${search}" are not found`
+      }
       {...autocompleteProps}
     />
   );
 };
 
-export default ProductSortAutocomplete;
+export default CenterAutocomplete;

@@ -1,7 +1,6 @@
 import {
   Header as MantineHeader,
   Burger,
-  Image,
   useMantineTheme,
   createStyles,
 } from '@mantine/core';
@@ -34,13 +33,6 @@ const Header = ({ opened, toggle }: HeaderProps): JSX.Element | undefined => {
     <MantineHeader height={{ base: 60 }} p='md'>
       <div className={classes.container}>
         <Burger opened={opened} onClick={toggle} size='sm' />
-
-        <Image
-          src='/images/logo/logo-green.png'
-          alt='fresh-market-logo'
-          height={28}
-          fit='contain'
-        />
       </div>
     </MantineHeader>
   );

@@ -43,11 +43,8 @@ const TableSelection = ({
         <Table verticalSpacing='sm' {...getTableProps()}>
           <thead>
             {headerGroups.map((headerGroup: any) => (
-              <tr {...headerGroup.getHeaderGroupProps()}>
-                <TableHeader
-                  key={headerGroup.id}
-                  columns={headerGroup.headers}
-                />
+              <tr key={headerGroup.id} {...headerGroup.getHeaderGroupProps()}>
+                <TableHeader columns={headerGroup.headers} />
               </tr>
             ))}
           </thead>

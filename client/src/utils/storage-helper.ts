@@ -1,6 +1,6 @@
 const TOKEN = {
-  ACCESS: 'accessToken',
-  REFRESH: 'refreshToken',
+  ACCESS: 'access_token',
+  REFRESH: 'refresh_token',
 };
 
 export const clearTokens = () => {

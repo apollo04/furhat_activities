@@ -15,14 +15,14 @@ class CenterRepository:
     def create_center(self, input: dict) -> str:
         payload = {
             "name": input["name"],
-            "country": input["name"],
-            "city": input["name"],
-            "street": input["name"],
+            "country": input["country"],
+            "city": input["city"],
+            "street": input["street"],
             "created_at": datetime.utcnow(),
         }
 
         result = self.database["centers"].insert_one(payload)
-        return result.inserted_id
+        return str(result.inserted_id)
 
     def get_centers(self) -> List[Center]:
         centers = self.database["centers"].find()

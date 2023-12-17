@@ -31,7 +31,7 @@ const DrawerFeedbackForm = ({
     onClose();
   };
 
-  const handleSubmit = (formValues: FormValues) => {};
+  const handleSubmit = () => {};
 
   return (
     <Drawer

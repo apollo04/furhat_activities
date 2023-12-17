@@ -9,7 +9,7 @@ export default function useRegister(): UseMutationResult<
   UserRegistration
 > {
   const register = (payload: UserRegistration) => {
-    return axiosUnauthorizedInstance.post('register', payload);
+    return axiosUnauthorizedInstance.post('auth/users', payload);
   };
   return useMutation(register);
 }

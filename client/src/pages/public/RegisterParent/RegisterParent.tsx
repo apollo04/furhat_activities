@@ -14,8 +14,10 @@ import {
 } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import { IconChevronLeft } from '@tabler/icons-react';
+import CenterAutocomplete from 'components/auto-completes/CenterAutocomplete';
 import { useAuth } from 'contexts/AuthContext';
 import { Link } from 'react-router-dom';
+import { DynamicAutoCompleteValue } from 'types';
 import { UserRegistration } from 'types/generated';
 import {
   emailValidator,
@@ -36,6 +38,7 @@ const useStyles = createStyles((theme) => ({
 interface FormValues {
   firstName: string;
   lastName: string;
+  center: DynamicAutoCompleteValue;
   email: string;
   password: string;
   rePassword: string;
@@ -49,7 +52,7 @@ const RegisterParent = () => {
     handleRegister,
     isLoginLoading,
   }: {
-    handleRegister: (registerPayload: UserRegistration) => void;
+    handleRegister: (registerPayload: any) => void;
     isLoginLoading: boolean;
   } = useAuth();
 
@@ -57,6 +60,7 @@ const RegisterParent = () => {
     initialValues: {
       firstName: '',
       lastName: '',
+      center: { value: '', label: '' },
       email: '',
       password: '',
       rePassword: '',
@@ -74,11 +78,19 @@ const RegisterParent = () => {
     const registerPayload = {
       email: formValues.email,
       password: formValues.password,
-      firstName: formValues.firstName,
-      lastName: formValues.lastName,
+      name: formValues.firstName,
+      surname: formValues.lastName,
+      center: formValues.center.value,
       role: 'parent' as UserRegistration['role'],
     };
     handleRegister(registerPayload);
+  };
+
+  const handleCenterChange = (item: DynamicAutoCompleteValue | null) => {
+    form.setFieldValue('center', {
+      value: item?.value || '',
+      label: item?.label || '',
+    });
   };
 
   return (
@@ -145,6 +157,14 @@ const RegisterParent = () => {
               }
               placeholder='Enter Password Repeat'
               {...form.getInputProps('rePassword')}
+              required
+            />
+
+            <CenterAutocomplete
+              label='Center'
+              placeholder='Select center'
+              value={form.values.center}
+              onChange={handleCenterChange}
               required
             />
 

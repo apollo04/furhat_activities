@@ -26,4 +26,4 @@ def add_child(
     child_id = svc.child_repository.create_child(input)
     svc.parent_repository.add_child_to_parent(user_id=user_id, child_id=child_id)
 
-    return child_id
+    return str(child_id)

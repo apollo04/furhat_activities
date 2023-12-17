@@ -14,12 +14,17 @@ class AuthorizeUserResponse(AppModel):
     token_type: str = "Bearer"
 
 
+class AuthRequest(AppModel):
+    email: str
+    password: str
+
+
 @router.post("/users/tokens", response_model=AuthorizeUserResponse)
 def authorize_user(
-    input: OAuth2PasswordRequestForm = Depends(),
-    svc: Service = Depends(get_service),
+        input: AuthRequest = Depends(),
+        svc: Service = Depends(get_service),
 ) -> AuthorizeUserResponse:
-    user = svc.authRepository.get_user_by_email(input.username)
+    user = svc.authRepository.get_user_by_email(input.email)
 
     if not user:
         raise InvalidCredentialsException

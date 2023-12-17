@@ -6,35 +6,32 @@ import {
   AutocompleteProps,
   Loader,
 } from '@mantine/core';
-import { useDebouncedValue } from '@mantine/hooks';
-import useAutoCompleteQualities from 'hooks/quality/useAutoCompleteQualities.ts';
+import { useAuth } from 'contexts/AuthContext';
+import useChildrenByCenter from 'hooks/parent/useChildrenByCenter';
 import { DynamicAutoCompleteValue } from 'types';
+import { Child } from 'types/generated';
 
-interface ProductSortQualityAutocompleteProps
+interface ChildAutocompleteProps
   extends Omit<AutocompleteProps, 'data' | 'value' | 'onChange'> {
-  sortId?: string;
   value: DynamicAutoCompleteValue;
   onChange: (item: DynamicAutoCompleteValue | null) => void;
 }
 
-const ProductSortQualityAutocomplete = ({
-  sortId,
+const ChildrenAutocomplete = ({
   icon,
   disabled,
   error,
   value,
   onChange,
   ...autocompleteProps
-}: ProductSortQualityAutocompleteProps) => {
+}: ChildAutocompleteProps) => {
+  const { profile } = useAuth();
   const [options, setOptions] = useState<AutocompleteItem[]>([]);
   const [search, setSearch] = useState(value.label);
-  const [debouncedSearch] = useDebouncedValue(search, 250);
 
-  const { data, isLoading, isSuccess, isError } = useAutoCompleteQualities({
-    sortId,
-    exists: false,
-    search: debouncedSearch,
-  });
+  const { data, isLoading, isSuccess, isError } = useChildrenByCenter(
+    profile?.role_info.center,
+  );
 
   const handleSearchChange = (query: string): void => {
     setSearch(query);
@@ -51,21 +48,14 @@ const ProductSortQualityAutocomplete = ({
   useEffect(() => {
     if (isSuccess && data?.data) {
       setOptions(
-        data.data.results!.map((quality) => ({
-          value: String(quality.id),
-          label: quality.name,
+        data.data.map((child: Child) => ({
+          // eslint-disable-next-line no-underscore-dangle
+          value: child._id,
+          label: [child.name, child.surname].join(' '),
         })),
       );
     }
   }, [isSuccess, data?.data]);
-
-  useEffect(() => {
-    if (!sortId) {
-      onChange(null);
-      setSearch('');
-      setOptions([]);
-    }
-  }, [sortId]);
 
   return (
     <Autocomplete
@@ -74,20 +64,20 @@ const ProductSortQualityAutocomplete = ({
       onChange={handleSearchChange}
       onItemSubmit={handleItemSubmit}
       onDropdownClose={handleClearSearch}
-      maxDropdownHeight={200}
-      limit={1000}
       filter={(_value, _item) =>
         _item.label.toLowerCase().includes(_value.toLowerCase().trim())
       }
       icon={isLoading ? <Loader size='sm' /> : icon}
       disabled={isError || disabled}
-      nothingFound={
-        !sortId ? 'Product sort is not selected' : 'No available qualities'
-      }
       error={isError ? 'Something went wrong while fetching' : error}
+      nothingFound={
+        isLoading
+          ? 'Children are loading'
+          : `Children with name "${search}" are not found`
+      }
       {...autocompleteProps}
     />
   );
 };
 
-export default ProductSortQualityAutocomplete;
+export default ChildrenAutocomplete;

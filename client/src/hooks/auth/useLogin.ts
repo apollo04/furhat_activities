@@ -9,7 +9,9 @@ export default function useLogin(): UseMutationResult<
   UserLogin
 > {
   const login = (payload: UserLogin) => {
-    return axiosUnauthorizedInstance.post('login', payload);
+    return axiosUnauthorizedInstance.post('auth/users/tokens', null, {
+      params: payload,
+    });
   };
   return useMutation(login);
 }

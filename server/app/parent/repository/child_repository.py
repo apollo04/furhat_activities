@@ -5,6 +5,8 @@ from bson.objectid import ObjectId
 from pymongo.database import Database
 from pymongo.results import DeleteResult, UpdateResult
 
+from ..models import Child
+
 
 class ChildRepository:
     def __init__(self, database: Database):
@@ -31,6 +33,14 @@ class ChildRepository:
             }
         )
         return child
+
+    def get_child_by_center_id(self, center_id: str) -> List[Child]:
+        children = self.database["children"].find(
+            {
+                "center": center_id,
+            }
+        )
+        return list(children)
 
     def get_children_by_parent_id(self, parent_id: str) -> List[dict]:
         child = self.database["children"].find(

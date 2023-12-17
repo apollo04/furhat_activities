@@ -7,5 +7,5 @@ from app.utils import AppModel
 
 class Specialist(AppModel):
     id: Any = Field(alias="_id")
-    school: str
+    center: str
     children: List[str]

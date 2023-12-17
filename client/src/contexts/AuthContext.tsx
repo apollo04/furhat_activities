@@ -34,8 +34,8 @@ function AuthProvider(props: any): JSX.Element {
     loginMutation.mutate(payload, {
       onSuccess: (response) => {
         handleSetTokens({
-          access: response.data.accessToken,
-          refresh: response.data.refreshToken,
+          access: response.data.access_token,
+          refresh: response.data.refresh_token,
         });
         window.location.replace('/');
       },
@@ -49,8 +49,8 @@ function AuthProvider(props: any): JSX.Element {
     registerMutation.mutate(payload, {
       onSuccess: (res) => {
         handleSetTokens({
-          access: res.data.accessToken,
-          refresh: res.data.refreshToken,
+          access: res.data.access_token,
+          refresh: res.data.refresh_token,
         });
         window.location.replace('/');
       },

@@ -13,12 +13,13 @@ import {
   Group,
   Grid,
   Button,
-  Select,
 } from '@mantine/core';
+import { useForm } from '@mantine/form';
 import { useDisclosure } from '@mantine/hooks';
 import { IconCheck, IconPlus, IconX } from '@tabler/icons-react';
+import ChildrenAutocomplete from 'components/auto-completes/ChildAutocomplete';
 import actionsData from 'mocks/actionData';
-// import { Action } from 'types/generated';
+import { DynamicAutoCompleteValue } from 'types/index';
 
 import ActionCard from './components/ActionCard.tsx';
 import DrawerFeedbackWriteForm from './components/DrawerFeedbackForm.tsx';
@@ -33,6 +34,10 @@ const FILTERS = [
   'phys. ed.',
 ];
 
+interface FormValues {
+  child: DynamicAutoCompleteValue;
+}
+
 const Home = () => {
   //   const [selectedAction, setSelectedAction] = useState<Action | undefined>(
   //     undefined,
@@ -40,6 +45,12 @@ const Home = () => {
   const [filters, setFilters] = useState<string[]>([]);
   const [seconds, setSeconds] = useState(0);
   const [isActive, setIsActive] = useState(false);
+
+  const form = useForm<FormValues>({
+    initialValues: {
+      child: { value: '', label: '' },
+    },
+  });
 
   const [
     isFeedbackFormOpened,
@@ -86,6 +97,13 @@ const Home = () => {
     }
   };
 
+  const handleCenterChange = (item: DynamicAutoCompleteValue | null) => {
+    form.setFieldValue('child', {
+      value: item?.value || '',
+      label: item?.label || '',
+    });
+  };
+
   return (
     <Stack>
       <Flex direction='column'>
@@ -98,7 +116,11 @@ const Home = () => {
       <Grid columns={10}>
         <Grid.Col sm={10} md={10}>
           <Group position='left'>
-            <Select data={['Алмаз Балгали']} placeholder='Select child' />
+            <ChildrenAutocomplete
+              placeholder='Select child'
+              value={form.values.child}
+              onChange={handleCenterChange}
+            />
             {!isActive && (
               <Button leftIcon={<IconPlus />} onClick={() => startTimer()}>
                 Start session

@@ -1,3 +1,4 @@
+import LoginAdmin from 'pages/public/LoginAdmin';
 import LoginParent from 'pages/public/LoginParent';
 import LoginRoleSelect from 'pages/public/LoginRoleSelect';
 import LoginSpecialist from 'pages/public/LoginSpecialist';
@@ -11,6 +12,7 @@ export const publicRoutesMap: RoutesMap = {
   '/login': <LoginRoleSelect />,
   '/login/specialist': <LoginSpecialist />,
   '/login/parent': <LoginParent />,
+  '/login/admin': <LoginAdmin />,
   '/register/specialist': <RegisterSpecialist />,
   '/register/parent': <RegisterParent />,
   '*': <Navigate to='/login' />,

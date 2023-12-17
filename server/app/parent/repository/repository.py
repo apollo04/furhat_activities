@@ -24,7 +24,7 @@ class ParentRepository:
 
     def add_child_to_parent(self, user_id: str, child_id: str) -> UpdateResult:
         filter_query = {"user_id": ObjectId(user_id)}
-        update_query = {"$push": {"children": ObjectId(child_id)}}
+        update_query = {"$push": {"children": str(child_id)}}
 
         return self.database["parents"].update_one(
             filter_query,
@@ -33,7 +33,7 @@ class ParentRepository:
 
     def delete_parents_child(self, user_id: str, child_id: str) -> UpdateResult:
         filter_query = {"user_id": ObjectId(user_id)}
-        update_query = {"$pull": {"children": ObjectId(child_id)}}
+        update_query = {"$pull": {"children": str(child_id)}}
 
         return self.database["parents"].update_one(
             filter_query,
@@ -54,8 +54,13 @@ class ParentRepository:
                 "user_id": ObjectId(user_id),
             }
         )
-        children = []
-
         if parent:
-            children = parent.get("children", [])
-        return children
+            children_ids = parent.get("children", [])
+            populated_children = []
+
+            for child_id in children_ids:
+                child_details = self.database["children"].find_one({"_id": ObjectId(child_id)})
+                if child_details:
+                    populated_children.append(child_details)
+
+            return list(populated_children)
