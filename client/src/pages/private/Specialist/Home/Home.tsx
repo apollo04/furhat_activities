@@ -22,6 +22,7 @@ import actionsData from 'mocks/actionData';
 import { DynamicAutoCompleteValue } from 'types/index';
 
 import ActionCard from './components/ActionCard.tsx';
+import DrawerConnectToRobot from './components/DrawerConnectToRobot.tsx';
 import DrawerFeedbackWriteForm from './components/DrawerFeedbackForm.tsx';
 
 const FILTERS = [
@@ -55,6 +56,11 @@ const Home = () => {
   const [
     isFeedbackFormOpened,
     { close: closeFeedbackForm, open: openFeedbackForm },
+  ] = useDisclosure(false);
+
+  const [
+    isConnectToRobotOpened,
+    { close: closeConnectToRobot, open: openConnectToRobot },
   ] = useDisclosure(false);
 
   useEffect(() => {
@@ -116,6 +122,9 @@ const Home = () => {
       <Grid columns={10}>
         <Grid.Col sm={10} md={10}>
           <Group position='left'>
+            <Button leftIcon={<IconPlus />} onClick={openConnectToRobot}>
+              Connect to robot
+            </Button>
             <ChildrenAutocomplete
               placeholder='Select child'
               value={form.values.child}
@@ -177,6 +186,12 @@ const Home = () => {
         opened={isFeedbackFormOpened}
         onClose={closeFeedbackForm}
         title='Give feedback'
+      />
+
+      <DrawerConnectToRobot
+        opened={isConnectToRobotOpened}
+        onClose={closeConnectToRobot}
+        title='Connect to robot'
       />
     </Stack>
   );
