@@ -3,3 +3,47 @@ action: Баурсак
 icon: /
 file: povar_scripts/baursakRus.py
 -
+action: Бешбармак
+icon: /
+file: povar_scripts/besbarmakRus.py
+-
+action: Поощрение
+ic  on: /
+file: povar_scripts/cook-encourageRus.py
+-
+action: Игра
+icon: /
+file: povar_scripts/cook-gameRus.py
+-
+action: Хвалить
+icon: /
+file: povar_scripts/cook-praiseRus.py
+-
+action: Вопрос 1
+icon: /
+file: povar_scripts/cook-question1Rus.py
+-
+action: Вопрос 2
+icon: /
+file: povar_scripts/cook-question2Rus.py
+-
+action: Вопрос 3
+icon: /
+file: povar_scripts/cook-question3Rus.py
+-
+action: Вопрос 4
+icon: /
+file: povar_scripts/cook-question4Rus.py
+-
+action: Вопрос 5
+icon: /
+file: povar_scripts/cook-question5Rus.py
+-
+action: Вопрос 6
+icon: /
+file: povar_scripts/cook-question6Rus.py
+-
+action: Начать
+icon: /
+file: povar_scripts/cook-startRus.py
+-

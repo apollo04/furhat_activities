@@ -77,6 +77,9 @@ def run_action(category_name: str, action_id: str, ip: str):
     for action in all_actions:
         if action["id"] == action_id:
             file_name = action["file"]
+
+            print("running action " + file_name)
+
             spec = importlib.util.spec_from_file_location(file_name, "actions/" + category["folder"] + file_name)
             module = importlib.util.module_from_spec(spec)
             spec.loader.exec_module(module)

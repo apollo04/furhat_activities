@@ -1,4 +1,10 @@
 - 
+category: Повар
+icon: povar.png
+folder: povar/
+file_kaz: povar/povar_kaz.txt
+file_rus: povar/povar_rus.txt
+- 
 category: Занятия с логопедом
 icon: logoped.png
 file_kaz: logoped/logoped_kaz.txt
@@ -8,13 +14,6 @@ category: На приёме у врача
 icon: doctor.png
 file_kaz: doctor/doctor_kaz.txt
 file_rus: doctor/doctor_rus.txt
-- 
-category: Повар
-icon: povar.png
-folder: povar/
-file_kaz: povar/povar_kaz.txt
-file_rus: povar/povar_rus.txt
--
 category: Строитель
 icon: builder.png
 file_kaz: builder/builder_kaz.txt

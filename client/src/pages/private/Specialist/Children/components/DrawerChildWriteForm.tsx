@@ -63,13 +63,13 @@ const DrawerChildWriteForm = ({
 
     createChildMutation.mutate(createPayload, {
       onSuccess: () => {
-        showSuccessNotification('Child creation is success');
+        showSuccessNotification('Ученик успешно создан');
         form.reset();
         onClose();
       },
       onError: (error) => {
         showErrorNotification(
-          'Child creation failed',
+          'Ошибка при создании ученика',
           error.response?.data.message || error.message,
         );
       },
@@ -86,28 +86,28 @@ const DrawerChildWriteForm = ({
       <form onSubmit={form.onSubmit(handleSubmit)}>
         <Stack spacing='xs'>
           <TextInput
-            label='Name'
-            placeholder='Name'
+            label='Имя'
+            placeholder='Имя'
             {...form.getInputProps('name')}
             required
           />
           <TextInput
-            label='Surname'
-            placeholder='Surname'
+            label='Фамилия'
+            placeholder='Фамилия'
             {...form.getInputProps('surname')}
             required
           />
           <NumberInput
-            label='Age'
-            placeholder='Age'
+            label='Возраст'
+            placeholder='Возраст'
             min={0}
             required
             {...form.getInputProps('age')}
           />
           <Select
-            label='Gender'
-            data={['male', 'female', 'other']}
-            placeholder='Gender'
+            label='Пол'
+            data={['Мужской', 'Женский', 'Другой']}
+            placeholder='Пол'
             {...form.getInputProps('gender')}
             required
           />
@@ -119,10 +119,10 @@ const DrawerChildWriteForm = ({
             onClick={handleResetAndClose}
             disabled={actionButtonsDisabled}
           >
-            Cancel
+            Отмена
           </Button>
           <Button type='submit' loading={actionButtonsDisabled}>
-            Create
+            Добавить
           </Button>
         </Group>
       </form>

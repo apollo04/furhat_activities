@@ -18,10 +18,7 @@ interface FormValues {
 interface DrawerConnectToRobotProps
   extends Pick<DrawerProps, 'opened' | 'onClose'> {
   title: string;
-  handleSetRobotInfo: (robotInfo: {
-    ip: string;
-    name: string;
-  }) => void;
+  handleSetRobotInfo: (robotInfo: { ip: string; name: string }) => void;
 }
 
 const DrawerConnectToRobot = ({
@@ -46,6 +43,7 @@ const DrawerConnectToRobot = ({
     const robotName = formValues.name;
     const robotIp = formValues.ip;
     handleSetRobotInfo({ ip: robotIp, name: robotName });
+    onClose();
   };
 
   return (
@@ -58,19 +56,19 @@ const DrawerConnectToRobot = ({
       <form onSubmit={form.onSubmit(handleSubmit)}>
         <Stack spacing='xs'>
           <Select
-            label='Robot'
+            label='Робот'
             data={['NAO', 'MIRAI', 'FURHAT']}
             {...form.getInputProps('name')}
             required
           />
-          <TextInput label='Robot ip' {...form.getInputProps('ip')} required />
+          <TextInput label='IP робота' {...form.getInputProps('ip')} required />
         </Stack>
 
         <Group position='right' mt='xl'>
           <Button variant='subtle' onClick={handleResetAndClose}>
-            Cancel
+            Отмена
           </Button>
-          <Button type='submit'>Connect</Button>
+          <Button type='submit'>Подлючиться</Button>
         </Group>
       </form>
     </Drawer>

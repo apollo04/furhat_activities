@@ -13,12 +13,12 @@ type NavbarLink = {
 
 const specialistItems: NavbarLink[] = [
   {
-    label: 'Dashboard',
+    label: 'Главная страница',
     path: '/',
     Icon: IconHome,
   },
   {
-    label: 'Students',
+    label: 'Ученики',
     path: '/students',
     Icon: IconUsers,
   },

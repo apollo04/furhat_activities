@@ -22,12 +22,12 @@ const ModalDeleteChild = ({
       // eslint-disable-next-line no-underscore-dangle
       deleteChildMutation.mutate(child.id, {
         onSuccess: () => {
-          showSuccessNotification('Child delete success');
+          showSuccessNotification('Ученик успешно удален');
           onClose();
         },
         onError: (error) => {
           showErrorNotification(
-            'Child delete failed',
+            'Ошибка при удалении ученика',
             error.response?.data.message || error.message,
           );
         },
@@ -39,24 +39,24 @@ const ModalDeleteChild = ({
     <Modal
       opened={opened}
       onClose={onClose}
-      title={<Title order={3}>Delete Child</Title>}
+      title={<Title order={3}>Удалить ученика</Title>}
       centered
     >
-      <Text>{`Are you sure that you want to delete "${child?.name}"? The changes are not recoverable.`}</Text>
+      <Text>{`Вы точно хотите удалить "${child?.name}"? Изменения не подлежат восстановлению.`}</Text>
       <Group mt='md' position='right'>
         <Button
           variant='default'
           onClick={onClose}
           disabled={deleteChildMutation.isLoading}
         >
-          Cancel
+          Отмена
         </Button>
         <Button
           color='red'
           onClick={handleDelete}
           loading={deleteChildMutation.isLoading}
         >
-          Delete
+          Удалить
         </Button>
       </Group>
     </Modal>

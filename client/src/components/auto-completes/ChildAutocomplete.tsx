@@ -65,11 +65,9 @@ const ChildrenAutocomplete = ({
       }
       icon={isLoading ? <Loader size='sm' /> : icon}
       disabled={isError || disabled}
-      error={isError ? 'Something went wrong while fetching' : error}
+      error={isError ? ', попробуйте позже.' : error}
       nothingFound={
-        isLoading
-          ? 'Children are loading'
-          : `Children with name "${search}" are not found`
+        isLoading ? 'Загрузка...' : `Ничего не найдено по запросу "${search}`
       }
       {...autocompleteProps}
     />

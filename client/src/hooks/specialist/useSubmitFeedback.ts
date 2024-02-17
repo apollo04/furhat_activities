@@ -6,7 +6,6 @@ export default function useSubmitFeedback(
   child_id: string,
 ): UseMutationResult<AxiosResponse<any>, AxiosError<{ message: string }>, any> {
   const postSubmitFeedback = (payload: any) => {
-    console.log(payload);
     return axiosUnauthorizedInstance.post(
       `children/${child_id}/add_feedback/`,
       payload,

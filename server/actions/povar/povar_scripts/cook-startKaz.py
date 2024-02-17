@@ -3,19 +3,20 @@ import time
 
 from furhat_remote_api import FurhatRemoteAPI
 
-furhat = FurhatRemoteAPI(sys.argv[1])
+def run_action(ip: str):
+    furhat = FurhatRemoteAPI(ip)
 
-furhat.set_face(mask="adult", character="Rania")
+    furhat.set_face(mask="adult", character="Rania")
 
-url_list = [
-    'http://novators.kz/audio/Cook/Cook_Intro_KAZ/cook-intro-1-KAZ.wav',
-    'http://novators.kz/audio/Cook/Cook_Intro_KAZ/cook-intro-2-KAZ.wav',
-    'http://novators.kz/audio/Cook/Cook_Intro_KAZ/cook-intro-3-KAZ.wav',
-    'http://novators.kz/audio/Cook/Cook_Intro_KAZ/cook-intro-4-KAZ.wav',
-    'http://novators.kz/audio/Cook/Cook_Intro_KAZ/cook-intro-5-KAZ.wav',
-    'http://novators.kz/audio/Cook/Cook_Intro_KAZ/cook-intro-6-KAZ.wav',
-]
+    url_list = [
+        'http://novators.kz/audio/Cook/Cook_Intro_KAZ/cook-intro-1-KAZ.wav',
+        'http://novators.kz/audio/Cook/Cook_Intro_KAZ/cook-intro-2-KAZ.wav',
+        'http://novators.kz/audio/Cook/Cook_Intro_KAZ/cook-intro-3-KAZ.wav',
+        'http://novators.kz/audio/Cook/Cook_Intro_KAZ/cook-intro-4-KAZ.wav',
+        'http://novators.kz/audio/Cook/Cook_Intro_KAZ/cook-intro-5-KAZ.wav',
+        'http://novators.kz/audio/Cook/Cook_Intro_KAZ/cook-intro-6-KAZ.wav',
+    ]
 
-for url in url_list:
-    furhat.say(url=url, lipsync=True)
-    time.sleep(5)
+    for url in url_list:
+        furhat.say(url=url, lipsync=True)
+        time.sleep(5)

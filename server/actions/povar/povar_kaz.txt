@@ -7,3 +7,47 @@ action: Баурсак 2
 icon: /
 file: povar_scripts/baursakKaz2.py
 -
+action: Бешбармак
+icon: /
+file: povar_scripts/besbarmakKaz.py
+-
+action: Ынталандыру
+icon: /
+file: povar_scripts/cook-encourageKaz.py
+-
+action: Ойын
+icon: /
+file: povar_scripts/cook-gameKaz.py
+-
+action: Мақтау
+icon: /
+file: povar_scripts/cook-praiseKaz.py
+-
+action: Cұрақ 1
+icon: /
+file: povar_scripts/cook-question1Kaz.py
+-
+action: Cұрақ 2
+icon: /
+file: povar_scripts/cook-question2Kaz.py
+-
+action: Cұрақ 3
+icon: /
+file: povar_scripts/cook-question3Kaz.py
+-
+action: Cұрақ 4
+icon: /
+file: povar_scripts/cook-question4Kaz.py
+-
+action: Cұрақ 5
+icon: /
+file: povar_scripts/cook-question5Kaz.py
+-
+action: Cұрақ 6
+icon: /
+file: povar_scripts/cook-question6Kaz.py
+-
+action: Бастау
+icon: /
+file: povar_scripts/cook-startKaz.py
+-
