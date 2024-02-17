@@ -53,7 +53,7 @@ const DrawerConnectToRobot = ({
         <Stack spacing='xs'>
           <Select
             label='Robot'
-            data={['NAO', 'MIRAI']}
+            data={['NAO', 'MIRAI', 'FURHAT']}
             {...form.getInputProps('name')}
             required
           />

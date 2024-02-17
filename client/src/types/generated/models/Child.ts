@@ -4,7 +4,7 @@
 /* eslint-disable */
 
 export type Child = {
-    _id: string;
+    id: string;
     name: string;
     surname: string;
     age: string;

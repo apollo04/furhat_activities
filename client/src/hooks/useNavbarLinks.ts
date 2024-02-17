@@ -1,7 +1,5 @@
 import {
-  IconReportAnalytics,
-  IconNotes,
-  IconSettings,
+  // IconSettings,
   TablerIconsProps,
   IconHome,
   IconUsers,
@@ -12,29 +10,6 @@ type NavbarLink = {
   path: string;
   Icon: (props: TablerIconsProps) => JSX.Element;
 };
-
-const parentItems: NavbarLink[] = [
-  {
-    label: 'Dashboard',
-    path: '/',
-    Icon: IconHome,
-  },
-  {
-    label: 'Grades',
-    path: '/grades',
-    Icon: IconReportAnalytics,
-  },
-  {
-    label: 'Skills',
-    path: '/skills',
-    Icon: IconNotes,
-  },
-  {
-    label: 'Settings',
-    path: '/settings',
-    Icon: IconSettings,
-  },
-];
 
 const specialistItems: NavbarLink[] = [
   {
@@ -47,32 +22,13 @@ const specialistItems: NavbarLink[] = [
     path: '/students',
     Icon: IconUsers,
   },
-  {
-    label: 'Settings',
-    path: '/settings',
-    Icon: IconSettings,
-  },
+  // {
+  //   label: 'Settings',
+  //   path: '/settings',
+  //   Icon: IconSettings,
+  // },
 ];
 
-const adminItems: NavbarLink[] = [
-  {
-    label: 'Centers',
-    path: '/',
-    Icon: IconHome,
-  },
-];
-
-export default function useNavbarLinks(
-  role: 'specialist' | 'parent',
-): NavbarLink[] {
-  if (role === 'specialist') {
-    return specialistItems;
-  }
-  if (role === 'parent') {
-    return parentItems;
-  }
-  if (role === 'admin') {
-    return adminItems;
-  }
-  return [];
+export default function useNavbarLinks(): NavbarLink[] {
+  return specialistItems;
 }

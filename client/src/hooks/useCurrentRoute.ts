@@ -1,12 +1,8 @@
 import { matchRoutes, useLocation } from 'react-router-dom';
-import { publicRoutesMap } from 'routes/PublicRoutes';
 import { SpecialistRoutesMap } from 'routes/roles/Specialist';
 
 export default function useCurrentRoute(): string {
-  const routes = ['/'].concat(
-    Object.keys(publicRoutesMap),
-    Object.keys(SpecialistRoutesMap),
-  );
+  const routes = ['/'].concat(Object.keys(SpecialistRoutesMap));
 
   const location = useLocation();
   const uniqRoutes = [...new Set(routes)];

@@ -6,8 +6,7 @@ import {
   AutocompleteProps,
   Loader,
 } from '@mantine/core';
-import { useAuth } from 'contexts/AuthContext';
-import useChildrenByCenter from 'hooks/parent/useChildrenByCenter';
+import useChildren from 'hooks/children/useChildren';
 import { DynamicAutoCompleteValue } from 'types';
 import { Child } from 'types/generated';
 
@@ -25,13 +24,10 @@ const ChildrenAutocomplete = ({
   onChange,
   ...autocompleteProps
 }: ChildAutocompleteProps) => {
-  const { profile } = useAuth();
   const [options, setOptions] = useState<AutocompleteItem[]>([]);
   const [search, setSearch] = useState(value.label);
 
-  const { data, isLoading, isSuccess, isError } = useChildrenByCenter(
-    profile?.role_info.center,
-  );
+  const { data, isLoading, isSuccess, isError } = useChildren();
 
   const handleSearchChange = (query: string): void => {
     setSearch(query);
@@ -48,9 +44,9 @@ const ChildrenAutocomplete = ({
   useEffect(() => {
     if (isSuccess && data?.data) {
       setOptions(
-        data.data.map((child: Child) => ({
+        data.data.children.map((child: Child) => ({
           // eslint-disable-next-line no-underscore-dangle
-          value: child._id,
+          value: child.id,
           label: [child.name, child.surname].join(' '),
         })),
       );

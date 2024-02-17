@@ -1,0 +1,9 @@
+-
+action: Баурсак
+icon: /
+file: povar_scripts/baursakKaz.py
+-
+action: Баурсак 2
+icon: /
+file: povar_scripts/baursakKaz2.py
+-

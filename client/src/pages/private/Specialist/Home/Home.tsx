@@ -9,31 +9,25 @@ import {
   Flex,
   Divider,
   SimpleGrid,
-  Badge,
   Group,
   Grid,
   Button,
+  Avatar,
+  Center,
+  Loader,
 } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import { useDisclosure } from '@mantine/hooks';
-import { IconCheck, IconPlus, IconX } from '@tabler/icons-react';
+import { IconCheck, IconFileAlert, IconPlus, IconX } from '@tabler/icons-react';
 import ChildrenAutocomplete from 'components/auto-completes/ChildAutocomplete';
+import EmptyState from 'components/states/EmptyState';
+import useCategories from 'hooks/specialist/useCategories';
 import actionsData from 'mocks/actionData';
 import { DynamicAutoCompleteValue } from 'types/index';
 
 import ActionCard from './components/ActionCard.tsx';
 import DrawerConnectToRobot from './components/DrawerConnectToRobot.tsx';
 import DrawerFeedbackWriteForm from './components/DrawerFeedbackForm.tsx';
-
-const FILTERS = [
-  'all',
-  'social',
-  'receptive',
-  'sensory',
-  'expressive lang.',
-  'cognitive',
-  'phys. ed.',
-];
 
 interface FormValues {
   child: DynamicAutoCompleteValue;
@@ -43,9 +37,13 @@ const Home = () => {
   //   const [selectedAction, setSelectedAction] = useState<Action | undefined>(
   //     undefined,
   //   );
-  const [filters, setFilters] = useState<string[]>([]);
   const [seconds, setSeconds] = useState(0);
   const [isActive, setIsActive] = useState(false);
+
+  const [categories, setCategories] = useState<any[]>([]);
+
+  const { data, isSuccess, isLoading, isFetching, isError, error } =
+    useCategories();
 
   const form = useForm<FormValues>({
     initialValues: {
@@ -95,20 +93,18 @@ const Home = () => {
     return formattedTime;
   };
 
-  const handleFilters = (filter: string) => {
-    if (filters.includes(filter)) {
-      setFilters((prev) => prev.filter((item) => item !== filter));
-    } else {
-      setFilters((prev) => [...prev, filter]);
-    }
-  };
-
   const handleCenterChange = (item: DynamicAutoCompleteValue | null) => {
     form.setFieldValue('child', {
       value: item?.value || '',
       label: item?.label || '',
     });
   };
+
+  useEffect(() => {
+    if (isSuccess && data?.data) {
+      setCategories(data.data);
+    }
+  }, [isSuccess, data?.data]);
 
   return (
     <Stack>
@@ -150,17 +146,34 @@ const Home = () => {
         </Grid.Col>
       </Grid>
 
-      <Group spacing='sm'>
-        {FILTERS.map((filter) => (
-          <Badge
-            key={filter}
-            onClick={() => handleFilters(filter)}
-            variant={filters.includes(filter) ? 'default' : 'outline'}
-          >
-            {filter}
-          </Badge>
-        ))}
-      </Group>
+      {isLoading && isFetching && (
+        <Center mt='xl'>
+          <Loader />
+        </Center>
+      )}
+
+      {isSuccess && categories.length === 0 && (
+        <EmptyState
+          title='No Categories'
+          description='There are no Categories to display.'
+        />
+      )}
+
+      {isError && (
+        <EmptyState
+          mt='xl'
+          title='Error'
+          description={
+            error?.response?.data.message ||
+            'Something went wrong while fetching data.'
+          }
+          Icon={
+            <Avatar radius='100%' size='xl' variant='light' color='red'>
+              <IconFileAlert size={25} />
+            </Avatar>
+          }
+        />
+      )}
 
       <SimpleGrid
         mt='xl'
@@ -173,12 +186,7 @@ const Home = () => {
         sx={{ position: 'relative' }}
       >
         {actionsData.map((action) => (
-          <ActionCard
-            key={action.name}
-            img={action.image}
-            name={action.name}
-            badges={action.badges}
-          />
+          <ActionCard key={action.name} img={action.image} name={action.name} />
         ))}
       </SimpleGrid>
 

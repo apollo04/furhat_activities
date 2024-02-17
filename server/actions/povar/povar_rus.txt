@@ -1,0 +1,5 @@
+-
+action: Баурсак
+icon: /
+file: povar_scripts/baursakRus.py
+-

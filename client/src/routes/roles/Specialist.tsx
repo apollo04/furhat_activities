@@ -1,5 +1,5 @@
 import Home from 'pages/private/Specialist/Home';
-import Students from 'pages/private/Specialist/Students';
+import Students from 'pages/private/Specialist/Children';
 import NotFound from 'pages/shared/NotFound';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { RoutesMap } from 'routes/types';

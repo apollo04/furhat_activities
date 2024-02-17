@@ -1,16 +1,15 @@
 import {
-  Button,
+  // Button,
   createStyles,
   getStylesRef,
-  Group,
+  // Group,
   Navbar as MantineNavbar,
   rem,
   Stack,
   Title,
   useMantineTheme,
 } from '@mantine/core';
-import { IconLogout } from '@tabler/icons-react';
-import { useAuth } from 'contexts/AuthContext';
+// import { IconLogout } from '@tabler/icons-react';
 import useCurrentRoute from 'hooks/useCurrentRoute';
 import useNavbarLinks from 'hooks/useNavbarLinks';
 import { Link } from 'react-router-dom';
@@ -75,11 +74,9 @@ const Navbar = ({ opened }: NavbarProps) => {
   const { classes, cx } = useStyles();
   const theme = useMantineTheme();
 
-  const { profile, logout } = useAuth();
-
   const currentPathname = useCurrentRoute();
 
-  const navbarLinks = useNavbarLinks(profile.role);
+  const navbarLinks = useNavbarLinks();
 
   const links = navbarLinks.map(({ label, path, Icon }) => (
     <Link
@@ -115,7 +112,7 @@ const Navbar = ({ opened }: NavbarProps) => {
         </Stack>
       </MantineNavbar.Section>
 
-      <MantineNavbar.Section className={classes.footer}>
+      {/* <MantineNavbar.Section className={classes.footer}>
         <Button
           variant='subtle'
           color='red'
@@ -135,7 +132,7 @@ const Navbar = ({ opened }: NavbarProps) => {
             </Title>
           </Group>
         </Button>
-      </MantineNavbar.Section>
+      </MantineNavbar.Section> */}
     </MantineNavbar>
   );
 };
