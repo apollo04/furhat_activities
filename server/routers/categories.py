@@ -35,6 +35,7 @@ def read_categories(file_path):
     current_file_kaz = None
     current_file_rus = None
     current_icon = None
+    current_folder = None
 
     for line in lines:
         if line.startswith('category:'):
@@ -42,13 +43,15 @@ def read_categories(file_path):
             actions[current_category] = {}
         elif line.startswith('icon:'):
             current_icon = line.split(':')[1].strip()
+        elif line.startswith('folder:'):
+            current_folder = line.split(':')[1].strip()
         elif line.startswith('file_kaz:'):
             current_file_kaz = line.split(':')[1].strip()
             actions[current_category]["actions_kaz"] = read_actions_file(current_file_kaz)
         elif line.startswith('file_rus:'):
             current_file_rus = line.split(':')[1].strip()
             actions[current_category]["actions_rus"] = read_actions_file(current_file_rus)
-            categories.append({'category': current_category, 'file_kaz': current_file_kaz, 'file_rus': current_file_rus, 'icon': current_icon})
+            categories.append({'category': current_category, 'file_kaz': current_file_kaz, 'file_rus': current_file_rus, 'icon': current_icon, 'folder': current_folder})
 
     return categories
 
@@ -66,11 +69,15 @@ def read_category_actions(category_name: str):
     return {"category_name": category_name, "actions_kaz": actions_list_kaz, "actions_rus": actions_list_rus}
 
 @router.get("/{category_name}/actions/{action_id}")
-def read_action(category_name: str, action_id: str, ip: str):
-    for action in actions[category_name]["actions_kaz"]:
+def run_action(category_name: str, action_id: str, ip: str):
+    all_actions = actions[category_name]["actions_kaz"] + actions[category_name]["actions_rus"]
+
+    category = [x for x in categories if x["category"] == category_name][0]
+
+    for action in all_actions:
         if action["id"] == action_id:
             file_name = action["file"]
-            spec = importlib.util.spec_from_file_location(file_name, f"{file_name}.py")
+            spec = importlib.util.spec_from_file_location(file_name, "actions/" + category["folder"] + file_name)
             module = importlib.util.module_from_spec(spec)
             spec.loader.exec_module(module)
             if hasattr(module, "run_action") and callable(module.run_action):

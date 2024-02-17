@@ -1,6 +1,7 @@
 -
 category: Повар
 icon: /
+folder: povar/
 file_kaz: povar/povar_kaz.txt
 file_rus: povar/povar_rus.txt
 -
