@@ -1,6 +1,6 @@
 // import { useState } from 'react';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 import {
   Title,
@@ -15,19 +15,18 @@ import {
   Avatar,
   Center,
   Loader,
-} from '@mantine/core';
-import { useForm } from '@mantine/form';
-import { useDisclosure } from '@mantine/hooks';
-import { IconCheck, IconFileAlert, IconPlus, IconX } from '@tabler/icons-react';
-import ChildrenAutocomplete from 'components/auto-completes/ChildAutocomplete';
-import EmptyState from 'components/states/EmptyState';
-import useCategories from 'hooks/specialist/useCategories';
-import actionsData from 'mocks/actionData';
-import { DynamicAutoCompleteValue } from 'types/index';
+} from "@mantine/core";
+import { useForm } from "@mantine/form";
+import { useDisclosure } from "@mantine/hooks";
+import { IconCheck, IconFileAlert, IconPlus, IconX } from "@tabler/icons-react";
+import ChildrenAutocomplete from "components/auto-completes/ChildAutocomplete";
+import EmptyState from "components/states/EmptyState";
+import useCategories from "hooks/specialist/useCategories";
+import { DynamicAutoCompleteValue } from "types/index";
 
-import ActionCard from './components/ActionCard.tsx';
-import DrawerConnectToRobot from './components/DrawerConnectToRobot.tsx';
-import DrawerFeedbackWriteForm from './components/DrawerFeedbackForm.tsx';
+import CategoryCard from "./components/CategoryCard.tsx";
+import DrawerConnectToRobot from "./components/DrawerConnectToRobot.tsx";
+import DrawerFeedbackWriteForm from "./components/DrawerFeedbackForm.tsx";
 
 interface FormValues {
   child: DynamicAutoCompleteValue;
@@ -39,7 +38,10 @@ const Home = () => {
   //   );
   const [seconds, setSeconds] = useState(0);
   const [isActive, setIsActive] = useState(false);
-
+  const [robotInfo, setRobotInfo] =  useState({
+    ip: "",
+    name: "",
+  });
   const [categories, setCategories] = useState<any[]>([]);
 
   const { data, isSuccess, isLoading, isFetching, isError, error } =
@@ -47,7 +49,7 @@ const Home = () => {
 
   const form = useForm<FormValues>({
     initialValues: {
-      child: { value: '', label: '' },
+      child: { value: "", label: "" },
     },
   });
 
@@ -89,7 +91,7 @@ const Home = () => {
     const remainingSeconds = seconds % 60;
     const formattedTime = `${minutes
       .toString()
-      .padStart(2, '0')}:${remainingSeconds.toString().padStart(2, '0')}`;
+      .padStart(2, "0")}:${remainingSeconds.toString().padStart(2, "0")}`;
     return formattedTime;
   };
 
@@ -100,29 +102,38 @@ const Home = () => {
     });
   };
 
+  const handleRobotInfoChange = (robotInfo: {
+    ip: string;
+    name: string;
+  }) => {
+    setRobotInfo(robotInfo);
+  }
+
   useEffect(() => {
     if (isSuccess && data?.data) {
       setCategories(data.data);
+      console.log(data)
     }
+    
   }, [isSuccess, data?.data]);
 
   return (
     <Stack>
-      <Flex direction='column'>
+      <Flex direction="column">
         <Title weight={700}>Actions</Title>
-        <Text color='dimmed'>Select robot action</Text>
+        <Text color="dimmed">Select robot action</Text>
       </Flex>
 
-      <Divider my='md' />
+      <Divider my="md" />
 
       <Grid columns={10}>
         <Grid.Col sm={10} md={10}>
-          <Group position='left'>
+          <Group position="left">
             <Button leftIcon={<IconPlus />} onClick={openConnectToRobot}>
               Connect to robot
             </Button>
             <ChildrenAutocomplete
-              placeholder='Select child'
+              placeholder="Select child"
               value={form.values.child}
               onChange={handleChildChange}
             />
@@ -147,28 +158,28 @@ const Home = () => {
       </Grid>
 
       {isLoading && isFetching && (
-        <Center mt='xl'>
+        <Center mt="xl">
           <Loader />
         </Center>
       )}
 
       {isSuccess && categories.length === 0 && (
         <EmptyState
-          title='No Categories'
-          description='There are no Categories to display.'
+          title="No Categories"
+          description="There are no Categories to display."
         />
       )}
 
       {isError && (
         <EmptyState
-          mt='xl'
-          title='Error'
+          mt="xl"
+          title="Error"
           description={
             error?.response?.data.message ||
-            'Something went wrong while fetching data.'
+            "Something went wrong while fetching data."
           }
           Icon={
-            <Avatar radius='100%' size='xl' variant='light' color='red'>
+            <Avatar radius="100%" size="xl" variant="light" color="red">
               <IconFileAlert size={25} />
             </Avatar>
           }
@@ -176,17 +187,17 @@ const Home = () => {
       )}
 
       <SimpleGrid
-        mt='xl'
-        spacing='lg'
+        mt="xl"
+        spacing="lg"
         breakpoints={[
-          { minWidth: 'sm', cols: 2 },
-          { minWidth: 'md', cols: 3 },
-          { minWidth: 'lg', cols: 4 },
+          { minWidth: "sm", cols: 2 },
+          { minWidth: "md", cols: 3 },
+          { minWidth: "lg", cols: 4 },
         ]}
-        sx={{ position: 'relative' }}
+        sx={{ position: "relative" }}
       >
-        {actionsData.map((action) => (
-          <ActionCard key={action.name} img={action.image} name={action.name} />
+        {categories.map((action) => (
+          <CategoryCard key={action.name} imgSrc={action.icon} name={action.category} robotInfo={robotInfo}/>
         ))}
       </SimpleGrid>
 
@@ -194,13 +205,14 @@ const Home = () => {
         childId={form.values.child.value}
         opened={isFeedbackFormOpened}
         onClose={closeFeedbackForm}
-        title='Give feedback'
+        title="Give feedback"
       />
 
       <DrawerConnectToRobot
+        handleSetRobotInfo={handleRobotInfoChange}
         opened={isConnectToRobotOpened}
         onClose={closeConnectToRobot}
-        title='Connect to robot'
+        title="Connect to robot"
       />
     </Stack>
   );
