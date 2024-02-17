@@ -42,9 +42,6 @@ const DrawerConnectToRobot = ({
     onClose();
   };
 
-  const handleSubmit = () => {
-    // const robotName = formValues.name;
-    // const robotIp = formValues.ip;
   const handleSubmit = (formValues: FormValues) => {
     const robotName = formValues.name;
     const robotIp = formValues.ip;

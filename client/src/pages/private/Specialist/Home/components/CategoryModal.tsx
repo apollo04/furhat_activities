@@ -10,9 +10,13 @@ interface CategoryModalProps {
     onClose: () => void;
     size: "xs" | "sm" | "md" | "lg" | "xl";
     category: string;
+    robotInfo?: {
+      ip: string;
+      name: string;
+    }
 }
 
-export const CategoryModal = ({ opened, onClose, size, category }: CategoryModalProps): JSX.Element => {
+export const CategoryModal = ({ opened, onClose, size, category, robotInfo }: CategoryModalProps): JSX.Element => {
     const [language, setLanguage] = useState("kk");
     const [actions, setActions] = useState<any[]>([]);
     const [categoryData, setCategoryData] = useState<any>({});
@@ -76,7 +80,7 @@ export const CategoryModal = ({ opened, onClose, size, category }: CategoryModal
                 paddingLeft: "1rem",
                 }}>
             {actions.map((action) => (
-              <ActionCard action={action} />
+              <ActionCard robotInfo={robotInfo} action={action} />
             ))}
             </Grid>
             </Flex>

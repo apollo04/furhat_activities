@@ -2,7 +2,6 @@ import { Group, Image, Paper, Stack, Title } from '@mantine/core';
 import './CategoryCard.css'
 import { CategoryModal } from './CategoryModal'
 import { useState } from 'react';
-import useAction from 'hooks/specialist/useAction';
 
 interface CategoryCardProps {
   imgSrc: string;
