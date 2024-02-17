@@ -93,7 +93,7 @@ const Home = () => {
     return formattedTime;
   };
 
-  const handleCenterChange = (item: DynamicAutoCompleteValue | null) => {
+  const handleChildChange = (item: DynamicAutoCompleteValue | null) => {
     form.setFieldValue('child', {
       value: item?.value || '',
       label: item?.label || '',
@@ -124,7 +124,7 @@ const Home = () => {
             <ChildrenAutocomplete
               placeholder='Select child'
               value={form.values.child}
-              onChange={handleCenterChange}
+              onChange={handleChildChange}
             />
             {!isActive && (
               <Button leftIcon={<IconPlus />} onClick={() => startTimer()}>
@@ -191,6 +191,7 @@ const Home = () => {
       </SimpleGrid>
 
       <DrawerFeedbackWriteForm
+        childId={form.values.child.value}
         opened={isFeedbackFormOpened}
         onClose={closeFeedbackForm}
         title='Give feedback'

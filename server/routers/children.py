@@ -2,6 +2,7 @@ from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
 import uuid
 import json
+from datetime import datetime
 
 router = APIRouter()
 
@@ -40,7 +41,7 @@ def create_child(child_data: ChildCreate):
              "surname": child_data.surname, 
              "age": child_data.age, 
              "gender": child_data.gender, 
-             "actions": []
+             "feedbacks": []
             }
     database["children"].append(child)
     save_to_json()
@@ -66,5 +67,39 @@ def delete_child(child_id: str):
         database["children"].remove(child)
         save_to_json()
         return child
+    else:
+        raise HTTPException(status_code=404, detail="Child not found")
+    
+class Feedback(BaseModel):
+    feedback_name: str
+    grade: int
+
+@router.post("/{child_id}/add_feedback")
+def add_feedback_to_child(child_id: str, feedback_data: list[Feedback]):
+    child = get_child_by_id(child_id)
+    if child:
+        all_feedback = []
+        for feedback in feedback_data:
+            action = {
+                      "feedback_name": feedback.feedback_name, 
+                      "grade": feedback.grade, 
+                     }
+            all_feedback.append(action)
+
+        all_feedback = {"id": str(uuid.uuid4()), 
+                        "date": datetime.now().isoformat(), 
+                        "feedback": all_feedback
+                       }        
+        child["feedbacks"].append(all_feedback)
+        save_to_json()
+        return {"message": "Feedback added successfully"}
+    else:
+        raise HTTPException(status_code=404, detail="Child not found")
+    
+@router.get("/{child_id}/feedbacks")
+def get_feedbacks(child_id: str):
+    child = get_child_by_id(child_id)
+    if child:
+        return child["feedbacks"]
     else:
         raise HTTPException(status_code=404, detail="Child not found")
