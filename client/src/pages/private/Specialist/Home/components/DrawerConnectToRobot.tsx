@@ -18,12 +18,17 @@ interface FormValues {
 interface DrawerConnectToRobotProps
   extends Pick<DrawerProps, 'opened' | 'onClose'> {
   title: string;
+  handleSetRobotInfo: (robotInfo: {
+    ip: string;
+    name: string;
+  }) => void;
 }
 
 const DrawerConnectToRobot = ({
   opened,
   onClose,
   title,
+  handleSetRobotInfo,
 }: DrawerConnectToRobotProps) => {
   const form = useForm<FormValues>({
     initialValues: {
@@ -40,6 +45,7 @@ const DrawerConnectToRobot = ({
   const handleSubmit = (formValues: FormValues) => {
     const robotName = formValues.name;
     const robotIp = formValues.ip;
+    handleSetRobotInfo({ ip: robotIp, name: robotName });
   };
 
   return (

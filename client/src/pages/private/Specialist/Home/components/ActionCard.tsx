@@ -1,13 +1,22 @@
-import { Group, Image, Paper, Stack, Title } from '@mantine/core';
+import { Paper, Group, Image, Stack, Title } from "@mantine/core";
+// import useAction from 'hooks/specialist/useAction';
 
 interface ActionCardProps {
-  img: string;
-  name: string;
+    robotInfo: any;
+    action: any
 }
 
-const ActionCard = ({ img, name }: ActionCardProps) => {
-  return (
-    <Paper shadow='md' sx={{ position: 'relative', overflow: 'hidden' }}>
+export const ActionCard = ({ action, robotInfo }: ActionCardProps): JSX.Element => {
+    // const handleStartAction = () => {
+    //     const { data, isSuccess, isLoading, isError, error } = useAction(action.category, action.action, "5353353");
+    //     console.log(data);
+    //     if (isSuccess) {
+    //         console.log("success");
+    //     }
+    // 
+    return (
+        <>
+    <Paper onClick={() => {}} shadow='md' className='categoryCard' style={{cursor: "pointer"}} sx={{ position: 'relative', overflow: 'hidden' }} >
       <Group
         position='right'
         pt='xs'
@@ -20,15 +29,13 @@ const ActionCard = ({ img, name }: ActionCardProps) => {
           zIndex: 10,
         }}
       ></Group>
-      <Image src={img} width='100%' height={160} alt={name} />
-
+      <Image src={`images/actions/holidays.png`} width='100%' height={160} alt={action.action} />
       <Stack pt='xs' pb='sm' px='md' spacing='xs'>
         <Title order={5} weight={700}>
-          {name}
+          {action.action.charAt(0).toUpperCase() + action.action.slice(1)}
         </Title>
       </Stack>
     </Paper>
-  );
-};
-
-export default ActionCard;
+    </>
+    );
+}
