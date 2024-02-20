@@ -55,7 +55,7 @@ const ActionCard = ({
         }}
       ></Group>
       <Image
-        src={`images/actions/holidays.png`}
+        src={`data:image/png;base64,${action.icon}`}
         width='100%'
         height={160}
         alt={action.action}

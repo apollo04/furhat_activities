@@ -1,27 +1,35 @@
 from fastapi import APIRouter
 import uuid
 import importlib.util
+import base64
 
 router = APIRouter()
 
 actions = {}
 
-def read_actions_file(file_path):
+def read_actions_file(current_folder, file_path):
     actions_list = []
     current_action = None
     current_file = None
 
-    with open("actions/" + file_path, 'r', encoding='utf-8') as file:
+    print(current_folder, file_path)
+
+    with open("./actions/" + file_path, 'r', encoding='utf-8') as file:
         lines = file.readlines()
 
     for line in lines:
         if line.startswith('action:'):
             current_action = line.split(':')[1].strip()
         elif line.startswith('icon:'):
-            current_icon = line.split(':')[1].strip()
+            current_icon_path = line.split(':')[1].strip()
+            try:
+                with open("./actions/" + current_folder + current_icon_path, "rb") as image_file:
+                    current_icon_path = base64.encodebytes(image_file.read())
+            except:
+                current_icon_path = ""
         elif line.startswith('file:'):
             current_file = line.split(':')[1].strip()
-            actions_list.append({"id": str(uuid.uuid4()), 'action': current_action, 'file': current_file, 'icon': current_icon})
+            actions_list.append({"id": str(uuid.uuid4()), 'action': current_action, 'file': current_file, 'icon': current_icon_path})
 
     return actions_list
 
@@ -34,7 +42,7 @@ def read_categories(file_path):
     current_category = None
     current_file_kaz = None
     current_file_rus = None
-    current_icon = None
+    current_icon_path = None
     current_folder = None
 
     for line in lines:
@@ -42,16 +50,18 @@ def read_categories(file_path):
             current_category = line.split(':')[1].strip().lower()
             actions[current_category] = {}
         elif line.startswith('icon:'):
-            current_icon = line.split(':')[1].strip()
+            current_icon_path = line.split(':')[1].strip()
+            with open("./actions/" + current_icon_path, "rb") as image_file:
+                current_icon_path = base64.encodebytes(image_file.read())
         elif line.startswith('folder:'):
             current_folder = line.split(':')[1].strip()
         elif line.startswith('file_kaz:'):
             current_file_kaz = line.split(':')[1].strip()
-            actions[current_category]["actions_kaz"] = read_actions_file(current_file_kaz)
+            actions[current_category]["actions_kaz"] = read_actions_file(current_folder, current_file_kaz)
         elif line.startswith('file_rus:'):
             current_file_rus = line.split(':')[1].strip()
-            actions[current_category]["actions_rus"] = read_actions_file(current_file_rus)
-            categories.append({'category': current_category, 'file_kaz': current_file_kaz, 'file_rus': current_file_rus, 'icon': current_icon, 'folder': current_folder})
+            actions[current_category]["actions_rus"] = read_actions_file(current_folder, current_file_rus)
+            categories.append({'category': current_category, 'file_kaz': current_file_kaz, 'file_rus': current_file_rus, 'icon': current_icon_path, 'folder': current_folder})
 
     return categories
 

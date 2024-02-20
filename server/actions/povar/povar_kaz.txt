@@ -1,6 +1,6 @@
 -
 action: Баурсак
-icon: /
+icon: povar_icons/povar.png
 file: povar_scripts/baursakKaz.py
 -
 action: Баурсак 2
