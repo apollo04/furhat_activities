@@ -1,4 +1,5 @@
 import {
+  Button,
   // Button,
   createStyles,
   getStylesRef,
@@ -9,9 +10,12 @@ import {
   Title,
   useMantineTheme,
 } from '@mantine/core';
+import { useDisclosure } from '@mantine/hooks';
+import { IconPlus } from '@tabler/icons-react';
 // import { IconLogout } from '@tabler/icons-react';
 import useCurrentRoute from 'hooks/useCurrentRoute';
 import useNavbarLinks from 'hooks/useNavbarLinks';
+import DrawerConnectToRobot from 'pages/private/Specialist/Home/components/DrawerConnectToRobot';
 import { Link } from 'react-router-dom';
 
 const useStyles = createStyles((theme) => ({
@@ -78,6 +82,11 @@ const Navbar = ({ opened }: NavbarProps) => {
 
   const navbarLinks = useNavbarLinks();
 
+  const [
+    isConnectToRobotOpened,
+    { close: closeConnectToRobot, open: openConnectToRobot },
+  ] = useDisclosure(false);
+
   const links = navbarLinks.map(({ label, path, Icon }) => (
     <Link
       key={label}
@@ -108,8 +117,16 @@ const Navbar = ({ opened }: NavbarProps) => {
     >
       <MantineNavbar.Section grow>
         <Stack pt='xl' spacing='xs'>
+          <Button leftIcon={<IconPlus />} onClick={openConnectToRobot}>
+            Подключитесь к роботу
+          </Button>
           {links}
         </Stack>
+        <DrawerConnectToRobot
+          opened={isConnectToRobotOpened}
+          onClose={closeConnectToRobot}
+          title='Подключитесь к роботу'
+        />
       </MantineNavbar.Section>
 
       {/* <MantineNavbar.Section className={classes.footer}>

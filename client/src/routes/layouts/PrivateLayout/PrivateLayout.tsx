@@ -19,7 +19,9 @@ const PrivateLayout = ({ children }: PrivateLayoutProps) => {
       navbar={<Navbar opened={opened} />}
       header={<Header opened={opened} toggle={toggle} />}
     >
-      <Container py='xl'>{children}</Container>
+      <Container py='xl' maw='95rem'>
+        {children}
+      </Container>
     </AppShell>
   );
 };

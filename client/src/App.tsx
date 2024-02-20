@@ -1,4 +1,5 @@
 import { MantineProvider } from '@mantine/core';
+import { RobotProvider } from 'contexts/RobotContext';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { ReactQueryDevtools } from 'react-query/devtools';
 import { BrowserRouter } from 'react-router-dom';
@@ -13,7 +14,9 @@ const App = () => {
     <QueryClientProvider client={queryClient}>
       <MantineProvider theme={theme} withGlobalStyles withNormalizeCSS>
         <BrowserRouter>
-          <Router />
+          <RobotProvider>
+            <Router />
+          </RobotProvider>
         </BrowserRouter>
       </MantineProvider>
 

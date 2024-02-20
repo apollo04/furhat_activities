@@ -9,6 +9,7 @@ import {
   Stack,
 } from '@mantine/core';
 import { useForm } from '@mantine/form';
+import { useRobot } from 'contexts/RobotContext';
 
 interface FormValues {
   ip: string;
@@ -18,15 +19,15 @@ interface FormValues {
 interface DrawerConnectToRobotProps
   extends Pick<DrawerProps, 'opened' | 'onClose'> {
   title: string;
-  handleSetRobotInfo: (robotInfo: { ip: string; name: string }) => void;
 }
 
 const DrawerConnectToRobot = ({
   opened,
   onClose,
   title,
-  handleSetRobotInfo,
 }: DrawerConnectToRobotProps) => {
+  const { handleSetRobotInfo } = useRobot();
+
   const form = useForm<FormValues>({
     initialValues: {
       ip: '',
@@ -57,7 +58,7 @@ const DrawerConnectToRobot = ({
         <Stack spacing='xs'>
           <Select
             label='Робот'
-            data={['NAO', 'MIRAI', 'FURHAT']}
+            data={['NAO', 'MIRAI']}
             {...form.getInputProps('name')}
             required
           />

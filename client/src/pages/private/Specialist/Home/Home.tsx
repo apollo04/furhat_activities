@@ -13,17 +13,18 @@ import {
   Avatar,
   Center,
   Loader,
+  Box,
 } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import { useDisclosure } from '@mantine/hooks';
 import { IconCheck, IconFileAlert, IconPlus, IconX } from '@tabler/icons-react';
 import ChildrenAutocomplete from 'components/auto-completes/ChildAutocomplete';
 import EmptyState from 'components/states/EmptyState';
+import { useRobot } from 'contexts/RobotContext';
 import useCategories from 'hooks/specialist/useCategories';
 import { DynamicAutoCompleteValue } from 'types/index';
 
 import CategoryCard from './components/CategoryCard.tsx';
-import DrawerConnectToRobot from './components/DrawerConnectToRobot.tsx';
 import DrawerFeedbackWriteForm from './components/DrawerFeedbackForm.tsx';
 
 interface FormValues {
@@ -31,15 +32,12 @@ interface FormValues {
 }
 
 const Home = () => {
+  const { robotInfo } = useRobot();
   //   const [selectedAction, setSelectedAction] = useState<Action | undefined>(
   //     undefined,
   //   );
   const [seconds, setSeconds] = useState(0);
   const [isActive, setIsActive] = useState(false);
-  const [robotInfo, setRobotInfo] = useState({
-    ip: '',
-    name: '',
-  });
   const [categories, setCategories] = useState<any[]>([]);
 
   const { data, isSuccess, isLoading, isFetching, isError, error } =
@@ -54,11 +52,6 @@ const Home = () => {
   const [
     isFeedbackFormOpened,
     { close: closeFeedbackForm, open: openFeedbackForm },
-  ] = useDisclosure(false);
-
-  const [
-    isConnectToRobotOpened,
-    { close: closeConnectToRobot, open: openConnectToRobot },
   ] = useDisclosure(false);
 
   useEffect(() => {
@@ -101,11 +94,6 @@ const Home = () => {
     });
   };
 
-  // eslint-disable-next-line @typescript-eslint/no-shadow
-  const handleRobotInfoChange = (robotInfo: { ip: string; name: string }) => {
-    setRobotInfo(robotInfo);
-  };
-
   useEffect(() => {
     if (isSuccess && data?.data) {
       setCategories(data.data);
@@ -113,7 +101,7 @@ const Home = () => {
   }, [isSuccess, data?.data]);
 
   return (
-    <Stack>
+    <Stack pos='relative'>
       <Flex direction='column'>
         <Title weight={700}>Категории</Title>
         <Text color='dimmed'>Выберите категорию</Text>
@@ -124,69 +112,83 @@ const Home = () => {
       <Grid columns={10}>
         <Grid.Col sm={10} md={10}>
           <Group position='left'>
-            <Button leftIcon={<IconPlus />} onClick={openConnectToRobot}>
-              Подключитесь к роботу
-            </Button>
-
-            {robotInfo.ip && (
+            <ChildrenAutocomplete
+              placeholder='Выберите ученика'
+              value={form.values.child}
+              onChange={handleChildChange}
+              disabled={!robotInfo?.ip}
+            />
+            {!isActive && (
+              <Button
+                disabled={!robotInfo?.ip || !form.values.child.value}
+                leftIcon={<IconPlus />}
+                onClick={() => startTimer()}
+              >
+                Начать сессию
+              </Button>
+            )}
+            {isActive && (
               <>
-                <ChildrenAutocomplete
-                  placeholder='Выберите ученика'
-                  value={form.values.child}
-                  onChange={handleChildChange}
-                />
-                {!isActive && (
-                  <Button leftIcon={<IconPlus />} onClick={() => startTimer()}>
-                    Начать сессию
-                  </Button>
-                )}
-                {isActive && (
-                  <>
-                    <Button leftIcon={<IconX />} onClick={() => resetTimer()}>
-                      Завершить сессию
-                    </Button>
-                    <Button leftIcon={<IconCheck />} onClick={openFeedbackForm}>
-                      Оставить отзыв
-                    </Button>
-                    <Text>Таймер: {formatTime()}</Text>
-                  </>
-                )}
+                <Button
+                  color='red'
+                  leftIcon={<IconX />}
+                  onClick={() => resetTimer()}
+                >
+                  Завершить сессию
+                </Button>
+                <Button leftIcon={<IconCheck />} onClick={openFeedbackForm}>
+                  Оценить
+                </Button>
+                <Text>Таймер: {formatTime()}</Text>
               </>
             )}
           </Group>
         </Grid.Col>
       </Grid>
+      <Box sx={{ position: 'relative' }}>
+        {(!robotInfo?.ip || !isActive) && (
+          <Box
+            sx={{
+              position: 'absolute',
+              top: 0,
+              left: '-2.5%',
+              width: '105%',
+              height: '100%',
+              backgroundColor: 'rgba(128, 128, 128, 0.5)',
+              zIndex: 2,
+            }}
+          />
+        )}
 
-      {isLoading && isFetching && (
-        <Center mt='xl'>
-          <Loader />
-        </Center>
-      )}
+        {isLoading && isFetching && (
+          <Center mt='xl'>
+            <Loader />
+          </Center>
+        )}
 
-      {isSuccess && categories.length === 0 && (
-        <EmptyState
-          title='Не найдено категории'
-          description='Нет категории для отображения.'
-        />
-      )}
+        {isSuccess && categories.length === 0 && (
+          <EmptyState
+            title='Не найдено категории'
+            description='Нет категории для отображения.'
+          />
+        )}
 
-      {isError && (
-        <EmptyState
-          mt='xl'
-          title='Error'
-          description={
-            error?.response?.data.message ||
-            'Что то пошло не так, попробуйте позже.'
-          }
-          Icon={
-            <Avatar radius='100%' size='xl' variant='light' color='red'>
-              <IconFileAlert size={25} />
-            </Avatar>
-          }
-        />
-      )}
+        {isError && (
+          <EmptyState
+            mt='xl'
+            title='Error'
+            description={
+              error?.response?.data.message ||
+              'Что то пошло не так, попробуйте позже.'
+            }
+            Icon={
+              <Avatar radius='100%' size='xl' variant='light' color='red'>
+                <IconFileAlert size={25} />
+              </Avatar>
+            }
+          />
+        )}
 
-      {isActive && (
         <SimpleGrid
           mt='xl'
           spacing='lg'
@@ -195,7 +197,7 @@ const Home = () => {
             { minWidth: 'md', cols: 3 },
             { minWidth: 'lg', cols: 4 },
           ]}
-          sx={{ position: 'relative' }}
+          sx={{ position: 'relative', zIndex: 1 }}
         >
           {categories.map((action) => (
             <CategoryCard
@@ -206,20 +208,13 @@ const Home = () => {
             />
           ))}
         </SimpleGrid>
-      )}
+      </Box>
 
       <DrawerFeedbackWriteForm
         childId={form.values.child.value}
         opened={isFeedbackFormOpened}
         onClose={closeFeedbackForm}
-        title='Оставить отзыв'
-      />
-
-      <DrawerConnectToRobot
-        handleSetRobotInfo={handleRobotInfoChange}
-        opened={isConnectToRobotOpened}
-        onClose={closeConnectToRobot}
-        title='Подключитесь к роботу'
+        title='Оставить оценку'
       />
     </Stack>
   );

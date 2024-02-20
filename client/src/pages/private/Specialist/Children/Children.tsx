@@ -112,8 +112,8 @@ const Children = () => {
   return (
     <Stack>
       <Flex direction='column'>
-        <Title weight={700}>Ученики</Title>
-        <Text color='dimmed'>Информация об учениках</Text>
+        <Title weight={700}>Дети</Title>
+        <Text color='dimmed'>Информация об Детях</Text>
       </Flex>
 
       <Divider my='md' />
@@ -122,7 +122,7 @@ const Children = () => {
         <Grid.Col sm={10} md={5}>
           <TextInput
             icon={<IconSearch size={theme.fontSizes.lg} />}
-            placeholder='Найти ученика'
+            placeholder='Найти ребенка'
             value={search}
             onChange={(event) => setSearch(event.currentTarget.value)}
           />
@@ -133,7 +133,7 @@ const Children = () => {
               leftIcon={<IconPlus size={theme.fontSizes.lg} />}
               onClick={openCreationForm}
             >
-              Добавить ученика
+              Добавить ребенка
             </Button>
           </Group>
         </Grid.Col>
@@ -164,8 +164,8 @@ const Children = () => {
               {isSuccess && ChildsData.length === 0 && (
                 <EmptyState
                   mt='xl'
-                  title='Не найдено учеников'
-                  description='Нет учеников для отображения.'
+                  title='Не найдено детей'
+                  description='Нет детей для отображения.'
                   Icon={
                     <Avatar
                       radius='100%'
@@ -186,7 +186,7 @@ const Children = () => {
       <DrawerChildWriteForm
         opened={isCreationFormOpened}
         onClose={closeCreationForm}
-        title='Добавить ученика'
+        title='Добавить ребенка'
       />
 
       <ModalDeleteChild

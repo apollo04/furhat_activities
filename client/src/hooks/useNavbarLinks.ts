@@ -18,7 +18,7 @@ const specialistItems: NavbarLink[] = [
     Icon: IconHome,
   },
   {
-    label: 'Ученики',
+    label: 'Дети',
     path: '/students',
     Icon: IconUsers,
   },

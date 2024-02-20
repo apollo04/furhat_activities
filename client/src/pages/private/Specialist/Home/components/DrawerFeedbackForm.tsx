@@ -71,12 +71,12 @@ const DrawerFeedbackForm = ({
 
       submitFeedback.mutate(resultFeedbacks, {
         onSuccess: () => {
-          showSuccessNotification('Отзыв успешно отправлен');
+          showSuccessNotification('Отзыв успешно сохранен');
           onClose();
         },
         onError: (error) => {
           showErrorNotification(
-            'Ошибка при отправке отзыва',
+            'Ошибка при сохранение отзыва',
             error.response?.data.message || error.message,
           );
         },
@@ -135,7 +135,7 @@ const DrawerFeedbackForm = ({
             Отмена
           </Button>
           <Button type='submit' loading={submitFeedback.isLoading}>
-            Отправить
+            Сохранить
           </Button>
         </Group>
       </form>

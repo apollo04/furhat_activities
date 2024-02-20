@@ -7,7 +7,7 @@ module.exports = {
     'plugin:react/recommended',
     'airbnb-base',
     'airbnb-typescript/base',
-    'plugin:prettier/recommended'
+    'plugin:prettier/recommended',
   ],
   ignorePatterns: ['dist'],
   parserOptions: {
@@ -17,43 +17,52 @@ module.exports = {
     sourceType: 'module',
     // Allows for the use of imports
     ecmaFeatures: {
-      jsx: true // Allows for the parsing of JSX
-    }
+      jsx: true, // Allows for the parsing of JSX
+    },
   },
 
   rules: {
-    "prettier/prettier": [
-      "error",
+    'prettier/prettier': [
+      'error',
       {
-        "jsxSingleQuote": true,
-        "singleQuote": true
-      }
+        jsxSingleQuote: true,
+        singleQuote: true,
+      },
     ],
 
-    "react/react-in-jsx-scope": "off",
-    "camelcase": "off",
+    'react/react-in-jsx-scope': 'off',
+    camelcase: 'off',
 
-    "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
-    "import/extensions": ['error', 'ignorePackages', {
-      js: 'never',
-      jsx: 'never',
-      ts: 'never',
-      tsx: 'never'
-    }],
-    'import/order': ['error', {
-      groups: ['builtin', 'external', 'internal'],
-      pathGroups: [{
-        pattern: 'react',
-        group: 'external',
-        position: 'before'
-      }],
-      pathGroupsExcludedImportTypes: ['react'],
-      'newlines-between': 'always',
-      alphabetize: {
-        order: 'asc',
-        caseInsensitive: true
-      }
-    }]
+    'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        js: 'never',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never',
+      },
+    ],
+    'import/order': [
+      'error',
+      {
+        groups: ['builtin', 'external', 'internal'],
+        pathGroups: [
+          {
+            pattern: 'react',
+            group: 'external',
+            position: 'before',
+          },
+        ],
+        pathGroupsExcludedImportTypes: ['react'],
+        'newlines-between': 'always',
+        alphabetize: {
+          order: 'asc',
+          caseInsensitive: true,
+        },
+      },
+    ],
     // '@typescript-eslint/naming-convention': [
     //   'error',
     //   {
@@ -74,7 +83,7 @@ module.exports = {
 
   settings: {
     react: {
-      version: 'detect' // Tells eslint-plugin-react to automatically detect the version of React to use
-    }
-  }
-}
+      version: 'detect', // Tells eslint-plugin-react to automatically detect the version of React to use
+    },
+  },
+};
