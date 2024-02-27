@@ -1,49 +1,65 @@
 -
+action: Начать
+icon: povar_icons/povar.png
+file: povar_scripts/cook-startRus.py
+-
 action: Баурсак
-icon: /
+icon: povar_icons/baursak2.webp
 file: povar_scripts/baursakRus.py
 -
 action: Бешбармак
-icon: /
+icon: povar_icons/beshbarmak.webp
 file: povar_scripts/besbarmakRus.py
 -
-action: Поощрение
-ic  on: /
-file: povar_scripts/cook-encourageRus.py
+action: Жент
+icon: povar_icons/jent.webp
+file: povar_scripts/zhentRus.py
+-
+action: Коспа
+icon: povar_icons/irimshik.webp
+file: povar_scripts/kospaRus.py
+-
+action: Шелпек
+icon: povar_icons/shelpek.webp
+file: povar_scripts/shelpekRus.py
+-
+action: Наурыз Коже
+icon: povar_icons/nauryzkozhe.webp
+file: povar_scripts/nauryzkozheRus.py
 -
 action: Игра
-icon: /
+icon: povar_icons/game.png
 file: povar_scripts/cook-gameRus.py
 -
-action: Хвалить
-icon: /
-file: povar_scripts/cook-praiseRus.py
--
 action: Вопрос 1
-icon: /
+icon: povar_icons/question.webp
 file: povar_scripts/cook-question1Rus.py
 -
 action: Вопрос 2
-icon: /
+icon: povar_icons/question.webp
 file: povar_scripts/cook-question2Rus.py
 -
 action: Вопрос 3
-icon: /
+icon: povar_icons/question.webp
 file: povar_scripts/cook-question3Rus.py
 -
 action: Вопрос 4
-icon: /
+icon: povar_icons/question.webp
 file: povar_scripts/cook-question4Rus.py
 -
 action: Вопрос 5
-icon: /
+icon: povar_icons/question.webp
 file: povar_scripts/cook-question5Rus.py
 -
 action: Вопрос 6
-icon: /
+icon: povar_icons/question.webp
 file: povar_scripts/cook-question6Rus.py
 -
-action: Начать
-icon: /
-file: povar_scripts/cook-startRus.py
+action: Похвала
+icon: povar_icons/success.webp
+file: povar_scripts/cook-praiseRus.py
+-
+action: Поддержка
+icon: povar_icons/support.webp
+file: povar_scripts/cook-encourageKaz.py
 -

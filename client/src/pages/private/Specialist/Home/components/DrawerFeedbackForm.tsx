@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'react';
+
 import {
   Button,
   Drawer,
@@ -7,6 +9,7 @@ import {
   Stack,
   Title,
   Text,
+  Select,
 } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import useSubmitFeedback from 'hooks/specialist/useSubmitFeedback';
@@ -15,61 +18,51 @@ import {
   showErrorNotification,
 } from 'utils/notifications';
 
-interface FormValues {
-  feedbacks: { [x: string]: number }[];
-}
-
 interface DrawerFeedbackFormProps
   extends Pick<DrawerProps, 'opened' | 'onClose'> {
+  categories: any[];
   childId: string;
   title: string;
+  isActive: boolean;
 }
 
-const FEEDBACKS: string[] = [
-  'Следование указаням робота',
-  'Знание арифметики',
-  'Умение читать',
-  'Планеты',
-  'Профессии',
-  'География',
-  'Еда',
-  'Животные',
-  'Супергерои',
-  'Праздники и традиции',
-  'Обьединение предметов по их свойствам',
-  'Составление фраз и предложений',
-  'Английский',
-];
+interface FormValues {
+  category: string;
+}
 
 const DrawerFeedbackForm = ({
+  categories,
   opened,
   onClose,
   childId,
+  isActive,
   title,
 }: DrawerFeedbackFormProps) => {
+  const submitFeedback = useSubmitFeedback(childId);
+  const [feedbacks, setFeedbacks] = useState<any>({});
+  const [currentFeedback, setCurrentFeedback] = useState<any>({});
+
   const form = useForm<FormValues>({
     initialValues: {
-      feedbacks: FEEDBACKS.map((feedback) => ({ [feedback]: 0 })),
+      category: '',
     },
   });
-  const submitFeedback = useSubmitFeedback(childId);
 
-  const handleResetAndClose = () => {
-    form.reset();
+  const handleClose = () => {
     onClose();
   };
 
-  const handleSubmit = (formValues: FormValues) => {
-    if (childId) {
-      const resultFeedbacks = formValues.feedbacks.map((feedback) => {
-        const key = Object.keys(feedback)[0];
-        return {
-          feedback_name: key,
-          grade: feedback[key],
-        };
-      });
+  const handleFullReset = () => {
+    form.reset();
+    setFeedbacks({});
+    setCurrentFeedback({});
+  };
 
-      submitFeedback.mutate(resultFeedbacks, {
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+
+    if (childId) {
+      submitFeedback.mutate(feedbacks, {
         onSuccess: () => {
           showSuccessNotification('Отзыв успешно сохранен');
           onClose();
@@ -84,25 +77,80 @@ const DrawerFeedbackForm = ({
     }
   };
 
-  const handleFeedbackChange = (feedback: string, value: number) => {
-    form.setFieldValue('feedbacks', [
-      ...form.values.feedbacks.filter((f) => !f[feedback]),
-      { [feedback]: value },
-    ]);
+  const handleCategory = (categoryItem: any, newFeedback: any = null) => {
+    if (feedbacks[categoryItem]) {
+      setFeedbacks((prev: any) => ({
+        ...prev,
+        [categoryItem]: {
+          ...prev[categoryItem],
+          ...(newFeedback || currentFeedback),
+        },
+      }));
+    } else {
+      setFeedbacks((prev: any) => ({
+        ...prev,
+        [categoryItem]: {},
+      }));
+    }
+    setCurrentFeedback({});
   };
+
+  const handleFeedbackChange = (feedback: string, value: number) => {
+    setCurrentFeedback((prev: any) => ({
+      ...prev,
+      [feedback]: value,
+    }));
+
+    handleCategory(form.values.category, {
+      [feedback]: value,
+    });
+  };
+
+  const handleCategoryChange = (item: string) => {
+    form.setFieldValue('category', item);
+    handleCategory(item);
+  };
+
+  const currentCategory = categories.find(
+    (category) => category.category === form.values.category,
+  );
+
+  useEffect(() => {
+    if (currentCategory) {
+      if (feedbacks[currentCategory.category]) {
+        setCurrentFeedback(feedbacks[currentCategory.category]);
+      } else {
+        setCurrentFeedback([]);
+      }
+    }
+  }, [currentCategory]);
+
+  useEffect(() => {
+    if (isActive) {
+      handleFullReset();
+    }
+  }, [isActive]);
 
   return (
     <Drawer
       opened={opened}
-      onClose={handleResetAndClose}
+      onClose={handleClose}
       title={<Title order={3}>{title}</Title>}
       sx={{ position: 'relative' }}
     >
-      <form onSubmit={form.onSubmit(handleSubmit)}>
+      <form onSubmit={handleSubmit}>
         <Stack spacing='xl'>
-          {FEEDBACKS.map((feedback) => (
-            <Stack key={feedback} spacing='xs'>
-              <Text>{feedback}</Text>
+          <Select
+            label='Выберите категорию'
+            placeholder='Выберите категорию'
+            data={categories.map((category: any) => category.category)}
+            value={form.values.category}
+            onChange={handleCategoryChange}
+          />
+
+          {(currentCategory?.grade_names || []).map((grade_name: any) => (
+            <Stack key={grade_name} spacing='xs'>
+              <Text>{grade_name}</Text>
               <Slider
                 color='blue'
                 step={10}
@@ -120,7 +168,8 @@ const DrawerFeedbackForm = ({
                   { value: 100, label: '10' },
                 ]}
                 name='feedbacks'
-                onChange={(value) => handleFeedbackChange(feedback, value)}
+                value={feedbacks[currentCategory.category][grade_name] || 0}
+                onChange={(value) => handleFeedbackChange(grade_name, value)}
               />
             </Stack>
           ))}
@@ -129,7 +178,7 @@ const DrawerFeedbackForm = ({
         <Group position='right' mt='xl'>
           <Button
             variant='subtle'
-            onClick={handleResetAndClose}
+            onClick={handleClose}
             loading={submitFeedback.isLoading}
           >
             Отмена

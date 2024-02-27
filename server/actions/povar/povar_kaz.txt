@@ -1,53 +1,66 @@
 -
-action: Баурсак
+action: Бастау
 icon: povar_icons/povar.png
+file: povar_scripts/cook-startKaz.py
+-
+action: Баурсак
+icon: povar_icons/baursak2.webp
 file: povar_scripts/baursakKaz.py
 -
-action: Баурсак 2
-icon: /
-file: povar_scripts/baursakKaz2.py
--
 action: Бешбармак
-icon: /
+icon: povar_icons/beshbarmak.webp
 file: povar_scripts/besbarmakKaz.py
 -
-action: Ынталандыру
-icon: /
-file: povar_scripts/cook-encourageKaz.py
+action: Наурыз Коже
+icon: povar_icons/nauryzkozhe.webp
+file: povar_scripts/nauryzkozheKaz.py
+-
+action: Коспа
+icon: povar_icons/irimshik.webp
+file: povar_scripts/kospaKaz.py
+-
+action: Шелпек
+icon: povar_icons/shelpek.webp
+file: povar_scripts/shelpekKaz.py
+-
+action: Жент
+icon: povar_icons/jent.webp
+file: povar_scripts/zhentKaz.py
 -
 action: Ойын
-icon: /
+icon: povar_icons/game.png
 file: povar_scripts/cook-gameKaz.py
 -
-action: Мақтау
-icon: /
-file: povar_scripts/cook-praiseKaz.py
--
 action: Cұрақ 1
-icon: /
+icon: povar_icons/question.webp
 file: povar_scripts/cook-question1Kaz.py
 -
 action: Cұрақ 2
-icon: /
+icon: povar_icons/question.webp
 file: povar_scripts/cook-question2Kaz.py
 -
 action: Cұрақ 3
-icon: /
+icon: povar_icons/question.webp
 file: povar_scripts/cook-question3Kaz.py
 -
 action: Cұрақ 4
-icon: /
+icon: povar_icons/question.webp
 file: povar_scripts/cook-question4Kaz.py
 -
 action: Cұрақ 5
-icon: /
+icon: povar_icons/question.webp
 file: povar_scripts/cook-question5Kaz.py
 -
 action: Cұрақ 6
-icon: /
+icon: povar_icons/question.webp
 file: povar_scripts/cook-question6Kaz.py
 -
-action: Бастау
-icon: /
-file: povar_scripts/cook-startKaz.py
+action: Мақтау
+icon: povar_icons/success.webp
+file: povar_scripts/cook-praiseKaz.py
+povar_scripts/cook-question5Kaz.py
+-
+action: Қолдау
+icon: povar_icons/support.webp
+file: povar_scripts/cook-encourageKaz.py
 -

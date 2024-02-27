@@ -69,26 +69,14 @@ def delete_child(child_id: str):
         return child
     else:
         raise HTTPException(status_code=404, detail="Child not found")
-    
-class Feedback(BaseModel):
-    feedback_name: str
-    grade: int
 
 @router.post("/{child_id}/add_feedback")
-def add_feedback_to_child(child_id: str, feedback_data: list[Feedback]):
+def add_feedback_to_child(child_id: str, feedback_data: dict[str, dict[str, int]]):
     child = get_child_by_id(child_id)
     if child:
-        all_feedback = []
-        for feedback in feedback_data:
-            action = {
-                      "feedback_name": feedback.feedback_name, 
-                      "grade": feedback.grade, 
-                     }
-            all_feedback.append(action)
-
         all_feedback = {"id": str(uuid.uuid4()), 
                         "date": datetime.now().isoformat(), 
-                        "feedback": all_feedback
+                        "feedback": feedback_data
                        }        
         child["feedbacks"].append(all_feedback)
         save_to_json()

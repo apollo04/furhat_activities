@@ -1,0 +1,48 @@
+-
+action: Начвть 
+icon: doctor_icons/doctor.png
+file: doctor_scripts/IntroRUS.py
+-
+action: Стетоскоп 
+icon: doctor_icons/stetoscope.webp
+file: doctor_scripts/StetoskopRUS.py
+-
+action: Шприц 
+icon: doctor_icons/needle.webp
+file: doctor_scripts/ShpritzRUS.py
+-
+action: Термометр 
+icon: doctor_icons/thermometer.webp
+file: doctor_scripts/ThermometeRUS.py
+-
+action: Шпатель 
+icon: doctor_icons/spatula.webp
+file: doctor_scripts/ShpatelRUS.py
+-
+action: Маска 
+icon: doctor_icons/medicalmask.webp
+file: doctor_scripts/MaskaRUS.py
+-
+action: Вопрос 1
+icon: doctor_icons/question.webp
+file: doctor_scripts/QuestionsRUS1.py
+-
+action: Вопрос 2
+icon: doctor_icons/question.webp
+file: doctor_scripts/QuestionsRUS2.py
+- 
+action: Вопрос 3
+icon: doctor_icons/question.webp
+file: doctor_scripts/QuestionsRUS3.py
+- 
+action: Вопрос 4
+icon: doctor_icons/question.webp
+file: doctor_scripts/QuestionsRUS4.py
+- 
+action: Вопрос 5
+icon: doctor_icons/question.webp
+file: doctor_scripts/QuestionsRUS5.py
+-
+action: Прощание
+icon: doctor_icons/goodbye.webp
+file: doctor_scripts/OutroRUS.py

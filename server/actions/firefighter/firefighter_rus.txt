@@ -1,0 +1,41 @@
+-
+action: Начать 
+icon: firefighter_icons/firefighter.webp
+file: firefighter_scripts/IntroRUS.py
+-
+action: Пожарная машина  
+icon: firefighter_icons/firetruck.png
+file: firefighter_scripts/FirefighterCarRUS.py
+-
+action: Форма 
+icon: firefighter_icons/firefighter.webp
+file: firefighter_scripts/FormaRUS.py
+-
+action: Топор 
+icon: firefighter_icons/axe.webp
+file: firefighter_scripts/ToporRUS.py
+-
+action: Рация 
+icon: firefighter_icons/walkietalkie.webp
+file: firefighter_scripts/RaciaRUS.py
+-
+action: Вопрос 1
+icon: firefighter_icons/axe.webp
+file: firefighter_scripts/Questions1RUS.py
+-
+action: Вопрос 2
+icon: firefighter_icons/axe.webp
+file: firefighter_scripts/Questions2RUS.py
+-
+action: Вопрос 3
+icon: firefighter_icons/axe.webp
+file: firefighter_scripts/Questions3RUS.py
+-
+action: Похвала 
+icon: firefighter_icons/success.webp
+file: firefighter_scripts/PraiseCorrectRUS.py
+-
+action: Поддержка 
+icon: firefighter_icons/support.webp
+file: firefighter_scripts/PraiseIncorrectRUS.py
+-

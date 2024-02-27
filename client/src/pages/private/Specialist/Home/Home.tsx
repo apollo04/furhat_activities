@@ -33,9 +33,6 @@ interface FormValues {
 
 const Home = () => {
   const { robotInfo } = useRobot();
-  //   const [selectedAction, setSelectedAction] = useState<Action | undefined>(
-  //     undefined,
-  //   );
   const [seconds, setSeconds] = useState(0);
   const [isActive, setIsActive] = useState(false);
   const [categories, setCategories] = useState<any[]>([]);
@@ -116,7 +113,7 @@ const Home = () => {
               placeholder='Выберите ученика'
               value={form.values.child}
               onChange={handleChildChange}
-              disabled={!robotInfo?.ip}
+              disabled={!robotInfo?.ip || isActive}
             />
             {!isActive && (
               <Button
@@ -210,12 +207,16 @@ const Home = () => {
         </SimpleGrid>
       </Box>
 
-      <DrawerFeedbackWriteForm
-        childId={form.values.child.value}
-        opened={isFeedbackFormOpened}
-        onClose={closeFeedbackForm}
-        title='Оставить оценку'
-      />
+      {categories && (
+        <DrawerFeedbackWriteForm
+          categories={categories}
+          childId={form.values.child.value}
+          isActive={isActive}
+          opened={isFeedbackFormOpened}
+          onClose={closeFeedbackForm}
+          title='Оставить оценку'
+        />
+      )}
     </Stack>
   );
 };

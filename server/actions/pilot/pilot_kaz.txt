@@ -1,0 +1,45 @@
+-
+action: Бастау 
+icon: pilot_icons/pilot.png
+file: pilot_scripts/IntroKAZ.py
+-
+action: Самолет 
+icon: pilot_icons/airplane.webp
+file: pilot_scripts/PlaneKAZ.py
+
+action: Вертолет 
+icon: pilot_icons/helicopter.webp
+file: pilot_scripts/HelicopterKAZ.py
+-
+action: Алтиметр 
+icon: pilot_icons/altimeter.webp
+file: pilot_scripts/AlitmeterKAZ.py
+-
+action: Наушники 
+icon: pilot_icons/headset.webp
+file: pilot_scripts/HeadphonesKAZ.py
+-
+action: Компас 
+icon: pilot_icons/compass.webp
+file: pilot_scripts/CompassKAZ.py
+-
+action: Форма 
+icon: pilot_icons/forma.png
+file: pilot_scripts/FormaKAZ.py
+-
+action: Cұрақ 1 
+icon: pilot_icons/question.webp
+file: pilot_scripts/QuestionsKAZ.py
+-
+action: Cұрақ 2
+icon: pilot_icons/question.webp
+file: pilot_scripts/Questions1KAZ.py
+-
+action: Мақтау 
+icon: pilot_icons/success.webp
+file: pilot_scripts/PraiseCorrectKAZ.py
+-
+action: Қолдау 
+icon: pilot_icons/support.webp
+file: pilot_scripts/PraiseIncorrectKAZ.py
+-

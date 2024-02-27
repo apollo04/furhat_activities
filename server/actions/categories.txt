@@ -4,74 +4,33 @@ icon: category_icons/povar.png
 folder: povar/
 file_kaz: povar/povar_kaz.txt
 file_rus: povar/povar_rus.txt
-- 
-category: Занятия с логопедом
-icon: category_icons/logoped.png
-file_kaz: logoped/logoped_kaz.txt
-file_rus: logoped/logoped_rus.txt
+grade_names: povar/povar_grade_names.txt
 - 
 category: На приёме у врача
 icon: category_icons/doctor.png
+folder: doctor/
 file_kaz: doctor/doctor_kaz.txt
 file_rus: doctor/doctor_rus.txt
+grade_names: povar/povar_grade_names.txt
 -
-category: Строитель
-icon: category_icons/builder.png
-file_kaz: builder/builder_kaz.txt
-file_rus: builder/builder_rus.txt
-- 
 category: Полицейский
 icon: category_icons/policeman.png
+folder: policeman/
 file_kaz: policeman/policeman_kaz.txt
 file_rus: policeman/policeman_rus.txt
-- 
-category: Учитель английского языка
-icon: category_icons/englishteacher.png
-file_kaz: englishteacher/englishteacher_kaz.txt
-file_rus: englishteacher/englishteacher_rus.txt
-- 
-category: Математика
-icon: category_icons/mathematics.png
-file_kaz: mathematics/mathematics_kaz.txt
-file_rus: mathematics/mathematics_rus.txt
-- 
-category: География
-icon: category_icons/geography.png
-file_kaz: geography/geography_kaz.txt
-file_rus: geography/geography_rus.txt
-- 
-category: Животные
-icon: category_icons/animals.png
-file_kaz: animals/animals_kaz.txt
-file_rus: animals/animals_rus.txt
+grade_names: povar/povar_grade_names.txt
 - 
 category: Пилот
 icon: category_icons/pilot.png
+folder: pilot/
 file_kaz: pilot/pilot_kaz.txt
 file_rus: pilot/pilot_rus.txt
+grade_names: povar/povar_grade_names.txt
 - 
-category: Праздники
-icon: category_icons/holidays.png
-file_kaz: holidays/holidays_kaz.txt
-file_rus: holidays/holidays_rus.txt
+category: Пожарный
+icon: category_icons/firefighter.webp
+folder: firefighter/
+file_kaz: firefighter/firefighter_kaz.txt
+file_rus: firefighter/firefighter_rus.txt
+grade_names: povar/povar_grade_names.txt
 - 
-category: Супергерои
-icon: category_icons/superhero.png
-file_kaz: superhero/superhero_kaz.txt
-file_rus: superhero/superhero_rus.txt
-- 
-category: Графический диктант
-icon: category_icons/graphicdictation.png
-file_kaz: graphicdictation/graphicdictation_kaz.txt
-file_rus: graphicdictation/graphicdictation_rus.txt
-- 
-category: Учимся читать
-icon: category_icons/learningtoread.png
-file_kaz: learningtoread/learningtoread_kaz.txt
-file_rus: learningtoread/learningtoread_rus.txt
-- 
-category: Исторические личности
-icon: category_icons/historicalfigures.png
-file_kaz: historicalfigures/historicalfigures_kaz.txt
-file_rus: historicalfigures/historicalfigures_rus.txt
-

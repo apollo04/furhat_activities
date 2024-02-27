@@ -1,0 +1,41 @@
+-
+action: Бастау 
+icon: firefighter_icons/firefighter.webp
+file: firefighter_scripts/IntroKAZ.py
+-
+action: Пожарная машина  
+icon: firefighter_icons/firetruck.png
+file: firefighter_scripts/FirefighterCarKAZ.py
+-
+action: Форма 
+icon: firefighter_icons/firefighter.webp
+file: firefighter_scripts/FormaKAZ.py
+-
+action: Топор 
+icon: firefighter_icons/axe.webp
+file: firefighter_scripts/ToporKAZ.py
+-
+action: Рация 
+icon: firefighter_icons/walkietalkie.webp
+file: firefighter_scripts/RaciaKAZ.py
+-
+action: Cұрақ 1
+icon: firefighter_icons/axe.webp
+file: firefighter_scripts/Questions1KAZ.py
+-
+action: Cұрақ 2
+icon: firefighter_icons/axe.webp
+file: firefighter_scripts/Questions2KAZ.py
+-
+action: Cұрақ 3
+icon: firefighter_icons/axe.webp
+file: firefighter_scripts/Questions3KAZ.py
+-
+action: Мақтау 
+icon: firefighter_icons/success.webp
+file: firefighter_scripts/PraiseCorrectKAZ.py
+-
+action: Қолдау 
+icon: firefighter_icons/support.webp
+file: firefighter_scripts/PraiseIncorrectKAZ.py
+-

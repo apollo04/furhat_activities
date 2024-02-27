@@ -12,8 +12,6 @@ def read_actions_file(current_folder, file_path):
     current_action = None
     current_file = None
 
-    print(current_folder, file_path)
-
     with open("./actions/" + file_path, 'r', encoding='utf-8') as file:
         lines = file.readlines()
 
@@ -33,6 +31,17 @@ def read_actions_file(current_folder, file_path):
 
     return actions_list
 
+def read_grade_names(file_path):
+    grade_names = []
+
+    with open(file_path, 'r', encoding='utf-8') as file:
+        lines = file.readlines()
+
+    for line in lines:
+        grade_names.append(line.strip())
+
+    return grade_names
+
 def read_categories(file_path):
     categories = []
 
@@ -44,6 +53,7 @@ def read_categories(file_path):
     current_file_rus = None
     current_icon_path = None
     current_folder = None
+    current_grade_names = None
 
     for line in lines:
         if line.startswith('category:'):
@@ -61,7 +71,17 @@ def read_categories(file_path):
         elif line.startswith('file_rus:'):
             current_file_rus = line.split(':')[1].strip()
             actions[current_category]["actions_rus"] = read_actions_file(current_folder, current_file_rus)
-            categories.append({'category': current_category, 'file_kaz': current_file_kaz, 'file_rus': current_file_rus, 'icon': current_icon_path, 'folder': current_folder})
+        elif line.startswith('grade_names:'):
+            current_grade_names = line.split(':')[1].strip()
+            current_grade_names = read_grade_names("./actions/" + current_grade_names)
+            actions[current_category]["grade_names"] = current_grade_names
+            categories.append({'category': current_category, 
+                               'file_kaz': current_file_kaz, 
+                               'file_rus': current_file_rus, 
+                               'icon': current_icon_path, 
+                               'folder': current_folder, 
+                               'grade_names': current_grade_names
+                               })
 
     return categories
 

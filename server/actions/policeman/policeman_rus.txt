@@ -1,0 +1,33 @@
+-
+action: Начать
+icon: policeman_icons/policeman.png
+file: policeman_scripts/policeman-startRus.py
+- 
+action: Жетон
+icon: policeman_icons/jetton.webp
+file: policeman_scripts/zhetonRus.py
+- 
+action: Жезл
+icon: policeman_icons/rod.webp
+file: policeman_scripts/zhezlRus.py
+- 
+action: Светофор
+icon: policeman_icons/trafficlights.jpeg
+file: policeman_scripts/trafficlightsRus.py
+- 
+action: Рация
+icon: policeman_icons/walkietalkie.webp
+file: policeman_scripts/raciyaRus.py
+- 
+action: ПДД
+icon: policeman_icons/pdd.jpeg
+file: policeman_scripts/PDDRus.py
+- 
+action: Свисток
+icon: policeman_icons/whistle.webp
+file: policeman_scripts/svistokRus.py
+-
+action: Игра c Рулем
+icon: policeman_icons/steeringwheel.webp
+file: policeman_scripts/steeringWheelRus.py
+-
