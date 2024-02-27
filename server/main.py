@@ -3,6 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from routers.children import router as children
 from routers.categories import router as categories
+from routers.furhat import router as furhat
 
 app = FastAPI()
 
@@ -16,3 +17,4 @@ app.add_middleware(
 
 app.include_router(children, prefix="/children", tags=["children"])
 app.include_router(categories, prefix="/categories", tags=["categories"])
+app.include_router(furhat, prefix="/furhat", tags=["furhat"])

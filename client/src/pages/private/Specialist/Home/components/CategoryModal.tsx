@@ -5,13 +5,19 @@ import {
   Loader,
   Avatar,
   SegmentedControl,
-  Flex,
   Grid,
   Modal,
+  Button,
+  Flex,
 } from '@mantine/core';
-import { IconFileAlert } from '@tabler/icons-react';
+import { IconFileAlert, IconHandStop } from '@tabler/icons-react';
 import EmptyState from 'components/states/EmptyState';
+import useStopFurhat from 'hooks/furhat/useStopFurhat';
 import useActions from 'hooks/specialist/useActions';
+import {
+  showErrorNotification,
+  showSuccessNotification,
+} from 'utils/notifications';
 
 import ActionCard from './ActionCard.tsx';
 
@@ -33,9 +39,11 @@ const CategoryModal = ({
   category,
   robotInfo,
 }: CategoryModalProps): JSX.Element => {
+  const stopFurhatMutation = useStopFurhat(robotInfo!.ip);
   const [language, setLanguage] = useState('kk');
   const [actions, setActions] = useState<any[]>([]);
   const [categoryData, setCategoryData] = useState<any>({});
+
   useEffect(() => {
     if (language === 'kk' && categoryData?.actions_kaz) {
       setActions(categoryData?.actions_kaz);
@@ -52,6 +60,20 @@ const CategoryModal = ({
       setCategoryData(data.data);
     }
   }, [isSuccess, data?.data, opened]);
+
+  const handleStopFurhat = () => {
+    stopFurhatMutation.mutate(null, {
+      onSuccess: () => {
+        showSuccessNotification('Робот успешно остановлен');
+      },
+      onError: (robot_error) => {
+        showErrorNotification(
+          'Ошибка при остановке робота',
+          robot_error.response?.data.message || robot_error.message,
+        );
+      },
+    });
+  };
 
   return (
     <>
@@ -90,9 +112,22 @@ const CategoryModal = ({
               { label: 'Русский', value: 'ru' },
             ]}
           />
-          <p style={{ fontSize: '24px', fontWeight: '600' }}>
-            {category.charAt(0).toUpperCase() + category.slice(1)}
-          </p>
+
+          <Flex justify='space-between' align='center'>
+            <p style={{ fontSize: '24px', fontWeight: '600' }}>
+              {category.charAt(0).toUpperCase() + category.slice(1)}
+            </p>
+
+            <Button
+              leftIcon={<IconHandStop />}
+              onClick={handleStopFurhat}
+              disabled={stopFurhatMutation.isLoading}
+              color='red'
+            >
+              Экстренный Стоп
+            </Button>
+          </Flex>
+
           <Grid
             style={{
               gap: '1.5rem',
