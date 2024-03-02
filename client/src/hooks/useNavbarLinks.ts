@@ -3,7 +3,8 @@ import {
   TablerIconsProps,
   IconHome,
   IconUsers,
-} from '@tabler/icons-react';
+  IconSettings,
+} from "@tabler/icons-react";
 
 type NavbarLink = {
   label: string;
@@ -13,20 +14,20 @@ type NavbarLink = {
 
 const specialistItems: NavbarLink[] = [
   {
-    label: 'Главная страница',
-    path: '/',
+    label: "Главная",
+    path: "/",
     Icon: IconHome,
   },
   {
-    label: 'Дети',
-    path: '/students',
+    label: "Дети",
+    path: "/students",
     Icon: IconUsers,
   },
-  // {
-  //   label: 'Settings',
-  //   path: '/settings',
-  //   Icon: IconSettings,
-  // },
+  {
+    label: "Настройки",
+    path: "/settings",
+    Icon: IconSettings,
+  },
 ];
 
 export default function useNavbarLinks(): NavbarLink[] {

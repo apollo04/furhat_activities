@@ -1,0 +1,10 @@
+{
+  "categories": "Категория",
+  "chooseCategory": "Категорияны таңдау",
+  "start": "Бастау",
+  "chooseChild": "Баланы таңдаңыз",
+  "end": "Бітіру",
+  "giveFeedback": "Баға беру",
+  "error": "Қате орын алды.",
+  "categoriesNotFound": "Категория табылмады."
+}

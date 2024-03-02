@@ -1,0 +1,21 @@
+{
+  "title": "Children",
+  "subTitle": "Information about children",
+  "search": "Find a child",
+  "addChild": "Add a child",
+  "firstName": "Name",
+  "lastName": "Last name",
+  "age": "Age",
+  "gender": "Gender",
+  "action": "Action",
+  "add": "Add",
+  "cancel": "Cancel",
+  "delete": "Delete",
+  "success": "Child successfully added",
+  "error": "An error occurred.",
+  "noChildren": "Not found",
+  "noChildrenDescription": "No children found to show.",
+  "male": "Male",
+  "female": "Female",
+  "other": "Other"
+}

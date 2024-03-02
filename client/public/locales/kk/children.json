@@ -1,0 +1,21 @@
+{
+  "title": "Балалар",
+  "subTitle": "Балаларды қосу, өзгерту және жою",
+  "search": "Іздеу",
+  "addChild": "Бала қосу",
+  "firstName": "Аты",
+  "lastName": "Тегі",
+  "age": "Жасы",
+  "gender": "Жынысы",
+  "action": "Әрекет",
+  "add": "Қосу",
+  "cancel": "Болдырмау",
+  "delete": "Жою",
+  "success": "Бала сәтті қосылды",
+  "error": "Қате орын алды",
+  "noChildren": "Балалар жоқ",
+  "noChildrenDescription": "Балалар табылған жоқ",
+  "male": "Ұл",
+  "female": "Қыз",
+  "other": "Басқа"
+}

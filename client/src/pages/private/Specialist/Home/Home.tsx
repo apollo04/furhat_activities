@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 import {
   Title,
@@ -14,24 +14,25 @@ import {
   Center,
   Loader,
   Box,
-} from '@mantine/core';
-import { useForm } from '@mantine/form';
-import { useDisclosure } from '@mantine/hooks';
-import { IconCheck, IconFileAlert, IconPlus, IconX } from '@tabler/icons-react';
-import ChildrenAutocomplete from 'components/auto-completes/ChildAutocomplete';
-import EmptyState from 'components/states/EmptyState';
-import { useRobot } from 'contexts/RobotContext';
-import useCategories from 'hooks/specialist/useCategories';
-import { DynamicAutoCompleteValue } from 'types/index';
-
-import CategoryCard from './components/CategoryCard.tsx';
-import DrawerFeedbackWriteForm from './components/DrawerFeedbackForm.tsx';
+} from "@mantine/core";
+import { useForm } from "@mantine/form";
+import { useDisclosure } from "@mantine/hooks";
+import { IconCheck, IconFileAlert, IconPlus, IconX } from "@tabler/icons-react";
+import ChildrenAutocomplete from "components/auto-completes/ChildAutocomplete";
+import EmptyState from "components/states/EmptyState";
+import { useRobot } from "contexts/RobotContext";
+import useCategories from "hooks/specialist/useCategories";
+import { DynamicAutoCompleteValue } from "types/index";
+import CategoryCard from "./components/CategoryCard.tsx";
+import DrawerFeedbackWriteForm from "./components/DrawerFeedbackForm.tsx";
+import { useTranslation } from "react-i18next";
 
 interface FormValues {
   child: DynamicAutoCompleteValue;
 }
 
 const Home = () => {
+  const { t } = useTranslation("home");
   const { robotInfo } = useRobot();
   const [seconds, setSeconds] = useState(0);
   const [isActive, setIsActive] = useState(false);
@@ -42,7 +43,7 @@ const Home = () => {
 
   const form = useForm<FormValues>({
     initialValues: {
-      child: { value: '', label: '' },
+      child: { value: "", label: "" },
     },
   });
 
@@ -80,14 +81,14 @@ const Home = () => {
     const remainingSeconds = seconds % 60;
     const formattedTime = `${minutes
       .toString()
-      .padStart(2, '0')}:${remainingSeconds.toString().padStart(2, '0')}`;
+      .padStart(2, "0")}:${remainingSeconds.toString().padStart(2, "0")}`;
     return formattedTime;
   };
 
   const handleChildChange = (item: DynamicAutoCompleteValue | null) => {
-    form.setFieldValue('child', {
-      value: item?.value || '',
-      label: item?.label || '',
+    form.setFieldValue("child", {
+      value: item?.value || "",
+      label: item?.label || "",
     });
   };
 
@@ -98,19 +99,19 @@ const Home = () => {
   }, [isSuccess, data?.data]);
 
   return (
-    <Stack pos='relative'>
-      <Flex direction='column'>
-        <Title weight={700}>Категории</Title>
-        <Text color='dimmed'>Выберите категорию</Text>
+    <Stack pos="relative">
+      <Flex direction="column">
+        <Title weight={700}>{t("categories")}</Title>
+        <Text color="dimmed">{t("chooseCategory")}</Text>
       </Flex>
 
-      <Divider my='md' />
+      <Divider my="md" />
 
       <Grid columns={10}>
         <Grid.Col sm={10} md={10}>
-          <Group position='left'>
+          <Group position="left">
             <ChildrenAutocomplete
-              placeholder='Выберите ученика'
+              placeholder={t("chooseChild")}
               value={form.values.child}
               onChange={handleChildChange}
               disabled={!robotInfo?.ip || isActive}
@@ -121,20 +122,20 @@ const Home = () => {
                 leftIcon={<IconPlus />}
                 onClick={() => startTimer()}
               >
-                Начать сессию
+                {t("start")}
               </Button>
             )}
             {isActive && (
               <>
                 <Button
-                  color='red'
+                  color="red"
                   leftIcon={<IconX />}
                   onClick={() => resetTimer()}
                 >
-                  Завершить сессию
+                  {t("end")}
                 </Button>
                 <Button leftIcon={<IconCheck />} onClick={openFeedbackForm}>
-                  Оценить
+                  {t("giveFeedback")}
                 </Button>
                 <Text>Таймер: {formatTime()}</Text>
               </>
@@ -142,44 +143,41 @@ const Home = () => {
           </Group>
         </Grid.Col>
       </Grid>
-      <Box sx={{ position: 'relative' }}>
+      <Box sx={{ position: "relative" }}>
         {(!robotInfo?.ip || !isActive) && (
           <Box
             sx={{
-              position: 'absolute',
+              position: "absolute",
               top: 0,
-              left: '-2.5%',
-              width: '105%',
-              height: '100%',
-              backgroundColor: 'rgba(128, 128, 128, 0.5)',
+              left: "-2.5%",
+              width: "105%",
+              height: "100%",
+              backgroundColor: "rgba(128, 128, 128, 0.5)",
               zIndex: 2,
             }}
           />
         )}
 
         {isLoading && isFetching && (
-          <Center mt='xl'>
+          <Center mt="xl">
             <Loader />
           </Center>
         )}
 
         {isSuccess && categories.length === 0 && (
           <EmptyState
-            title='Не найдено категории'
-            description='Нет категории для отображения.'
+            title={t("categoriesNotFound")}
+            description={t("categoriesNotFound")}
           />
         )}
 
         {isError && (
           <EmptyState
-            mt='xl'
-            title='Error'
-            description={
-              error?.response?.data.message ||
-              'Что то пошло не так, попробуйте позже.'
-            }
+            mt="xl"
+            title="ERROR"
+            description={error?.response?.data.message || t("error")}
             Icon={
-              <Avatar radius='100%' size='xl' variant='light' color='red'>
+              <Avatar radius="100%" size="xl" variant="light" color="red">
                 <IconFileAlert size={25} />
               </Avatar>
             }
@@ -187,14 +185,14 @@ const Home = () => {
         )}
 
         <SimpleGrid
-          mt='xl'
-          spacing='lg'
+          mt="xl"
+          spacing="lg"
           breakpoints={[
-            { minWidth: 'sm', cols: 2 },
-            { minWidth: 'md', cols: 3 },
-            { minWidth: 'lg', cols: 4 },
+            { minWidth: "sm", cols: 2 },
+            { minWidth: "md", cols: 3 },
+            { minWidth: "lg", cols: 4 },
           ]}
-          sx={{ position: 'relative', zIndex: 1 }}
+          sx={{ position: "relative", zIndex: 1 }}
         >
           {categories.map((action) => (
             <CategoryCard
@@ -214,7 +212,7 @@ const Home = () => {
           isActive={isActive}
           opened={isFeedbackFormOpened}
           onClose={closeFeedbackForm}
-          title='Оставить оценку'
+          title={t("giveFeedback")}
         />
       )}
     </Stack>

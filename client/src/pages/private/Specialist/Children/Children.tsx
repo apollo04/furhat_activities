@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 import {
   Title,
@@ -15,32 +15,33 @@ import {
   Button,
   ActionIcon,
   Tooltip,
-} from '@mantine/core';
-import { useDisclosure } from '@mantine/hooks';
+} from "@mantine/core";
+import { useDisclosure } from "@mantine/hooks";
 import {
   IconFileAlert,
   IconFileDescription,
   IconPlus,
   IconSearch,
   IconTrash,
-} from '@tabler/icons-react';
-import EmptyState from 'components/states/EmptyState';
-import Table from 'components/Table';
-import useChildren from 'hooks/children/useChildren';
-import { Child } from 'types/generated';
-
-import DrawerChildWriteForm from './components/DrawerChildWriteForm.tsx';
-import ModalDeleteChild from './components/ModalDeleteChild.tsx';
+} from "@tabler/icons-react";
+import EmptyState from "components/states/EmptyState";
+import Table from "components/Table";
+import useChildren from "hooks/children/useChildren";
+import { Child } from "types/generated";
+import { useTranslation } from "react-i18next";
+import DrawerChildWriteForm from "./components/DrawerChildWriteForm.tsx";
+import ModalDeleteChild from "./components/ModalDeleteChild.tsx";
 
 const Children = () => {
+  const { t } = useTranslation("children");
   const theme = useMantineTheme();
 
   const [ChildsData, setChildsData] = useState<Child[]>([]);
   const [selectedChild, setSelectedChild] = useState<Child | undefined>(
-    undefined,
+    undefined
   );
 
-  const [search, setSearch] = useState<string>('');
+  const [search, setSearch] = useState<string>("");
 
   const { data, isSuccess, isLoading, isFetching, isError, error } =
     useChildren();
@@ -66,31 +67,31 @@ const Children = () => {
 
   const columns = [
     {
-      Header: 'Имя',
-      accessor: 'name',
+      Header: t("firstName"),
+      accessor: "name",
     },
     {
-      Header: 'Фамилия',
-      accessor: 'surname',
+      Header: t("lastName"),
+      accessor: "surname",
     },
     {
-      Header: 'Возраст',
-      accessor: 'age',
+      Header: t("age"),
+      accessor: "age",
     },
     {
-      Header: 'Пол',
-      accessor: 'gender',
+      Header: t("gender"),
+      accessor: "gender",
     },
     {
-      Header: 'Действие',
-      name: 'action',
+      Header: t("action"),
+      name: "action",
       Cell: ({ row }: { row: { original: Child } }) => (
         <Group>
-          <Tooltip label='Удалить'>
+          <Tooltip label={t("delete")}>
             <ActionIcon
-              variant='light'
-              color='red'
-              size='lg'
+              variant="light"
+              color="red"
+              size="lg"
               onClick={() => {
                 handleOpenDeleteModal(row.original);
               }}
@@ -111,35 +112,35 @@ const Children = () => {
 
   return (
     <Stack>
-      <Flex direction='column'>
-        <Title weight={700}>Дети</Title>
-        <Text color='dimmed'>Информация об Детях</Text>
+      <Flex direction="column">
+        <Title weight={700}>{t("title")}</Title>
+        <Text color="dimmed">{t("subTitle")}</Text>
       </Flex>
 
-      <Divider my='md' />
+      <Divider my="md" />
 
       <Grid columns={10}>
         <Grid.Col sm={10} md={5}>
           <TextInput
             icon={<IconSearch size={theme.fontSizes.lg} />}
-            placeholder='Найти ребенка'
+            placeholder={t("search")}
             value={search}
             onChange={(event) => setSearch(event.currentTarget.value)}
           />
         </Grid.Col>
         <Grid.Col sm={10} md={4}>
-          <Group position='right'>
+          <Group position="right">
             <Button
               leftIcon={<IconPlus size={theme.fontSizes.lg} />}
               onClick={openCreationForm}
             >
-              Добавить ребенка
+              {t("addChild")}
             </Button>
           </Group>
         </Grid.Col>
       </Grid>
 
-      <Paper sx={{ position: 'relative' }}>
+      <Paper sx={{ position: "relative" }}>
         <Table
           data={ChildsData}
           columns={columns}
@@ -148,14 +149,11 @@ const Children = () => {
             <>
               {isError && (
                 <EmptyState
-                  mt='xl'
-                  title='Error'
-                  description={
-                    error?.response?.data.message ||
-                    'Что-то пошло не так, попробуйте позже.'
-                  }
+                  mt="xl"
+                  title="Error"
+                  description={error?.response?.data.message || t("error")}
                   Icon={
-                    <Avatar radius='100%' size='xl' variant='light' color='red'>
+                    <Avatar radius="100%" size="xl" variant="light" color="red">
                       <IconFileAlert size={25} />
                     </Avatar>
                   }
@@ -163,15 +161,15 @@ const Children = () => {
               )}
               {isSuccess && ChildsData.length === 0 && (
                 <EmptyState
-                  mt='xl'
-                  title='Не найдено детей'
-                  description='Нет детей для отображения.'
+                  mt="xl"
+                  title={t("noChildren")}
+                  description={t("noChildrenDescription")}
                   Icon={
                     <Avatar
-                      radius='100%'
-                      size='xl'
-                      variant='light'
-                      color='primary'
+                      radius="100%"
+                      size="xl"
+                      variant="light"
+                      color="primary"
                     >
                       <IconFileDescription size={25} />
                     </Avatar>
@@ -186,7 +184,7 @@ const Children = () => {
       <DrawerChildWriteForm
         opened={isCreationFormOpened}
         onClose={closeCreationForm}
-        title='Добавить ребенка'
+        title={t("addChild")}
       />
 
       <ModalDeleteChild

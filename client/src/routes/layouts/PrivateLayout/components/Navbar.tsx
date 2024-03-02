@@ -9,14 +9,15 @@ import {
   Stack,
   Title,
   useMantineTheme,
-} from '@mantine/core';
-import { useDisclosure } from '@mantine/hooks';
-import { IconPlus } from '@tabler/icons-react';
+} from "@mantine/core";
+import { useDisclosure } from "@mantine/hooks";
+import { useTranslation } from "react-i18next";
+import { IconPlus } from "@tabler/icons-react";
 // import { IconLogout } from '@tabler/icons-react';
-import useCurrentRoute from 'hooks/useCurrentRoute';
-import useNavbarLinks from 'hooks/useNavbarLinks';
-import DrawerConnectToRobot from 'pages/private/Specialist/Home/components/DrawerConnectToRobot';
-import { Link } from 'react-router-dom';
+import useCurrentRoute from "hooks/useCurrentRoute";
+import useNavbarLinks from "hooks/useNavbarLinks";
+import DrawerConnectToRobot from "pages/private/Specialist/Home/components/DrawerConnectToRobot";
+import { Link } from "react-router-dom";
 
 const useStyles = createStyles((theme) => ({
   header: {
@@ -34,36 +35,36 @@ const useStyles = createStyles((theme) => ({
   link: {
     ...theme.fn.focusStyles(),
 
-    display: 'flex',
-    alignItems: 'center',
-    textDecoration: 'none',
+    display: "flex",
+    alignItems: "center",
+    textDecoration: "none",
     fontSize: theme.fontSizes.sm,
     color: theme.colors.gray[7],
     padding: `${theme.spacing.xs} ${theme.spacing.sm}`,
     borderRadius: theme.radius.md,
     fontWeight: 500,
 
-    '&:hover': {
+    "&:hover": {
       backgroundColor: theme.colors.gray[0],
       color: theme.black,
 
-      [`& .${getStylesRef('icon')}`]: {
+      [`& .${getStylesRef("icon")}`]: {
         color: theme.black,
       },
     },
   },
 
   linkIcon: {
-    ref: getStylesRef('icon'),
+    ref: getStylesRef("icon"),
     color: theme.colors.gray[6],
     marginRight: theme.spacing.sm,
   },
 
   linkActive: {
-    '&, &:hover': {
+    "&, &:hover": {
       backgroundColor: theme.colors.green[7],
       color: theme.colors.gray[0],
-      [`& .${getStylesRef('icon')}`]: {
+      [`& .${getStylesRef("icon")}`]: {
         color: theme.white,
       },
     },
@@ -75,6 +76,7 @@ interface NavbarProps {
 }
 
 const Navbar = ({ opened }: NavbarProps) => {
+  const { t } = useTranslation("navbar");
   const { classes, cx } = useStyles();
   const theme = useMantineTheme();
 
@@ -109,23 +111,23 @@ const Navbar = ({ opened }: NavbarProps) => {
   return (
     <MantineNavbar
       width={{ md: 300 }}
-      hiddenBreakpoint='md'
+      hiddenBreakpoint="md"
       hidden={!opened}
-      p='xl'
+      p="xl"
       sx={{ boxShadow: theme.shadows.xl }}
       withBorder={false}
     >
       <MantineNavbar.Section grow>
-        <Stack pt='xl' spacing='xs'>
+        <Stack pt="xl" spacing="xs">
           <Button leftIcon={<IconPlus />} onClick={openConnectToRobot}>
-            Подключитесь к роботу
+            {t("connect")}
           </Button>
           {links}
         </Stack>
         <DrawerConnectToRobot
           opened={isConnectToRobotOpened}
           onClose={closeConnectToRobot}
-          title='Подключитесь к роботу'
+          title={t("connect")}
         />
       </MantineNavbar.Section>
 

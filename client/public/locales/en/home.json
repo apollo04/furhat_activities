@@ -1,0 +1,10 @@
+{
+  "categories": "Categories",
+  "chooseCategory": "Choose a category",
+  "start": "Start a session",
+  "chooseChild": "Choose a child",
+  "end": "End session",
+  "giveFeedback": "Give feedback",
+  "error": "Something went wrong. Please try again later.",
+  "categoriesNotFound": "No categories found."
+}

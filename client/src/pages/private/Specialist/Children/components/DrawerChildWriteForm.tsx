@@ -8,13 +8,14 @@ import {
   Stack,
   TextInput,
   Title,
-} from '@mantine/core';
-import { useForm } from '@mantine/form';
-import useCreateChild from 'hooks/children/useCreateChild';
+} from "@mantine/core";
+import { useForm } from "@mantine/form";
+import useCreateChild from "hooks/children/useCreateChild";
 import {
   showErrorNotification,
   showSuccessNotification,
-} from 'utils/notifications';
+} from "utils/notifications";
+import { useTranslation } from "react-i18next";
 
 interface FormValues {
   name: string;
@@ -24,7 +25,7 @@ interface FormValues {
 }
 
 interface DrawerFarmWriteFromProps
-  extends Pick<DrawerProps, 'opened' | 'onClose'> {
+  extends Pick<DrawerProps, "opened" | "onClose"> {
   title: string;
 }
 
@@ -33,16 +34,17 @@ const DrawerChildWriteForm = ({
   onClose,
   title,
 }: DrawerFarmWriteFromProps) => {
+  const { t } = useTranslation("children");
   const createChildMutation = useCreateChild();
 
   const nextWeekDate = new Date();
   nextWeekDate.setDate(nextWeekDate.getDate() + 7);
 
   const initialValues = {
-    name: '',
-    surname: '',
-    age: '',
-    gender: '',
+    name: "",
+    surname: "",
+    age: "",
+    gender: "",
   };
 
   const form = useForm<FormValues>({
@@ -63,14 +65,14 @@ const DrawerChildWriteForm = ({
 
     createChildMutation.mutate(createPayload, {
       onSuccess: () => {
-        showSuccessNotification('Ученик успешно создан');
+        showSuccessNotification(t("success"));
         form.reset();
         onClose();
       },
       onError: (error) => {
         showErrorNotification(
-          'Ошибка при создании ученика',
-          error.response?.data.message || error.message,
+          t("error"),
+          error.response?.data.message || error.message
         );
       },
     });
@@ -81,48 +83,48 @@ const DrawerChildWriteForm = ({
       opened={opened}
       onClose={handleResetAndClose}
       title={<Title order={3}>{title}</Title>}
-      sx={{ position: 'relative' }}
+      sx={{ position: "relative" }}
     >
       <form onSubmit={form.onSubmit(handleSubmit)}>
-        <Stack spacing='xs'>
+        <Stack spacing="xs">
           <TextInput
-            label='Имя'
-            placeholder='Имя'
-            {...form.getInputProps('name')}
+            label={t("firstName")}
+            placeholder={t("firstName")}
+            {...form.getInputProps("name")}
             required
           />
           <TextInput
-            label='Фамилия'
-            placeholder='Фамилия'
-            {...form.getInputProps('surname')}
+            label={t("lastName")}
+            placeholder={t("lastName")}
+            {...form.getInputProps("surname")}
             required
           />
           <NumberInput
-            label='Возраст'
-            placeholder='Возраст'
+            label={t("age")}
+            placeholder={t("age")}
             min={0}
             required
-            {...form.getInputProps('age')}
+            {...form.getInputProps("age")}
           />
           <Select
-            label='Пол'
-            data={['Мужской', 'Женский', 'Другой']}
-            placeholder='Пол'
-            {...form.getInputProps('gender')}
+            label={t("gender")}
+            data={[t("male"), t("female"), t("other")]}
+            placeholder={t("gender")}
+            {...form.getInputProps("gender")}
             required
           />
         </Stack>
 
-        <Group position='right' mt='lg'>
+        <Group position="right" mt="lg">
           <Button
-            variant='subtle'
+            variant="subtle"
             onClick={handleResetAndClose}
             disabled={actionButtonsDisabled}
           >
-            Отмена
+            {t("cancel")}
           </Button>
-          <Button type='submit' loading={actionButtonsDisabled}>
-            Добавить
+          <Button type="submit" loading={actionButtonsDisabled}>
+            {t("add")}
           </Button>
         </Group>
       </form>
