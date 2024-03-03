@@ -20,6 +20,7 @@ import { useDisclosure } from "@mantine/hooks";
 import {
   IconFileAlert,
   IconFileDescription,
+  IconInfoCircle,
   IconPlus,
   IconSearch,
   IconTrash,
@@ -31,7 +32,7 @@ import { Child } from "types/generated";
 import { useTranslation } from "react-i18next";
 import DrawerChildWriteForm from "./components/DrawerChildWriteForm.tsx";
 import ModalDeleteChild from "./components/ModalDeleteChild.tsx";
-
+import ModalInfoChild from "./components/ModalInfoChild.tsx";
 const Children = () => {
   const { t } = useTranslation("children");
   const theme = useMantineTheme();
@@ -56,6 +57,9 @@ const Children = () => {
     { close: closeDeleteModal, open: openDeleteModal },
   ] = useDisclosure(false);
 
+  const [isInfoModelOpened, { close: closeInfoModal, open: openInfoModal }] =
+    useDisclosure(false);
+
   const handleOpenDeleteModal = (child: Child) => {
     setSelectedChild(child);
     openDeleteModal();
@@ -63,6 +67,14 @@ const Children = () => {
   const handleCloseDeleteModal = () => {
     setSelectedChild(undefined);
     closeDeleteModal();
+  };
+  const handleOpenInfoModal = (child: Child) => {
+    setSelectedChild(child);
+    openInfoModal();
+  };
+  const handleCloseInfoModal = () => {
+    setSelectedChild(undefined);
+    closeInfoModal();
   };
 
   const columns = [
@@ -97,6 +109,18 @@ const Children = () => {
               }}
             >
               <IconTrash size={theme.fontSizes.lg} />
+            </ActionIcon>
+          </Tooltip>
+          <Tooltip label="Info">
+            <ActionIcon
+              variant="light"
+              color="blue"
+              size="lg"
+              onClick={() => {
+                handleOpenInfoModal(row.original);
+              }}
+            >
+              <IconInfoCircle size={theme.fontSizes.lg} />
             </ActionIcon>
           </Tooltip>
         </Group>
@@ -191,6 +215,11 @@ const Children = () => {
         child={selectedChild}
         opened={isDeleteModalOpened}
         onClose={handleCloseDeleteModal}
+      />
+      <ModalInfoChild
+        child={selectedChild}
+        opened={isInfoModelOpened}
+        onClose={handleCloseInfoModal}
       />
     </Stack>
   );

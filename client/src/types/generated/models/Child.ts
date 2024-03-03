@@ -2,12 +2,12 @@
 /* istanbul ignore file */
 /* tslint:disable */
 /* eslint-disable */
-
+import { Feedbacks } from "./Feedbacks";
 export type Child = {
-    id: string;
-    name: string;
-    surname: string;
-    age: string;
-    gender: string;
+  id: string;
+  name: string;
+  surname: string;
+  age: string;
+  gender: string;
+  feedbacks: Feedbacks;
 };
-  
