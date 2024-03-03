@@ -1,0 +1,24 @@
+-
+action: IntroKAZ 
+icon: logoped_icons/intro.png
+file: logoped_scripts/IntroKAZ.py
+
+-
+action: TwoWords 
+icon: logoped_icons/twowords.png
+file: logoped_scripts/TwoWords.py
+
+-
+action: ThreeWords 
+icon: logoped_icons/threewords.png
+file: logoped_scripts/ThreeWords.py
+
+-
+action: TaskKAZ 
+icon: logoped_icons/task.png
+file: logoped_scripts/TaskKAZ.py
+
+-
+action: PraiseKAZ 
+icon: logoped_icons/praise.png
+file: logoped_scripts/PraiseKAZ.py

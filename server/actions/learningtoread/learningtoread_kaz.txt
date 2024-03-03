@@ -1,0 +1,53 @@
+-
+action: StartKAZ 
+icon: learningtoread_icons/start.webp
+file: learningtoread_scripts/StartKAZ.py
+-
+action: SearchBlueLetterKAZ 
+icon: learningtoread_icons/blueletter.webp
+file: learningtoread_scripts/SearchBlueLetterKAZ.py
+-
+action: FoundBlueLetterKAZ 
+icon: learningtoread_icons/blueletter.webp
+file: learningtoread_scripts/FoundBlueLetterKAZ.py
+-
+action: SearchRedLetterKAZ 
+icon: learningtoread_icons/redletter.webp
+file: learningtoread_scripts/SearchRedLetterKAZ.py
+-
+action: FoundRedLetterKAZ 
+icon: learningtoread_icons/redletter.webp
+file: learningtoread_scripts/FoundRedLetterKAZ.py
+-
+action: MakeWordKAZ 
+icon: learningtoread_icons/words.webp
+file: learningtoread_scripts/MakeWordKAZ.py
+-
+action: ExampleKAZ 
+icon: learningtoread_icons/example.png
+file: learningtoread_scripts/ExampleKAZ.py
+-
+action: MotherKAZ 
+icon: learningtoread_icons/mother.webp
+file: learningtoread_scripts/MotherKAZ.py
+-
+action: FatherKAZ 
+icon: learningtoread_icons/father.webp
+file: learningtoread_scripts/FatherKAZ.py
+-
+action: SupportKAZ 
+icon: learningtoread_icons/support.webp
+file: learningtoread_scripts/SupportKAZ.py
+-
+action: GoodbyeKAZ 
+icon: learningtoread_icons/goodbye.webp
+file: learningtoread_scripts/GoodbyeKAZ.py
+-
+action: PraiseKAZ 
+icon: learningtoread_icons/correct.webp
+file: learningtoread_scripts/PraiseKAZ.py
+
+
+
+
+

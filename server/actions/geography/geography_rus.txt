@@ -1,0 +1,52 @@
+
+-
+action: Начать 
+icon: geography_icons/KazakhstanMap.png
+file: geography_scripts/KazakhstanMapRUS.py
+
+-
+action: Мангистау 
+icon: geography_icons/mangystau.jpeg
+file: geography_scripts/MangystauRUS.py
+
+-
+action: Алматы 
+icon: geography_icons/almaty.jpeg
+file: geography_scripts/AlmatyRUS.py
+
+-
+action: Северный Казахстан 
+icon: geography_icons/soltustik.jpeg
+file: geography_scripts/SoltustikRUS.py
+
+-
+action: Туркестан 
+icon: geography_icons/turkestan.jpeg
+file: geography_scripts/TurkestanRUS.py
+
+-
+action: Улытау 
+icon: geography_icons/ulytau.jpeg
+file: geography_scripts/UlytauRUS.py
+
+-
+action: Астана 
+icon: geography_icons/astana.jpeg
+file: geography_scripts/AstanaRUS.py
+
+-
+action: Павлодар
+icon: geography_icons/pavlodar.jpeg
+file: geography_scripts/PavlodarRUS.py
+
+-
+action: Кызылорда 
+icon: geography_icons/kyzylorda.jpeg
+file: geography_scripts/KyzylordaRUS.py
+
+-
+action: Костанай 
+icon: geography_icons/kostanay.jpeg
+file: geography_scripts/KostanayRUS.py
+
+-

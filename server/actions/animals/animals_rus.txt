@@ -1,0 +1,86 @@
+
+-
+action: Начать 
+icon: animals_icons/animals.jpg
+file: animals_scripts/AnimalsRUS.py
+
+-
+action: Слон 
+icon: animals_icons/elephant.png
+file: animals_scripts/ElephantRUS.py
+-
+action: Мышь
+icon: animals_icons/mouse.png
+file: animals_scripts/MouseRUS.py
+
+-
+action: Кошка
+icon: animals_icons/cat.png
+file: animals_scripts/CatRUS.py
+
+-
+action: Собака 
+icon: animals_icons/dog.png
+file: animals_scripts/DogRUS.py
+
+-
+action: Корова
+icon: animals_icons/cow.png
+file: animals_scripts/CowRUS.py
+
+-
+action: Лягушка 
+icon: animals_icons/frog.png
+file: animals_scripts/FrogRUS.py
+
+-
+action: Овца
+icon: animals_icons/sheep.png
+file: animals_scripts/SheepRUS.py
+
+-
+action: Лошадь 
+icon: animals_icons/horse.png
+file: animals_scripts/HorseRUS.py
+
+-
+action: Тигр 
+icon: animals_icons/tiger.png
+file: animals_scripts/TigerRUS.py
+
+-
+action: Обезьяна 
+icon: animals_icons/monkey.png
+file: animals_scripts/MonkeyRUS.py
+
+-
+action: Свинья 
+icon: animals_icons/pig.png
+file: animals_scripts/PigRUS.py
+
+-
+action: Жираф 
+icon: animals_icons/giraffe.png
+file: animals_scripts/GiraffeRUS.py
+
+-
+action: Лев 
+icon: animals_icons/lion.png
+file: animals_scripts/LionRUS.py
+
+-
+action: Зебра 
+icon: animals_icons/zebra.png
+file: animals_scripts/ZebraRUS.py
+
+-
+action: Бегемот
+icon: animals_icons/hippo.png
+file: animals_scripts/HippoRUS.py
+
+-
+action: Крокодил 
+icon: animals_icons/crocodile.png
+file: animals_scripts/CrocodileRUS.py
+
+-

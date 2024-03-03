@@ -1,0 +1,29 @@
+-
+action: Начать
+icon: superhero_icons/superher.png
+file: superhero_scripts/SuperheroesIntroRUS.py
+-
+action: Железный человек
+icon: superhero_icons/ironman.png
+file: superhero_scripts/IronmanRUS.py
+
+-
+action: Халк
+icon: superhero_icons/hulk.png
+file: superhero_scripts/HulkRUS.py
+
+-
+action: Бэтмен
+icon: superhero_icons/batman1.png
+file: superhero_scripts/BatmanRUS.py
+
+-
+
+action: Человек-паук
+icon: superhero_icons/spiderman.png
+file: superhero_scripts/SpidermanRUS.py
+ 
+-
+action: Капитан Америка
+icon: superhero_icons/camerica.png
+file: superhero_scripts/CaptainAmericaRUS.py

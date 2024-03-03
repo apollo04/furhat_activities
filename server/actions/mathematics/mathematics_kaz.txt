@@ -1,0 +1,20 @@
+
+-
+action: countingNumbersKAZ 
+icon: mathematics_icons/count.png
+file: mathematics_scripts/countingNumbersKAZ.py
+
+-
+action: comparisonKAZ 
+icon: mathematics_icons/compare.png
+file: mathematics_scripts/comparisonKAZ.py
+
+-
+action: additionKAZ 
+icon: mathematics_icons/add.png
+file: mathematics_scripts/additionKAZ.py
+
+-
+action: subtractionKAZ 
+icon: mathematics_icons/sub.png
+file: mathematics_scripts/subtractionKAZ.py

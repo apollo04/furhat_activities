@@ -1,0 +1,54 @@
+-
+action: Бастау
+icon: builder_icons/builder.png
+file: builder_scripts/builder-startKaz.py
+-
+action: Бетономешалка
+icon: builder_icons/mixer.webp
+file: builder_scripts/mixerKaz.py
+-
+action: Самосвал
+icon: builder_icons/dumptruck.webp
+file: builder_scripts/samosvalKaz.py
+-
+action: Экскаватор
+icon: builder_icons/escavator.webp
+file: builder_scripts/ekskavatorKaz.py
+-
+action: Молоток
+icon: builder_icons/hammer.webp
+file: builder_scripts/molotokKaz.py
+-
+action: Пила
+icon: builder_icons/saw.webp
+file: builder_scripts/pilaKaz.py
+-
+action: Отвертка
+icon: builder_icons/screwdriver.webp
+file: builder_scripts/screwdriverKaz.py
+-
+action: Гаечный ключ
+icon: builder_icons/wrench.webp
+file: builder_scripts/wrenchKaz.py
+-
+action: Плоскогубцы
+icon: builder_icons/pliers.webp
+file: builder_scripts/pliersKaz.py
+-
+action: Cұрақ 1
+icon: builder_icons/question.webp
+file: builder_scripts/builder-question2Kaz.py
+-
+action: Cұрақ 2
+icon: builder_icons/question.webp
+file: builder_scripts/builder-question3Kaz.py
+-
+action: Мақтау
+icon: builder_icons/success.webp
+file: builder_scripts/builder-praiseKaz.py
+builder_scripts/builder-question5Kaz.py
+-
+action: Қолдау
+icon: builder_icons/support.webp
+file: builder_scripts/builder-encourageKaz.py
+-

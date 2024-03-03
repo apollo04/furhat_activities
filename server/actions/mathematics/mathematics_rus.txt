@@ -1,0 +1,20 @@
+
+-
+action: CountingNumbersRUS 
+icon: mathematics_icons/count.png
+file: mathematics_scripts/CountingNumbersRUS.py
+
+-
+action: ComparisonRUS 
+icon: mathematics_icons/compare.png
+file: mathematics_scripts/ComparisonRUS.py
+
+-
+action: AdditionRUS 
+icon: mathematics_icons/add.png
+file: mathematics_scripts/AdditionRUS.py
+
+-
+action: SubtractionRUS 
+icon: mathematics_icons/sub.png
+file: mathematics_scripts/SubtractionRUS.py

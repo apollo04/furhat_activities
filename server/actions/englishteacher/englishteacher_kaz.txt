@@ -1,0 +1,94 @@
+-
+action: EngTeacherIntroKAZ
+icon: englishteacher_icons/intro.png
+file: englishteacher_scripts/EngTeacherIntroKAZ.py
+
+-
+action: EngTeacherQ1KAZ
+icon: englishteacher_icons/q1.png
+file: englishteacher_scripts/EngTeacherQ1KAZ.py
+
+-
+action: EngTeacherQ2KAZ
+icon: englishteacher_icons/q2.png
+file: englishteacher_scripts/EngTeacherQ2KAZ.py
+
+-
+action: EngTeacherQ3KAZ
+icon: englishteacher_icons/q3.png
+file: englishteacher_scripts/EngTeacherQ3KAZ.py
+
+-
+action: EngTeacherQ4KAZ
+icon: englishteacher_icons/q4.png
+file: englishteacher_scripts/EngTeacherQ4KAZ.py
+
+-
+action: EngTeacherQ5KAZ
+icon: englishteacher_icons/q5.png
+file: englishteacher_scripts/EngTeacherQ5KAZ.py
+
+-
+action: EngTeacherQ6KAZ
+icon: englishteacher_icons/q6.png
+file: englishteacher_scripts/EngTeacherQ6KAZ.py
+
+-
+action: EngTeacherQ7KAZ
+icon: englishteacher_icons/q7.png
+file: englishteacher_scripts/EngTeacherQ7KAZ.py
+
+-
+action: EngTeacherQ8KAZ
+icon: englishteacher_icons/q8.png
+file: englishteacher_scripts/EngTeacherQ8KAZ.py
+
+-
+action: EngTeacherQ9KAZ
+icon: englishteacher_icons/q9.png
+file: englishteacher_scripts/EngTeacherQ9KAZ.py
+
+-
+action: EngTeacherQ10KAZ
+icon: englishteacher_icons/q10.png
+file: englishteacher_scripts/EngTeacherQ10KAZ.py
+
+-
+action: EngTeacherQ11KAZ
+icon: englishteacher_icons/q11.png
+file: englishteacher_scripts/EngTeacherQ11KAZ.py
+
+-
+action: EngTeacherQ12KAZ
+icon: englishteacher_icons/q12.png
+file: englishteacher_scripts/EngTeacherQ12KAZ.py
+
+-
+action: EngTeacherQ13KAZ
+icon: englishteacher_icons/q13.png
+file: englishteacher_scripts/EngTeacherQ13KAZ.py
+
+-
+action: EngTeacherQ14KAZ
+icon: englishteacher_icons/q14.png
+file: englishteacher_scripts/EngTeacherQ14KAZ.py
+
+-
+action: EngTeacherQ15KAZ
+icon: englishteacher_icons/q15.png
+file: englishteacher_scripts/EngTeacherQ15KAZ.py
+
+-
+action: Praise
+icon: englishteacher_icons/support.webp
+file: englishteacher_scripts/Praise.py
+
+-
+action: OutroKAZ
+icon: englishteacher_icons/outro.png
+file: englishteacher_scripts/OutroKAZ.py
+
+
+
+
+

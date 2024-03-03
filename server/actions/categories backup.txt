@@ -1,0 +1,36 @@
+- 
+category: Повар
+icon: category_icons/povar.png
+folder: povar/
+file_kaz: povar/povar_kaz.txt
+file_rus: povar/povar_rus.txt
+grade_names: povar/povar_grade_names.txt
+- 
+category: На приёме у врача
+icon: category_icons/doctor.png
+folder: doctor/
+file_kaz: doctor/doctor_kaz.txt
+file_rus: doctor/doctor_rus.txt
+grade_names: povar/povar_grade_names.txt
+-
+category: Полицейский
+icon: category_icons/policeman.png
+folder: policeman/
+file_kaz: policeman/policeman_kaz.txt
+file_rus: policeman/policeman_rus.txt
+grade_names: povar/povar_grade_names.txt
+- 
+category: Пилот
+icon: category_icons/pilot.png
+folder: pilot/
+file_kaz: pilot/pilot_kaz.txt
+file_rus: pilot/pilot_rus.txt
+grade_names: povar/povar_grade_names.txt
+- 
+category: Пожарный
+icon: category_icons/firefighter.webp
+folder: firefighter/
+file_kaz: firefighter/firefighter_kaz.txt
+file_rus: firefighter/firefighter_rus.txt
+grade_names: povar/povar_grade_names.txt
+- 

@@ -11,26 +11,103 @@ icon: category_icons/doctor.png
 folder: doctor/
 file_kaz: doctor/doctor_kaz.txt
 file_rus: doctor/doctor_rus.txt
-grade_names: povar/povar_grade_names.txt
+grade_names: doctor/doctor_grade_names.txt
 -
 category: Полицейский
 icon: category_icons/policeman.png
 folder: policeman/
 file_kaz: policeman/policeman_kaz.txt
 file_rus: policeman/policeman_rus.txt
-grade_names: povar/povar_grade_names.txt
+grade_names: policeman/policeman_grade_names.txt
 - 
 category: Пилот
 icon: category_icons/pilot.png
 folder: pilot/
 file_kaz: pilot/pilot_kaz.txt
 file_rus: pilot/pilot_rus.txt
-grade_names: povar/povar_grade_names.txt
+grade_names: pilot/pilot_grade_names.txt
+- 
+category: Строитель
+icon: category_icons/builder.png
+folder: builder/
+file_kaz: builder/builder_kaz.txt
+file_rus: builder/builder_rus.txt
+grade_names: builder/builder_grade_names.txt
 - 
 category: Пожарный
 icon: category_icons/firefighter.webp
 folder: firefighter/
 file_kaz: firefighter/firefighter_kaz.txt
 file_rus: firefighter/firefighter_rus.txt
-grade_names: povar/povar_grade_names.txt
+grade_names: firefighter/firefighter_grade_names.txt
+-
+category: Занятия с логопедом
+icon: category_icons/logoped.png
+folder: logoped/
+file_kaz: logoped/logoped_kaz.txt
+file_rus: logoped/logoped_rus.txt
+grade_names: logoped/logoped_grade_names.txt
+- 
+category: Учитель английского языка
+icon: category_icons/geography.png
+folder: englishteacher/
+file_kaz: englishteacher/englishteacher_kaz.txt
+file_rus: englishteacher/englishteacher_rus.txt
+grade_names: englishteacher/englishteacher_grade_names.txt
+- 
+category: Космос
+icon: category_icons/mercury.png
+folder: space/
+file_kaz: space/space_kaz.txt
+file_rus: space/space_rus.txt
+grade_names: space/space_grade_names.txt
+- 
+category: Животные
+icon: category_icons/animals.png
+folder: animals/
+file_kaz: animals/animals_kaz.txt
+file_rus: animals/animals_rus.txt
+grade_names: animals/animals_grade_names.txt
+- 
+category: Праздники
+icon: category_icons/holidays.png
+folder: holidays/
+file_kaz: holidays/holidays_kaz.txt
+file_rus: holidays/holidays_rus.txt
+grade_names: holidays/holidays_grade_names.txt
+- 
+category: Супергерои
+icon: category_icons/superhero.png
+folder: superhero/
+file_kaz: superhero/superhero_kaz.txt
+file_rus: superhero/superhero_rus.txt
+grade_names: superhero/superhero_grade_names.txt
+- 
+category: Моя страна
+icon: category_icons/historicalfigures.png
+folder: geography/
+file_kaz: geography/geography_kaz.txt
+file_rus: geography/geography_rus.txt
+grade_names: geography/geography_grade_names.txt
+- 
+category: Математика
+icon: category_icons/mathematics.png
+folder: mathematics/
+file_kaz: mathematics/mathematics_kaz.txt
+file_rus: mathematics/mathematics_rus.txt
+grade_names: mathematics/mathematics_grade_names.txt
+- 
+category: Учимся читать
+icon: category_icons/learningtoread.png
+folder: learningtoread/
+file_kaz: learningtoread/learningtoread_kaz.txt
+file_rus: learningtoread/learningtoread_rus.txt
+grade_names: learningtoread/learningtoread_grade_names.txt
+-
+category: Графический диктант
+icon: category_icons/graphicdictation.png
+folder: graphicdictation/
+file_kaz: graphicdictation/graphicdictation_kaz.txt
+file_rus: graphicdictation/graphicdictation_rus.txt
+grade_names: graphicdictation/graphicdictation_grade_names.txt
 - 

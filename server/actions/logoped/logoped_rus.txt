@@ -1,0 +1,24 @@
+-
+action: IntroRUS 
+icon: logoped_icons/intro.png
+file: logoped_scripts/IntroRUS.py
+
+-
+action: TwoWordsRUS 
+icon: logoped_icons/twowords.png
+file: logoped_scripts/TwoWordsRUS.py
+
+-
+action: ThreeWordsRUS
+icon: logoped_icons/threewords.png
+file: logoped_scripts/ThreeWordsRUS.py
+
+-
+action: TaskRUS 
+icon: logoped_icons/task.png
+file: logoped_scripts/TaskRUS.py
+
+-
+action: PraiseRUS 
+icon: logoped_icons/praise.png
+file: logoped_scripts/PraiseRUS.py

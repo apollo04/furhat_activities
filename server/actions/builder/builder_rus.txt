@@ -1,0 +1,57 @@
+-
+action: Начать
+icon: builder_icons/builder.png
+file: builder_scripts/builder-startRus.py
+-
+action: Бетономешалка
+icon: builder_icons/mixer.webp
+file: builder_scripts/mixerRus.py
+-
+action: Самосвал
+icon: builder_icons/dumptruck.webp
+file: builder_scripts/samosvalRus.py
+-
+action: Экскаватор
+icon: builder_icons/escavator.webp
+file: builder_scripts/ekskavatorRus.py
+-
+action: Молоток
+icon: builder_icons/hammer.webp
+file: builder_scripts/molotokRus.py
+-
+action: Пила
+icon: builder_icons/saw.webp
+file: builder_scripts/pilaRus.py
+-
+action: Отвертка
+icon: builder_icons/screwdriver.webp
+file: builder_scripts/screwdriverRus.py
+-
+action: Гаечный ключ
+icon: builder_icons/wrench.webp
+file: builder_scripts/wrenchRus.py
+-
+action: Плоскогубцы
+icon: builder_icons/pliers.webp
+file: builder_scripts/pliersRus.py
+-
+action: Вопрос 1
+icon: builder_icons/question.webp
+file: builder_scripts/builder-question1Rus.py
+-
+action: Вопрос 2
+icon: builder_icons/question.webp
+file: builder_scripts/builder-question2Rus.py
+-
+action: Вопрос 3
+icon: builder_icons/question.webp
+file: builder_scripts/builder-question3Rus.py
+-
+action: Похвала
+icon: builder_icons/success.webp
+file: builder_scripts/builder-praiseRus.py
+-
+action: Поддержка
+icon: builder_icons/support.webp
+file: builder_scripts/builder-encourageRus.py
+-

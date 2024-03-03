@@ -1,0 +1,29 @@
+-
+action: DictantIntroKAZ 
+icon: graphicdictation_icons/intro.png
+file: graphicdictation_scripts/DictantIntroKAZ.py
+
+-
+action: ElephantKAZ 
+icon: graphicdictation_icons/elephant.png
+file: graphicdictation_scripts/ElephantKAZ.py
+
+-
+action: RabbitKAZ 
+icon: graphicdictation_icons/rabbit.png
+file: graphicdictation_scripts/RabbitKAZ.py
+
+-
+action: KeyKAZ 
+icon: graphicdictation_icons/key.png
+file: graphicdictation_scripts/KeyKAZ.py
+
+-
+action: PraiseCorrectKAZ 
+icon: graphicdictation_icons/success.webp
+file: graphicdictation_scripts/PraiseCorrectKAZ.py
+
+-
+action: PraiseIncorrectKAZ 
+icon: graphicdictation_icons/support.webp
+file: graphicdictation_scripts/PraiseIncorrectKAZ.py

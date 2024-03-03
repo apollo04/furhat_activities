@@ -1,0 +1,43 @@
+action: Бастау
+icon:space_icons/intro.png
+file: space_scripts/IntroKAZ.py
+-
+action: Солнце
+icon: space_icons/sun.png
+file: space_scripts/SunKAZ.py
+-
+action: Луна
+icon: space_icons/moon.png
+file: space_scripts/MoonKAZ.py
+-
+action: Меркурий
+icon: space_icons/mercury.png
+file: space_scripts/MercuryKAZ.py
+-
+action: Венера
+icon: space_icons/venus.png
+file: space_scripts/VenusKAZ.py
+-
+action: Земля
+icon: space_icons/earth.png
+file: space_scripts/EarthKAZ.py
+-
+action: Марс
+icon: space_icons/mars.png
+file: space_scripts/MarsKAZ.py
+-
+action: Юпитер
+icon: space_icons/jupiter.png
+file: space_scripts/JupiterKAZ.py
+-
+action: Сатурн
+icon: space_icons/saturn.png
+file: space_scripts/SaturnKAZ.py
+-
+action: Уран
+icon: space_icons/uranus.png
+file: space_scripts/UranusKAZ.py
+-
+action: Нептун
+icon: space_icons/neptune.png
+file: space_scripts/NeptuneKAZ.py

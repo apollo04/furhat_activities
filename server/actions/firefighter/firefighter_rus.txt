@@ -11,24 +11,24 @@ action: Форма
 icon: firefighter_icons/firefighter.webp
 file: firefighter_scripts/FormaRUS.py
 -
-action: Топор 
-icon: firefighter_icons/axe.webp
-file: firefighter_scripts/ToporRUS.py
--
 action: Рация 
 icon: firefighter_icons/walkietalkie.webp
 file: firefighter_scripts/RaciaRUS.py
 -
-action: Вопрос 1
+action: Топор 
 icon: firefighter_icons/axe.webp
+file: firefighter_scripts/ToporRUS.py
+
+action: Вопрос 1
+icon: firefighter_icons/question.webp
 file: firefighter_scripts/Questions1RUS.py
 -
 action: Вопрос 2
-icon: firefighter_icons/axe.webp
+icon: firefighter_icons/question.webp
 file: firefighter_scripts/Questions2RUS.py
 -
 action: Вопрос 3
-icon: firefighter_icons/axe.webp
+icon: firefighter_icons/question.webp
 file: firefighter_scripts/Questions3RUS.py
 -
 action: Похвала 

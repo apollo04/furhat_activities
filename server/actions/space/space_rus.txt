@@ -1,0 +1,43 @@
+action: Начать
+icon:space_icons/intro.png
+file: space_scripts/IntroRUS.py
+-
+action: Солнце
+icon: space_icons/sun.png
+file: space_scripts/SunRUS.py
+-
+action: Луна
+icon: space_icons/moon.png
+file: space_scripts/MoonRUS.py
+-
+action: Меркурий
+icon: space_icons/mercury.png
+file: space_scripts/MercuryRUS.py
+-
+action: Венера
+icon: space_icons/venus.png
+file: space_scripts/VenusRUS.py
+-
+action: Земля
+icon: space_icons/earth.png
+file: space_scripts/EarthRUS.py
+-
+action: Марс
+icon: space_icons/mars.png
+file: space_scripts/MarsRUS.py
+-
+action: Юпитер
+icon: space_icons/jupiter.png
+file: space_scripts/JupiterRUS.py
+-
+action: Сатурн
+icon: space_icons/saturn.png
+file: space_scripts/SaturnRUS.py
+-
+action: Уран
+icon: space_icons/uranus.png
+file: space_scripts/UranusRUS.py
+-
+action: Нептун
+icon: space_icons/neptune.png
+file: space_scripts/NeptuneRUS.py

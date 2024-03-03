@@ -1,0 +1,31 @@
+
+-
+action: Бастау
+icon: superhero_icons/superhero.png
+file: superhero_scripts/SuperheroesIntroKAZ.py
+
+-
+action: Железный человек
+icon: superhero_icons/ironman.png
+file: superhero_scripts/IronmanKAZ.py
+
+-
+action: Халк
+icon: superhero_icons/hulk.png
+file: superhero_scripts/HulkKAZ.py
+
+-
+action: Бэтмен
+icon: superhero_icons/batman1.png
+file: superhero_scripts/BatmanKAZ.py
+
+-
+action: Человек-паук
+icon: superhero_icons/spiderman.png
+file: superhero_scripts/SpidermanKAZ.py
+
+-
+action: Капитан Америка
+icon: superhero_icons/camerica.png
+file: superhero_scripts/CaptainAmericaKAZ.py
+

@@ -1,0 +1,86 @@
+
+-
+action: Бастау 
+icon: animals_icons/animals.jpg
+file: animals_scripts/Animals2KAZ.py
+
+-
+action: Піл 
+icon: animals_icons/elephant.png
+file: animals_scripts/ElephantKAZ.py
+-
+action: Тышқан 
+icon: animals_icons/mouse.png
+file: animals_scripts/MouseKAZ.py
+
+-
+action: Мысық
+icon: animals_icons/cat.png
+file: animals_scripts/CatKAZ.py
+
+-
+action: Ит 
+icon: animals_icons/dog.png
+file: animals_scripts/DogKAZ.py
+
+-
+action: Сиыр
+icon: animals_icons/cow.png
+file: animals_scripts/CowKAZ.py
+
+-
+action: Бақа 
+icon: animals_icons/frog.png
+file: animals_scripts/FrogKAZ.py
+
+-
+action: Қой 
+icon: animals_icons/sheep.png
+file: animals_scripts/SheepKAZ.py
+
+-
+action: Ат 
+icon: animals_icons/horse.png
+file: animals_scripts/HorseKAZ.py
+
+-
+action: Жолбарыс 
+icon: animals_icons/tiger.png
+file: animals_scripts/TigerKAZ.py
+
+-
+action: Маймыл 
+icon: animals_icons/monkey.png
+file: animals_scripts/MonkeyKAZ.py
+
+-
+action: Доңыз 
+icon: animals_icons/pig.png
+file: animals_scripts/PigKAZ.py
+
+-
+action: Жираф 
+icon: animals_icons/giraffe.png
+file: animals_scripts/GiraffeKAZ.py
+
+-
+action: Арыстан 
+icon: animals_icons/lion.png
+file: animals_scripts/LionKAZ.py
+
+-
+action: Зебра 
+icon: animals_icons/zebra.png
+file: animals_scripts/ZebraKAZ.py
+
+-
+action: Бегемот
+icon: animals_icons/hippo.png
+file: animals_scripts/HippoKAZ.py
+
+-
+action: Қолтырауын 
+icon: animals_icons/crocodile.png
+file: animals_scripts/CrocodileKAZ.py
+
+-

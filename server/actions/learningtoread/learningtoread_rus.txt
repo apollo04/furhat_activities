@@ -1,0 +1,48 @@
+-
+action: StartRUS 
+icon: learningtoread_icons/start.webp
+file: learningtoread_scripts/StartRUS.py
+-
+action: SearchBlueLetterRUS 
+icon: learningtoread_icons/blueletter.webp
+file: learningtoread_scripts/SearchBlueLetterRUS.py
+-
+action: FoundBlueLetterRUS 
+icon: learningtoread_icons/blueletter.webp
+file: learningtoread_scripts/FoundBlueLetterRUS.py
+-
+action: SearchRedLetterRUS 
+icon: learningtoread_icons/redletter.webp
+file: learningtoread_scripts/SearchRedLetterRUS.py
+-
+action: FoundRedLetterRUS 
+icon: learningtoread_icons/redletter.webp
+file: learningtoread_scripts/FoundRedLetterRUS.py
+-
+action: MakeWordRUS 
+icon: learningtoread_icons/words.webp
+file: learningtoread_scripts/MakeWordRUS.py
+-
+action: ExampleRUS 
+icon: learningtoread_icons/example.png
+file: learningtoread_scripts/ExampleRUS.py
+-
+action: MamaRUS 
+icon: learningtoread_icons/mother.webp
+file: learningtoread_scripts/MamaRUS.py
+-
+action: PapaRUS 
+icon: learningtoread_icons/father.webp
+file: learningtoread_scripts/PapaRUS.py
+-
+action: SupportRUS 
+icon: learningtoread_icons/support.webp
+file: learningtoread_scripts/SupportRUS.py
+-
+action: GoodbyeRUS 
+icon: learningtoread_icons/goodbye.webp
+file: learningtoread_scripts/GoodbyeRUS.py
+-
+action: PraiseRUS 
+icon: learningtoread_icons/correct.webp
+file: learningtoread_scripts/PraiseRUS.py

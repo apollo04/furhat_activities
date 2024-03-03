@@ -1,0 +1,29 @@
+-
+action: IntroRUS 
+icon: graphicdictation_icons/intro.png
+file: graphicdictation_scripts/IntroRUS.py
+
+-
+action: ElephantRUS 
+icon: graphicdictation_icons/elephant.png
+file: graphicdictation_scripts/ElephantRUS.py
+
+-
+action: ZayacRUS 
+icon: graphicdictation_icons/rabbit.png
+file: graphicdictation_scripts/ZayacRUS.py
+
+-
+action: KeyRUS 
+icon: graphicdictation_icons/key.png
+file: graphicdictation_scripts/KeyRUS.py
+
+-
+action: PraiseCorrectRUS 
+icon: graphicdictation_icons/success.webp
+file: graphicdictation_scripts/PraiseCorrectRUS.py
+
+-
+action: PraiseIncorrectRUS 
+icon: graphicdictation_icons/support.webp
+file: graphicdictation_scripts/PraiseIncorrectRUS.py

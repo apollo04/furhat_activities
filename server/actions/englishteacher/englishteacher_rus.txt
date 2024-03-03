@@ -1,0 +1,94 @@
+-
+action: EngTeacherIntroRUS
+icon: englishteacher_icons/intro.png
+file: englishteacher_scripts/EngTeacherIntroRUS.py
+
+-
+action: EngTeacherQ1RUS
+icon: englishteacher_icons/q1.png
+file: englishteacher_scripts/EngTeacherQ1RUS.py
+
+-
+action: EngTeacherQ2RUS
+icon: englishteacher_icons/q2.png
+file: englishteacher_scripts/EngTeacherQ2RUS.py
+
+-
+action: EngTeacherQ3RUS
+icon: englishteacher_icons/q3.png
+file: englishteacher_scripts/EngTeacherQ3RUS.py
+
+-
+action: EngTeacherQ4RUS
+icon: englishteacher_icons/q4.png
+file: englishteacher_scripts/EngTeacherQ4RUS.py
+
+-
+action: EngTeacherQ5RUS
+icon: englishteacher_icons/q5.png
+file: englishteacher_scripts/EngTeacherQ5RUS.py
+
+-
+action: EngTeacherQ6RUS
+icon: englishteacher_icons/q6.png
+file: englishteacher_scripts/EngTeacherQ6RUS.py
+
+-
+action: EngTeacherQ7RUS
+icon: englishteacher_icons/q7.png
+file: englishteacher_scripts/EngTeacherQ7RUS.py
+
+-
+action: EngTeacherQ8RUS
+icon: englishteacher_icons/q8.png
+file: englishteacher_scripts/EngTeacherQ8RUS.py
+
+-
+action: EngTeacherQ9RUS
+icon: englishteacher_icons/q9.png
+file: englishteacher_scripts/EngTeacherQ9RUS.py
+
+-
+action: EngTeacherQ10RUS
+icon: englishteacher_icons/q10.png
+file: englishteacher_scripts/EngTeacherQ10RUS.py
+
+-
+action: EngTeacherQ11RUS
+icon: englishteacher_icons/q11.png
+file: englishteacher_scripts/EngTeacherQ11RUS.py
+
+-
+action: EngTeacherQ12RUS
+icon: englishteacher_icons/q12.png
+file: englishteacher_scripts/EngTeacherQ12RUS.py
+
+-
+action: EngTeacherQ13RUS
+icon: englishteacher_icons/q13.png
+file: englishteacher_scripts/EngTeacherQ13RUS.py
+
+-
+action: EngTeacherQ14RUS
+icon: englishteacher_icons/q14.png
+file: englishteacher_scripts/EngTeacherQ14RUS.py
+
+-
+action: EngTeacherQ15RUS
+icon: englishteacher_icons/q15.png
+file: englishteacher_scripts/EngTeacherQ15RUS.py
+
+-
+action: Praise
+icon: englishteacher_icons/support.webp
+file: englishteacher_scripts/Praise.py
+
+-
+action: OutroRUS
+icon: englishteacher_icons/outro.png
+file: englishteacher_scripts/OutroRUS.py
+
+
+
+
+

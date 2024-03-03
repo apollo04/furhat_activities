@@ -1,0 +1,31 @@
+-
+action: HolidaysRUS 
+icon: holidays_icons/intro.png
+file: holidays_scripts/HolidaysRUS.py
+-
+action: AltybakanRUS 
+icon: holidays_icons/altybakan.png
+file: holidays_scripts/AltybakanRUS.py
+-
+action: BirthdayRUS 
+icon: holidays_icons/birthday.png
+file: holidays_scripts/BirthdayRUS.py
+-
+action: KozheRUS 
+icon: holidays_icons/kozhe.png
+file: holidays_scripts/KozheRUS.py
+-
+action: NauryzRUS 
+icon: holidays_icons/nauryz.png
+file: holidays_scripts/NauryzRUS.py
+-
+action: NewYearRUS 
+icon: holidays_icons/newyear.png
+file: holidays_scripts/NewYearRUS.py
+-
+action: SongRUS 
+icon: holidays_icons/song.png
+file: holidays_scripts/SongRUS.py
+
+
+

@@ -1,0 +1,53 @@
+
+-
+action: Бастау 
+icon: geography_icons/KazakhstanMap.png
+file: geography_scripts/KazakhstanMapKAZ.py
+
+-
+action: Маңғыстау 
+icon: geography_icons/mangystau.jpeg
+file: geography_scripts/MangystauKAZ.py
+
+-
+action: Алматы
+icon: geography_icons/almaty.jpeg
+file: geography_scripts/AlmatyKAZ.py
+
+-
+action: Солтүстік Қазақстан
+icon: geography_icons/soltustik.jpeg
+file: geography_scripts/SoltustikKAZ.py
+
+-
+action: Түркістан 
+icon: geography_icons/turkestan.jpeg
+file: geography_scripts/TurkestanKAZ.py
+
+-
+action: Ұлытау 
+icon: geography_icons/ulytau.jpeg
+file: geography_scripts/UlytauKAZ.py
+
+-
+action: Астана 
+icon: geography_icons/astana.jpeg
+file: geography_scripts/AstanaKAZ.py
+
+-
+action: Павлодар 
+icon: geography_icons/pavlodar.jpeg
+file: geography_scripts/PavlodarKAZ.py
+
+-
+action: Қызылорда 
+icon: geography_icons/kyzylorda.jpeg
+file: geography_scripts/KyzylordaKAZ.py
+
+-
+action: Қостанай 
+icon: geography_icons/kostanay.jpeg
+file: geography_scripts/KostanayKAZ.py
+
+-
+
