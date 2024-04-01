@@ -1,24 +1,24 @@
 -
-action: IntroKAZ 
-icon: logoped_icons/intro.png
+action: Бастау 
+icon: logoped_icons/intro.webp
 file: logoped_scripts/IntroKAZ.py
 
 -
-action: TwoWords 
-icon: logoped_icons/twowords.png
+action: Сөз тіркесін құрау (екі сөз)
+icon: logoped_icons/twowords.webp
 file: logoped_scripts/TwoWords.py
 
 -
-action: ThreeWords 
-icon: logoped_icons/threewords.png
+action: Сөз тіркесін құрау (үш сөз)
+icon: logoped_icons/threewords.webp
 file: logoped_scripts/ThreeWords.py
 
 -
-action: TaskKAZ 
-icon: logoped_icons/task.png
+action: Тапсырма
+icon: logoped_icons/task.webp
 file: logoped_scripts/TaskKAZ.py
 
 -
-action: PraiseKAZ 
-icon: logoped_icons/praise.png
+action: Мақтау
+icon: logoped_icons/praise.webp
 file: logoped_scripts/PraiseKAZ.py

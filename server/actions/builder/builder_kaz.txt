@@ -3,7 +3,7 @@ action: Бастау
 icon: builder_icons/builder.png
 file: builder_scripts/builder-startKaz.py
 -
-action: Бетономешалка
+action: Бетон араластырғыш
 icon: builder_icons/mixer.webp
 file: builder_scripts/mixerKaz.py
 -
@@ -15,23 +15,23 @@ action: Экскаватор
 icon: builder_icons/escavator.webp
 file: builder_scripts/ekskavatorKaz.py
 -
-action: Молоток
+action: Балға
 icon: builder_icons/hammer.webp
 file: builder_scripts/molotokKaz.py
 -
-action: Пила
+action: Ара
 icon: builder_icons/saw.webp
 file: builder_scripts/pilaKaz.py
 -
-action: Отвертка
+action: Бұрағыш
 icon: builder_icons/screwdriver.webp
 file: builder_scripts/screwdriverKaz.py
 -
-action: Гаечный ключ
+action: Сомын кілт
 icon: builder_icons/wrench.webp
 file: builder_scripts/wrenchKaz.py
 -
-action: Плоскогубцы
+action: Атауыз
 icon: builder_icons/pliers.webp
 file: builder_scripts/pliersKaz.py
 -

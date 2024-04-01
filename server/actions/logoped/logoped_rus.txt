@@ -1,24 +1,24 @@
 -
-action: IntroRUS 
-icon: logoped_icons/intro.png
+action: Начать
+icon: logoped_icons/intro.webp
 file: logoped_scripts/IntroRUS.py
 
 -
-action: TwoWordsRUS 
-icon: logoped_icons/twowords.png
+action: Создать фразы (два слова)
+icon: logoped_icons/twowords.webp
 file: logoped_scripts/TwoWordsRUS.py
 
 -
-action: ThreeWordsRUS
-icon: logoped_icons/threewords.png
+action: Создать фразы (три слова)
+icon: logoped_icons/threewords.webp
 file: logoped_scripts/ThreeWordsRUS.py
 
 -
-action: TaskRUS 
-icon: logoped_icons/task.png
+action: Задание
+icon: logoped_icons/task.webp
 file: logoped_scripts/TaskRUS.py
 
 -
-action: PraiseRUS 
-icon: logoped_icons/praise.png
+action: Похвала
+icon: logoped_icons/praise.webp
 file: logoped_scripts/PraiseRUS.py

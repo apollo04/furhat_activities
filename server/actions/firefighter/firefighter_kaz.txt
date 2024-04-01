@@ -3,7 +3,7 @@ action: Бастау
 icon: firefighter_icons/firefighter.webp
 file: firefighter_scripts/IntroKAZ.py
 -
-action: Пожарная машина  
+action: Өрт сөндіргіш көлік  
 icon: firefighter_icons/firetruck.png
 file: firefighter_scripts/FirefighterCarKAZ.py
 -
@@ -15,7 +15,7 @@ action: Рация
 icon: firefighter_icons/walkietalkie.webp
 file: firefighter_scripts/RaciaKAZ.py
 -
-action: Топор 
+action: Балта
 icon: firefighter_icons/axe.webp
 file: firefighter_scripts/ToporKAZ.py
 -

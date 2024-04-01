@@ -1,5 +1,5 @@
 -
-action: Начать
+action: Бастау
 icon: policeman_icons/policeman.png
 file: policeman_scripts/policeman-startKaz.py
 - 
@@ -7,11 +7,11 @@ action: Жетон
 icon: policeman_icons/jetton.webp
 file: policeman_scripts/zhetonKaz.py
 - 
-action: Жезл
+action: Темір таяқ
 icon: policeman_icons/rod.webp
 file: policeman_scripts/zhezlKaz.py
 - 
-action: Светофор
+action: Бағдаршам
 icon: policeman_icons/trafficlights.jpeg
 file: policeman_scripts/trafficlightsKaz.py
 - 
@@ -19,15 +19,15 @@ action: Рация
 icon: policeman_icons/walkietalkie.webp
 file: policeman_scripts/raciyaKaz.py
 - 
-action: ПДД
+action: ЖЖЕ
 icon: policeman_icons/pdd.jpeg
 file: policeman_scripts/PDDKaz.py
 - 
-action: Свисток
+action: Ысқырық
 icon: policeman_icons/whistle.webp
 file: policeman_scripts/svistokKaz.py
 -
-action: Игра c Рулем
+action: Рульмен ойын 
 icon: policeman_icons/steeringwheel.webp
 file: policeman_scripts/steeringWheelKaz.py
 -

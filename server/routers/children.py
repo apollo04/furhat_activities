@@ -71,7 +71,7 @@ def delete_child(child_id: str):
         raise HTTPException(status_code=404, detail="Child not found")
 
 @router.post("/{child_id}/add_feedback")
-def add_feedback_to_child(child_id: str, feedback_data: dict[str, dict[str, int]]):
+def add_feedback_to_child(child_id: str, feedback_data: dict):
     child = get_child_by_id(child_id)
     if child:
         all_feedback = {"id": str(uuid.uuid4()), 

@@ -23,23 +23,23 @@ action: Маска
 icon: doctor_icons/medicalmask.webp
 file: doctor_scripts/MaskaKAZ.py
 -
-action: Вопрос 1
+action: Сұрақ 1
 icon: doctor_icons/question.webp
 file: doctor_scripts/QuestionsKAZ1.py
 -
-action: Вопрос 2
+action: Сұрақ 2
 icon: doctor_icons/question.webp
 file: doctor_scripts/QuestionsKAZ2.py
 - 
-action: Вопрос 3
+action: Сұрақ 3
 icon: doctor_icons/question.webp
 file: doctor_scripts/QuestionsKAZ3.py
 - 
-action: Вопрос 4
+action: Сұрақ 4
 icon: doctor_icons/question.webp
 file: doctor_scripts/QuestionsKAZ4.py
 - 
-action: Вопрос 5
+action: Сұрақ 5
 icon: doctor_icons/question.webp
 file: doctor_scripts/QuestionsKAZ5.py
 -
