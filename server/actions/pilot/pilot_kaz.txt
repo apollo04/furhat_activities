@@ -1,6 +1,6 @@
 -
 action: Бастау 
-icon: pilot_icons/pilot.png
+icon: pilot_icons/pilot.webp
 file: pilot_scripts/IntroKAZ.py
 -
 action: Ұшақ
@@ -24,7 +24,7 @@ icon: pilot_icons/compass.webp
 file: pilot_scripts/CompassKAZ.py
 -
 action: Форма 
-icon: pilot_icons/forma.png
+icon: pilot_icons/forma.webp
 file: pilot_scripts/FormaKAZ.py
 -
 action: Cұрақ 1 

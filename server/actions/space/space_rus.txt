@@ -1,5 +1,5 @@
 action: Начать
-icon:space_icons/intro.png
+icon:space_icons/intro.webp
 file: space_scripts/IntroRUS.py
 -
 action: Солнце

@@ -8,7 +8,7 @@ icon: firefighter_icons/firetruck.png
 file: firefighter_scripts/FirefighterCarRUS.py
 -
 action: Форма 
-icon: firefighter_icons/firefighter.webp
+icon: firefighter_icons/forma.webp
 file: firefighter_scripts/FormaRUS.py
 -
 action: Рация 

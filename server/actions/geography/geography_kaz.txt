@@ -1,7 +1,7 @@
 
 -
 action: Бастау 
-icon: geography_icons/KazakhstanMap.png
+icon: geography_icons/kazakhstan.webp
 file: geography_scripts/KazakhstanMapKAZ.py
 
 -

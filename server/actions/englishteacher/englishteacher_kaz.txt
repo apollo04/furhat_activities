@@ -1,81 +1,81 @@
 -
 action: Бастау
-icon: englishteacher_icons/intro.png
+icon: englishteacher_icons/intro.webp
 file: englishteacher_scripts/EngTeacherIntroKAZ.py
 
 -
 action: Eurasia
-icon: englishteacher_icons/q1.png
+icon: englishteacher_icons/q1.webp
 file: englishteacher_scripts/EngTeacherQ1KAZ.py
 
 -
 action: Ocean
-icon: englishteacher_icons/q2.png
+icon: englishteacher_icons/q2.webp
 file: englishteacher_scripts/EngTeacherQ2KAZ.py
 
 -
 action: Country
-icon: englishteacher_icons/q3.png
+icon: englishteacher_icons/q3.webp
 file: englishteacher_scripts/EngTeacherQ3KAZ.py
 
 -
 action: Capital city
-icon: englishteacher_icons/q4.png
+icon: englishteacher_icons/q4.webp
 file: englishteacher_scripts/EngTeacherQ4KAZ.py
 
 -
 action: Africa
-icon: englishteacher_icons/q5.png
+icon: englishteacher_icons/q5.webp
 file: englishteacher_scripts/EngTeacherQ5KAZ.py
 
 -
 action: Pacific Ocean
-icon: englishteacher_icons/q6.png
+icon: englishteacher_icons/q6.webp
 file: englishteacher_scripts/EngTeacherQ6KAZ.py
 
 -
 action: Antarctic Desert
-icon: englishteacher_icons/q7.png
+icon: englishteacher_icons/q7.webp
 file: englishteacher_scripts/EngTeacherQ7KAZ.py
 
 -
 action: Antarctica
-icon: englishteacher_icons/q8.png
+icon: englishteacher_icons/q8.webp
 file: englishteacher_scripts/EngTeacherQ8KAZ.py
 
 -
 action: Continents
-icon: englishteacher_icons/q9.png
+icon: englishteacher_icons/q9.webp
 file: englishteacher_scripts/EngTeacherQ9KAZ.py
 
 -
 action: EngTeacherQ10KAZ
-icon: englishteacher_icons/q10.png
+icon: englishteacher_icons/q10.webp
 file: englishteacher_scripts/EngTeacherQ10KAZ.py
 
 -
 action: EngTeacherQ11KAZ
-icon: englishteacher_icons/q11.png
+icon: englishteacher_icons/q11.webp
 file: englishteacher_scripts/EngTeacherQ11KAZ.py
 
 -
 action: EngTeacherQ12KAZ
-icon: englishteacher_icons/q12.png
+icon: englishteacher_icons/q12.webp
 file: englishteacher_scripts/EngTeacherQ12KAZ.py
 
 -
 action: EngTeacherQ13KAZ
-icon: englishteacher_icons/q13.png
+icon: englishteacher_icons/q13.webp
 file: englishteacher_scripts/EngTeacherQ13KAZ.py
 
 -
 action: EngTeacherQ14KAZ
-icon: englishteacher_icons/q14.png
+icon: englishteacher_icons/q14.webp
 file: englishteacher_scripts/EngTeacherQ14KAZ.py
 
 -
 action: EngTeacherQ15KAZ
-icon: englishteacher_icons/q15.png
+icon: englishteacher_icons/q15.webp
 file: englishteacher_scripts/EngTeacherQ15KAZ.py
 
 -

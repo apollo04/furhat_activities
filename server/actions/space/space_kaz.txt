@@ -1,5 +1,5 @@
 action: Бастау
-icon:space_icons/intro.png
+icon:space_icons/intro.webp
 file: space_scripts/IntroKAZ.py
 -
 action: Күн

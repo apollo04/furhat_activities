@@ -1,20 +1,20 @@
 
 -
 action: Санау 
-icon: mathematics_icons/count.webp
+icon: mathematics_icons/counting.webp
 file: mathematics_scripts/countingNumbersKAZ.py
 
 -
 action: Салыстыру
-icon: mathematics_icons/compare.webp
+icon: mathematics_icons/comparison.webp
 file: mathematics_scripts/comparisonKAZ.py
 
 -
 action: Қосу
-icon: mathematics_icons/add.webp
+icon: mathematics_icons/plus.webp
 file: mathematics_scripts/additionKAZ.py
 
 -
 action: Азайту 
-icon: mathematics_icons/sub.webp
+icon: mathematics_icons/minus.webp
 file: mathematics_scripts/subtractionKAZ.py

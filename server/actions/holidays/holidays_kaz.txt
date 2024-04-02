@@ -1,6 +1,6 @@
 -
 action: Бастау
-icon: holidays_icons/holidays.png
+icon: holidays_icons/holidays.webp
 file: holidays_scripts/HolidaysKAZ.py
 -
 action: Алтыбақан 
