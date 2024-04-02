@@ -43,6 +43,6 @@ action: Пока
 icon: learningtoread_icons/goodbye.webp
 file: learningtoread_scripts/GoodbyeRUS.py
 -
-action: Похвалить 
+action: Похвалить
 icon: learningtoread_icons/correct.webp
 file: learningtoread_scripts/PraiseRUS.py
