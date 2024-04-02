@@ -5,7 +5,7 @@ icon: superhero_icons/superhero.png
 file: superhero_scripts/SuperheroesIntroKAZ.py
 
 -
-action: Железный человек
+action: Темір Адам
 icon: superhero_icons/ironman.png
 file: superhero_scripts/IronmanKAZ.py
 
@@ -20,7 +20,7 @@ icon: superhero_icons/batman1.png
 file: superhero_scripts/BatmanKAZ.py
 
 -
-action: Человек-паук
+action: Өрмекші - Адам
 icon: superhero_icons/spiderman.png
 file: superhero_scripts/SpidermanKAZ.py
 

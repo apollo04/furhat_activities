@@ -1,48 +1,48 @@
 -
-action: StartRUS 
+action: Начать
 icon: learningtoread_icons/start.webp
 file: learningtoread_scripts/StartRUS.py
 -
-action: SearchBlueLetterRUS 
+action: Найти синюю букву
 icon: learningtoread_icons/blueletter.webp
 file: learningtoread_scripts/SearchBlueLetterRUS.py
 -
-action: FoundBlueLetterRUS 
+action: Букву в синий круг
 icon: learningtoread_icons/blueletter.webp
 file: learningtoread_scripts/FoundBlueLetterRUS.py
 -
-action: SearchRedLetterRUS 
+action: Найти красную букву
 icon: learningtoread_icons/redletter.webp
 file: learningtoread_scripts/SearchRedLetterRUS.py
 -
-action: FoundRedLetterRUS 
+action: Букву в красный круг 
 icon: learningtoread_icons/redletter.webp
 file: learningtoread_scripts/FoundRedLetterRUS.py
 -
-action: MakeWordRUS 
+action: Соединить две буквы 
 icon: learningtoread_icons/words.webp
 file: learningtoread_scripts/MakeWordRUS.py
 -
-action: ExampleRUS 
+action: Пример
 icon: learningtoread_icons/example.png
 file: learningtoread_scripts/ExampleRUS.py
 -
-action: MamaRUS 
+action: Мама 
 icon: learningtoread_icons/mother.webp
 file: learningtoread_scripts/MamaRUS.py
 -
-action: PapaRUS 
+action: Папа
 icon: learningtoread_icons/father.webp
 file: learningtoread_scripts/PapaRUS.py
 -
-action: SupportRUS 
+action: Поддержка 
 icon: learningtoread_icons/support.webp
 file: learningtoread_scripts/SupportRUS.py
 -
-action: GoodbyeRUS 
+action: Пока 
 icon: learningtoread_icons/goodbye.webp
 file: learningtoread_scripts/GoodbyeRUS.py
 -
-action: PraiseRUS 
+action: Похвалить 
 icon: learningtoread_icons/correct.webp
 file: learningtoread_scripts/PraiseRUS.py

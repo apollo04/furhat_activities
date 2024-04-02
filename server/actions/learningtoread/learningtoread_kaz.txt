@@ -1,49 +1,49 @@
 -
-action: StartKAZ 
+action: Бастау
 icon: learningtoread_icons/start.webp
 file: learningtoread_scripts/StartKAZ.py
 -
-action: SearchBlueLetterKAZ 
+action: Көк әріпті табу 
 icon: learningtoread_icons/blueletter.webp
 file: learningtoread_scripts/SearchBlueLetterKAZ.py
 -
-action: FoundBlueLetterKAZ 
+action: Көк шеңберге салу
 icon: learningtoread_icons/blueletter.webp
 file: learningtoread_scripts/FoundBlueLetterKAZ.py
 -
-action: SearchRedLetterKAZ 
+action: Қызыл әріпті табу 
 icon: learningtoread_icons/redletter.webp
 file: learningtoread_scripts/SearchRedLetterKAZ.py
 -
-action: FoundRedLetterKAZ 
+action: Қызыл шеңберге салу
 icon: learningtoread_icons/redletter.webp
 file: learningtoread_scripts/FoundRedLetterKAZ.py
 -
-action: MakeWordKAZ 
+action: Екі әріпті қосу 
 icon: learningtoread_icons/words.webp
 file: learningtoread_scripts/MakeWordKAZ.py
 -
-action: ExampleKAZ 
+action: Мысал 
 icon: learningtoread_icons/example.png
 file: learningtoread_scripts/ExampleKAZ.py
 -
-action: MotherKAZ 
+action: Ана
 icon: learningtoread_icons/mother.webp
 file: learningtoread_scripts/MotherKAZ.py
 -
-action: FatherKAZ 
+action: Әке 
 icon: learningtoread_icons/father.webp
 file: learningtoread_scripts/FatherKAZ.py
 -
-action: SupportKAZ 
+action: Қолдау
 icon: learningtoread_icons/support.webp
 file: learningtoread_scripts/SupportKAZ.py
 -
-action: GoodbyeKAZ 
+action: Сау бол 
 icon: learningtoread_icons/goodbye.webp
 file: learningtoread_scripts/GoodbyeKAZ.py
 -
-action: PraiseKAZ 
+action: Мақтау
 icon: learningtoread_icons/correct.webp
 file: learningtoread_scripts/PraiseKAZ.py
 

@@ -1,6 +1,6 @@
 -
 action: Начать
-icon: superhero_icons/superher.png
+icon: superhero_icons/superhero.png
 file: superhero_scripts/SuperheroesIntroRUS.py
 -
 action: Железный человек

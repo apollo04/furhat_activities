@@ -2,11 +2,11 @@ action: Бастау
 icon:space_icons/intro.png
 file: space_scripts/IntroKAZ.py
 -
-action: Солнце
+action: Күн
 icon: space_icons/sun.png
 file: space_scripts/SunKAZ.py
 -
-action: Луна
+action: Ай
 icon: space_icons/moon.png
 file: space_scripts/MoonKAZ.py
 -
@@ -14,11 +14,11 @@ action: Меркурий
 icon: space_icons/mercury.png
 file: space_scripts/MercuryKAZ.py
 -
-action: Венера
+action: Шолпан
 icon: space_icons/venus.png
 file: space_scripts/VenusKAZ.py
 -
-action: Земля
+action: Жер
 icon: space_icons/earth.png
 file: space_scripts/EarthKAZ.py
 -

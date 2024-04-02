@@ -1,30 +1,30 @@
 -
-action: HolidaysRUS 
-icon: holidays_icons/intro.png
+action: Начать
+icon: holidays_icons/holidays.webp
 file: holidays_scripts/HolidaysRUS.py
 -
-action: AltybakanRUS 
+action: Алтыбакан
 icon: holidays_icons/altybakan.png
 file: holidays_scripts/AltybakanRUS.py
 -
-action: BirthdayRUS 
-icon: holidays_icons/birthday.png
+action: День рождения
+icon: holidays_icons/birthday.webp
 file: holidays_scripts/BirthdayRUS.py
 -
-action: KozheRUS 
-icon: holidays_icons/kozhe.png
+action: Наурыз коже
+icon: holidays_icons/kozhe.webp
 file: holidays_scripts/KozheRUS.py
 -
-action: NauryzRUS 
-icon: holidays_icons/nauryz.png
+action: Наурыз
+icon: holidays_icons/nauryz.webp
 file: holidays_scripts/NauryzRUS.py
 -
-action: NewYearRUS 
-icon: holidays_icons/newyear.png
+action: Новый год
+icon: holidays_icons/newyear.webp
 file: holidays_scripts/NewYearRUS.py
 -
-action: SongRUS 
-icon: holidays_icons/song.png
+action: Песня
+icon: holidays_icons/song.webp
 file: holidays_scripts/SongRUS.py
 
 

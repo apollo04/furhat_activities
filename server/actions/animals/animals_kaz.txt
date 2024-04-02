@@ -59,7 +59,7 @@ icon: animals_icons/pig.png
 file: animals_scripts/PigKAZ.py
 
 -
-action: Жираф 
+action: керік
 icon: animals_icons/giraffe.png
 file: animals_scripts/GiraffeKAZ.py
 
@@ -74,7 +74,7 @@ icon: animals_icons/zebra.png
 file: animals_scripts/ZebraKAZ.py
 
 -
-action: Бегемот
+action: Сусиыр
 icon: animals_icons/hippo.png
 file: animals_scripts/HippoKAZ.py
 
