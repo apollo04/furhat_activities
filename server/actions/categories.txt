@@ -21,7 +21,7 @@ file_rus: policeman/policeman_rus.txt
 grade_names: policeman/policeman_grade_names.txt
 - 
 category: Пилот
-icon: category_icons/pilot.png
+icon: category_icons/pilot.webp
 folder: pilot/
 file_kaz: pilot/pilot_kaz.txt
 file_rus: pilot/pilot_rus.txt
@@ -56,7 +56,7 @@ file_rus: englishteacher/englishteacher_rus.txt
 grade_names: englishteacher/englishteacher_grade_names.txt
 - 
 category: Космос
-icon: category_icons/mercury.png
+icon: category_icons/intro.webp
 folder: space/
 file_kaz: space/space_kaz.txt
 file_rus: space/space_rus.txt

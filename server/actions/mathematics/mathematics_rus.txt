@@ -1,20 +1,20 @@
 
 -
 action: Считать
-icon: mathematics_icons/count.webp
+icon: mathematics_icons/counting.webp
 file: mathematics_scripts/CountingNumbersRUS.py
 
 -
 action: Сравнение
-icon: mathematics_icons/compare.webp
+icon: mathematics_icons/comparison.webp
 file: mathematics_scripts/ComparisonRUS.py
 
 -
 action: Сложение
-icon: mathematics_icons/add.webp
+icon: mathematics_icons/plus.webp
 file: mathematics_scripts/AdditionRUS.py
 
 -
 action: Вычитание 
-icon: mathematics_icons/sub.webp
+icon: mathematics_icons/minus.png
 file: mathematics_scripts/SubtractionRUS.py

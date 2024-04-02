@@ -5,7 +5,11 @@ icon: animals_icons/animals.jpg
 file: animals_scripts/AnimalsRUS.py
 
 -
-action: Слон 
+action: Слон 1 
+icon: animals_icons/elephant.png
+file: animals_scripts/ElephantRUS.py
+-
+action: Слон 2
 icon: animals_icons/elephant.png
 file: animals_scripts/ElephantRUS.py
 -
