@@ -9,13 +9,20 @@ action: Слон 1
 icon: animals_icons/elephant.png
 file: animals_scripts/ElephantRUS.py
 -
+
 action: Слон 2
 icon: animals_icons/elephant.png
-file: animals_scripts/ElephantRUS.py
+file: animals_scripts/ElephantRUS2.py
+
 -
 action: Мышь
 icon: animals_icons/mouse.png
 file: animals_scripts/MouseRUS.py
+
+-
+action: Мышь 2
+icon: animals_icons/mouse.png
+file: animals_scripts/MouseRUS2.py
 
 -
 action: Кошка
@@ -23,9 +30,19 @@ icon: animals_icons/cat.png
 file: animals_scripts/CatRUS.py
 
 -
+action: Кошка 2
+icon: animals_icons/cat.png
+file: animals_scripts/CatRUS2.py
+
+-
 action: Собака 
 icon: animals_icons/dog.png
 file: animals_scripts/DogRUS.py
+
+-
+action: Собака 2
+icon: animals_icons/dog.png
+file: animals_scripts/DogRUS2.py
 
 -
 action: Корова
@@ -33,9 +50,19 @@ icon: animals_icons/cow.png
 file: animals_scripts/CowRUS.py
 
 -
+action: Корова 2
+icon: animals_icons/cow.png
+file: animals_scripts/CowRUS2.py
+
+-
 action: Лягушка 
 icon: animals_icons/frog.png
 file: animals_scripts/FrogRUS.py
+
+-
+action: Лягушка 2
+icon: animals_icons/frog.png
+file: animals_scripts/FrogRUS2.py
 
 -
 action: Овца
@@ -43,9 +70,19 @@ icon: animals_icons/sheep.png
 file: animals_scripts/SheepRUS.py
 
 -
+action: Овца 2
+icon: animals_icons/sheep.png
+file: animals_scripts/SheepRUS2.py
+
+-
 action: Лошадь 
 icon: animals_icons/horse.png
 file: animals_scripts/HorseRUS.py
+
+-
+action: Лошадь 2
+icon: animals_icons/horse.png
+file: animals_scripts/HorseRUS2.py
 
 -
 action: Тигр 
@@ -53,9 +90,19 @@ icon: animals_icons/tiger.png
 file: animals_scripts/TigerRUS.py
 
 -
+action: Тигр 2
+icon: animals_icons/tiger.png
+file: animals_scripts/TigerRUS2.py
+
+-
 action: Обезьяна 
 icon: animals_icons/monkey.png
 file: animals_scripts/MonkeyRUS.py
+
+-
+action: Обезьяна 2
+icon: animals_icons/monkey.png
+file: animals_scripts/MonkeyRUS2.py
 
 -
 action: Свинья 
@@ -63,9 +110,19 @@ icon: animals_icons/pig.png
 file: animals_scripts/PigRUS.py
 
 -
+action: Свинья 2
+icon: animals_icons/pig.png
+file: animals_scripts/PigRUS2.py
+
+-
 action: Жираф 
 icon: animals_icons/giraffe.png
 file: animals_scripts/GiraffeRUS.py
+
+-
+action: Жираф 2
+icon: animals_icons/giraffe.png
+file: animals_scripts/GiraffeRUS2.py
 
 -
 action: Лев 
@@ -73,9 +130,19 @@ icon: animals_icons/lion.png
 file: animals_scripts/LionRUS.py
 
 -
+action: Лев 2
+icon: animals_icons/lion.png
+file: animals_scripts/LionRUS2.py
+
+-
 action: Зебра 
 icon: animals_icons/zebra.png
 file: animals_scripts/ZebraRUS.py
+
+-
+action: Зебра 2
+icon: animals_icons/zebra.png
+file: animals_scripts/ZebraRUS2.py
 
 -
 action: Бегемот
@@ -83,8 +150,18 @@ icon: animals_icons/hippo.png
 file: animals_scripts/HippoRUS.py
 
 -
+action: Бегемот 2
+icon: animals_icons/hippo.png
+file: animals_scripts/HippoRUS2.py
+
+-
 action: Крокодил 
 icon: animals_icons/crocodile.png
 file: animals_scripts/CrocodileRUS.py
+
+-
+action: Крокодил 2
+icon: animals_icons/crocodile.png
+file: animals_scripts/CrocodileRUS2.py
 
 -

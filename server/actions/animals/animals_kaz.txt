@@ -8,14 +8,21 @@ file: animals_scripts/Animals2KAZ.py
 action: Піл 
 icon: animals_icons/elephant.png
 file: animals_scripts/ElephantKAZ.py
+
 -
-action: Піл 
+action: Піл 2
 icon: animals_icons/elephant.png
-file: animals_scripts/ElephantKAZ.py
+file: animals_scripts/ElephantKAZ2.py
+
 -
 action: Тышқан 
 icon: animals_icons/mouse.png
 file: animals_scripts/MouseKAZ.py
+
+-
+action: Тышқан 2
+icon: animals_icons/mouse.png
+file: animals_scripts/MouseKAZ2.py
 
 -
 action: Мысық
@@ -23,9 +30,19 @@ icon: animals_icons/cat.png
 file: animals_scripts/CatKAZ.py
 
 -
+action: Мысық 2
+icon: animals_icons/cat.png
+file: animals_scripts/CatKAZ2.py
+
+-
 action: Ит 
 icon: animals_icons/dog.png
 file: animals_scripts/DogKAZ.py
+
+-
+action: Ит 2
+icon: animals_icons/dog.png
+file: animals_scripts/DogKAZ2.py
 
 -
 action: Сиыр
@@ -33,9 +50,19 @@ icon: animals_icons/cow.png
 file: animals_scripts/CowKAZ.py
 
 -
+action: Сиыр 2
+icon: animals_icons/cow.png
+file: animals_scripts/CowKAZ2.py
+
+-
 action: Бақа 
 icon: animals_icons/frog.png
 file: animals_scripts/FrogKAZ.py
+
+-
+action: Бақа 2
+icon: animals_icons/frog.png
+file: animals_scripts/FrogKAZ2.py
 
 -
 action: Қой 
@@ -43,9 +70,19 @@ icon: animals_icons/sheep.png
 file: animals_scripts/SheepKAZ.py
 
 -
+action: Қой 2
+icon: animals_icons/sheep.png
+file: animals_scripts/SheepKAZ2.py
+
+-
 action: Ат 
 icon: animals_icons/horse.png
 file: animals_scripts/HorseKAZ.py
+
+-
+action: Ат 2
+icon: animals_icons/horse.png
+file: animals_scripts/HorseKAZ2.py
 
 -
 action: Жолбарыс 
@@ -53,9 +90,19 @@ icon: animals_icons/tiger.png
 file: animals_scripts/TigerKAZ.py
 
 -
+action: Жолбарыс 2
+icon: animals_icons/tiger.png
+file: animals_scripts/TigerKAZ2.py
+
+-
 action: Маймыл 
 icon: animals_icons/monkey.png
 file: animals_scripts/MonkeyKAZ.py
+
+-
+action: Маймыл 2
+icon: animals_icons/monkey.png
+file: animals_scripts/MonkeyKAZ2.py
 
 -
 action: Доңыз 
@@ -63,9 +110,19 @@ icon: animals_icons/pig.png
 file: animals_scripts/PigKAZ.py
 
 -
-action: керік
+action: Доңыз 2
+icon: animals_icons/pig.png
+file: animals_scripts/PigKAZ2.py
+
+-
+action: Керік
 icon: animals_icons/giraffe.png
 file: animals_scripts/GiraffeKAZ.py
+
+-
+action: Керік 2
+icon: animals_icons/giraffe.png
+file: animals_scripts/GiraffeKAZ2.py
 
 -
 action: Арыстан 
@@ -73,9 +130,19 @@ icon: animals_icons/lion.png
 file: animals_scripts/LionKAZ.py
 
 -
+action: Арыстан 2
+icon: animals_icons/lion.png
+file: animals_scripts/LionKAZ2.py
+
+-
 action: Зебра 
 icon: animals_icons/zebra.png
 file: animals_scripts/ZebraKAZ.py
+
+-
+action: Зебра 2
+icon: animals_icons/zebra.png
+file: animals_scripts/ZebraKAZ2.py
 
 -
 action: Сусиыр
@@ -83,8 +150,18 @@ icon: animals_icons/hippo.png
 file: animals_scripts/HippoKAZ.py
 
 -
+action: Сусиыр 2
+icon: animals_icons/hippo.png
+file: animals_scripts/HippoKAZ2.py
+
+-
 action: Қолтырауын 
 icon: animals_icons/crocodile.png
 file: animals_scripts/CrocodileKAZ.py
+
+-
+action: Қолтырауын 2
+icon: animals_icons/crocodile.png
+file: animals_scripts/CrocodileKAZ2.py
 
 -
