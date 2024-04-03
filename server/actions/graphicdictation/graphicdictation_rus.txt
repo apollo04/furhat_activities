@@ -1,5 +1,5 @@
 -
-action: Начать
+action: Диктант
 icon: graphicdictation_icons/intro.webp
 file: graphicdictation_scripts/IntroRUS.py
 
