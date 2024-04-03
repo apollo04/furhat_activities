@@ -84,7 +84,7 @@ icon: englishteacher_icons/support.webp
 file: englishteacher_scripts/Praise.py
 
 -
-action: Пока
+action: Прощание
 icon: englishteacher_icons/outro.webp
 file: englishteacher_scripts/OutroRUS.py
 

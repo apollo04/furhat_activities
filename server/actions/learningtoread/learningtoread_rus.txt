@@ -39,10 +39,10 @@ action: Поддержка
 icon: learningtoread_icons/support.webp
 file: learningtoread_scripts/SupportRUS.py
 -
-action: Пока 
+action: Прощание
 icon: learningtoread_icons/goodbye.webp
 file: learningtoread_scripts/GoodbyeRUS.py
 -
-action: Похвалить
+action: Похвала
 icon: learningtoread_icons/correct.webp
 file: learningtoread_scripts/PraiseRUS.py

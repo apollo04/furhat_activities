@@ -19,11 +19,11 @@ icon: graphicdictation_icons/key.png
 file: graphicdictation_scripts/KeyKAZ.py
 
 -
-action: Мақтау (Дұрыс) 
+action: Мақтау 
 icon: graphicdictation_icons/success.webp
 file: graphicdictation_scripts/PraiseCorrectKAZ.py
 
 -
-action: Мақтау (Қате)
+action: Қолдау
 icon: graphicdictation_icons/support.webp
 file: graphicdictation_scripts/PraiseIncorrectKAZ.py
