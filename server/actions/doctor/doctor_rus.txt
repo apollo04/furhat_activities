@@ -1,5 +1,5 @@
 -
-action: Начвть 
+action: Начaть 
 icon: doctor_icons/doctor.png
 file: doctor_scripts/IntroRUS.py
 -

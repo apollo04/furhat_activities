@@ -1,29 +1,29 @@
 -
-action: DictantIntroKAZ 
+action: Диктант 
 icon: graphicdictation_icons/intro.png
 file: graphicdictation_scripts/DictantIntroKAZ.py
 
 -
-action: ElephantKAZ 
+action: Піл
 icon: graphicdictation_icons/elephant.png
 file: graphicdictation_scripts/ElephantKAZ.py
 
 -
-action: RabbitKAZ 
+action: Қоян
 icon: graphicdictation_icons/rabbit.png
 file: graphicdictation_scripts/RabbitKAZ.py
 
 -
-action: KeyKAZ 
+action: Кілт
 icon: graphicdictation_icons/key.png
 file: graphicdictation_scripts/KeyKAZ.py
 
 -
-action: PraiseCorrectKAZ 
+action: Мақтау (Дұрыс) 
 icon: graphicdictation_icons/success.webp
 file: graphicdictation_scripts/PraiseCorrectKAZ.py
 
 -
-action: PraiseIncorrectKAZ 
+action: Мақтау (Қате)
 icon: graphicdictation_icons/support.webp
 file: graphicdictation_scripts/PraiseIncorrectKAZ.py

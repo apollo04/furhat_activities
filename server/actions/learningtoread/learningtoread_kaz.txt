@@ -27,11 +27,11 @@ action: Мысал
 icon: learningtoread_icons/example.png
 file: learningtoread_scripts/ExampleKAZ.py
 -
-action: Ана
+action: Мама
 icon: learningtoread_icons/mother.webp
 file: learningtoread_scripts/MotherKAZ.py
 -
-action: Әке 
+action: Папа 
 icon: learningtoread_icons/father.webp
 file: learningtoread_scripts/FatherKAZ.py
 -
