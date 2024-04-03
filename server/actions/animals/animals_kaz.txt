@@ -9,6 +9,10 @@ action: Піл
 icon: animals_icons/elephant.png
 file: animals_scripts/ElephantKAZ.py
 -
+action: Піл 
+icon: animals_icons/elephant.png
+file: animals_scripts/ElephantKAZ.py
+-
 action: Тышқан 
 icon: animals_icons/mouse.png
 file: animals_scripts/MouseKAZ.py
