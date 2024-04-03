@@ -1,6 +1,6 @@
 -
 action: Диктант 
-icon: graphicdictation_icons/intro.png
+icon: graphicdictation_icons/intro.webp
 file: graphicdictation_scripts/DictantIntroKAZ.py
 
 -

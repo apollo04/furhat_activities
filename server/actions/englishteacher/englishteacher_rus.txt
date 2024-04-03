@@ -1,90 +1,90 @@
 -
-action: EngTeacherIntroRUS
+action: Начать
 icon: englishteacher_icons/intro.webp
 file: englishteacher_scripts/EngTeacherIntroRUS.py
 
 -
-action: EngTeacherQ1RUS
+action: Евразия
 icon: englishteacher_icons/q1.webp
 file: englishteacher_scripts/EngTeacherQ1RUS.py
 
 -
-action: EngTeacherQ2RUS
+action: Океан
 icon: englishteacher_icons/q2.webp
 file: englishteacher_scripts/EngTeacherQ2RUS.py
 
 -
-action: EngTeacherQ3RUS
+action: Страна
 icon: englishteacher_icons/q3.webp
 file: englishteacher_scripts/EngTeacherQ3RUS.py
 
 -
-action: EngTeacherQ4RUS
+action: Столица
 icon: englishteacher_icons/q4.webp
 file: englishteacher_scripts/EngTeacherQ4RUS.py
 
 -
-action: EngTeacherQ5RUS
+action: Африка
 icon: englishteacher_icons/q5.webp
 file: englishteacher_scripts/EngTeacherQ5RUS.py
 
 -
-action: EngTeacherQ6RUS
+action: Тихий океан
 icon: englishteacher_icons/q6.webp
 file: englishteacher_scripts/EngTeacherQ6RUS.py
 
 -
-action: EngTeacherQ7RUS
+action: Сахара
 icon: englishteacher_icons/q7.webp
 file: englishteacher_scripts/EngTeacherQ7RUS.py
 
 -
-action: EngTeacherQ8RUS
+action: Антарктика
 icon: englishteacher_icons/q8.webp
 file: englishteacher_scripts/EngTeacherQ8RUS.py
 
 -
-action: EngTeacherQ9RUS
+action: Континенты
 icon: englishteacher_icons/q9.webp
 file: englishteacher_scripts/EngTeacherQ9RUS.py
 
 -
-action: EngTeacherQ10RUS
+action: Эверест
 icon: englishteacher_icons/q10.webp
 file: englishteacher_scripts/EngTeacherQ10RUS.py
 
 -
-action: EngTeacherQ11RUS
+action: Ниль
 icon: englishteacher_icons/q11.webp
 file: englishteacher_scripts/EngTeacherQ11RUS.py
 
 -
-action: EngTeacherQ12RUS
+action: Египт
 icon: englishteacher_icons/q12.webp
 file: englishteacher_scripts/EngTeacherQ12RUS.py
 
 -
-action: EngTeacherQ13RUS
+action: Россия
 icon: englishteacher_icons/q13.webp
 file: englishteacher_scripts/EngTeacherQ13RUS.py
 
 -
-action: EngTeacherQ14RUS
+action: Австралия
 icon: englishteacher_icons/q14.webp
 file: englishteacher_scripts/EngTeacherQ14RUS.py
 
 -
-action: EngTeacherQ15RUS
+action: Задание с глобусом
 icon: englishteacher_icons/q15.webp
 file: englishteacher_scripts/EngTeacherQ15RUS.py
 
 -
-action: Praise
+action: Похвала
 icon: englishteacher_icons/support.webp
 file: englishteacher_scripts/Praise.py
 
 -
-action: OutroRUS
+action: Пока
 icon: englishteacher_icons/outro.webp
 file: englishteacher_scripts/OutroRUS.py
 

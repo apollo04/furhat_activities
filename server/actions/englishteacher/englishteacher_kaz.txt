@@ -9,7 +9,7 @@ icon: englishteacher_icons/q1.webp
 file: englishteacher_scripts/EngTeacherQ1KAZ.py
 
 -
-action: Океан
+action: Мұхит
 icon: englishteacher_icons/q2.webp
 file: englishteacher_scripts/EngTeacherQ2KAZ.py
 
@@ -29,7 +29,7 @@ icon: englishteacher_icons/q5.webp
 file: englishteacher_scripts/EngTeacherQ5KAZ.py
 
 -
-action: Тихий океан
+action: Тынық мұхиты
 icon: englishteacher_icons/q6.webp
 file: englishteacher_scripts/EngTeacherQ6KAZ.py
 
@@ -39,7 +39,7 @@ icon: englishteacher_icons/q7.webp
 file: englishteacher_scripts/EngTeacherQ7KAZ.py
 
 -
-action: Антрактида
+action: Антарктика
 icon: englishteacher_icons/q8.webp
 file: englishteacher_scripts/EngTeacherQ8KAZ.py
 
@@ -49,42 +49,42 @@ icon: englishteacher_icons/q9.webp
 file: englishteacher_scripts/EngTeacherQ9KAZ.py
 
 -
-action: EngTeacherQ10KAZ
+action: Эверест 
 icon: englishteacher_icons/q10.webp
 file: englishteacher_scripts/EngTeacherQ10KAZ.py
 
 -
-action: EngTeacherQ11KAZ
+action: Ніл өзені
 icon: englishteacher_icons/q11.webp
 file: englishteacher_scripts/EngTeacherQ11KAZ.py
 
 -
-action: EngTeacherQ12KAZ
+action: Египт
 icon: englishteacher_icons/q12.webp
 file: englishteacher_scripts/EngTeacherQ12KAZ.py
 
 -
-action: EngTeacherQ13KAZ
+action: Ресей
 icon: englishteacher_icons/q13.webp
 file: englishteacher_scripts/EngTeacherQ13KAZ.py
 
 -
-action: EngTeacherQ14KAZ
+action: Аустралия
 icon: englishteacher_icons/q14.webp
 file: englishteacher_scripts/EngTeacherQ14KAZ.py
 
 -
-action: EngTeacherQ15KAZ
+action: Глобуспен тапсырма
 icon: englishteacher_icons/q15.webp
 file: englishteacher_scripts/EngTeacherQ15KAZ.py
 
 -
-action: Praise
+action: Мақтау
 icon: englishteacher_icons/support.webp
 file: englishteacher_scripts/Praise.py
 
 -
-action: OutroKAZ
+action: Сау бол
 icon: englishteacher_icons/outro.webp
 file: englishteacher_scripts/OutroKAZ.py
 
