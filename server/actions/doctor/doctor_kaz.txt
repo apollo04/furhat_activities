@@ -25,23 +25,23 @@ file: doctor_scripts/MaskaKAZ.py
 -
 action: Сұрақ 1
 icon: doctor_icons/question.webp
-file: doctor_scripts/QuestionsKAZ1.py
+file: doctor_scripts/Questions1KAZ.py
 -
 action: Сұрақ 2
 icon: doctor_icons/question.webp
-file: doctor_scripts/QuestionsKAZ2.py
+file: doctor_scripts/Questions2KAZ.py
 - 
 action: Сұрақ 3
 icon: doctor_icons/question.webp
-file: doctor_scripts/QuestionsKAZ3.py
+file: doctor_scripts/Questions3KAZ.py
 - 
 action: Сұрақ 4
 icon: doctor_icons/question.webp
-file: doctor_scripts/QuestionsKAZ4.py
+file: doctor_scripts/Questions4KAZ.py
 - 
 action: Сұрақ 5
 icon: doctor_icons/question.webp
-file: doctor_scripts/QuestionsKAZ5.py
+file: doctor_scripts/Questions5KAZ.py
 -
 action: Сау бол
 icon: doctor_icons/goodbye.webp

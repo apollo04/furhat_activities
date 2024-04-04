@@ -25,23 +25,23 @@ file: doctor_scripts/MaskaRUS.py
 -
 action: Вопрос 1
 icon: doctor_icons/question.webp
-file: doctor_scripts/QuestionsRUS1.py
+file: doctor_scripts/Questions1RUS.py
 -
 action: Вопрос 2
 icon: doctor_icons/question.webp
-file: doctor_scripts/QuestionsRUS2.py
+file: doctor_scripts/Questions2RUS.py
 - 
 action: Вопрос 3
 icon: doctor_icons/question.webp
-file: doctor_scripts/QuestionsRUS3.py
+file: doctor_scripts/Questions3RUS.py
 - 
 action: Вопрос 4
 icon: doctor_icons/question.webp
-file: doctor_scripts/QuestionsRUS4.py
+file: doctor_scripts/Questions4RUS.py
 - 
 action: Вопрос 5
 icon: doctor_icons/question.webp
-file: doctor_scripts/QuestionsRUS5.py
+file: doctor_scripts/Questions5RUS.py
 -
 action: Прощание
 icon: doctor_icons/goodbye.webp
