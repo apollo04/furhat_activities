@@ -13,7 +13,7 @@ file: pilot_scripts/HelicopterKAZ.py
 -
 action: Алтиметр 
 icon: pilot_icons/altimeter.webp
-file: pilot_scripts/AlitmeterKAZ.py
+file: pilot_scripts/AltimeterKAZ.py
 -
 action: Құлаққаптар
 icon: pilot_icons/headset.webp

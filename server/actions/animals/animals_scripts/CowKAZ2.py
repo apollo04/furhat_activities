@@ -4,7 +4,7 @@ from furhat_remote_api import FurhatRemoteAPI
 
 def run_action(ip: str):
     furhat = FurhatRemoteAPI(ip)
-    furhat.set_face(mask="adult", character="Yi")
+    furhat.set_face(mask="adult", character="Samuel")
     
     url_list = ["http://novators.kz/audio/Animals/Animals2/AnimalsKAZ/CowKAZ/cowKAZ2.wav"]
 
