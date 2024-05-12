@@ -165,3 +165,18 @@ icon: animals_icons/crocodile.png
 file: animals_scripts/CrocodileKAZ2.py
 
 -
+action: Келесі жануар 1
+icon: animals_icons/animals.jpg
+file: animals_scripts/animalsEnding1KAZ.py
+
+-
+action: Келесі жануар 2
+icon: animals_icons/animals.jpg
+file: animals_scripts/animalsEnding2KAZ.py
+
+-
+action: Келесі жануар 3
+icon: animals_icons/animals.jpg
+file: animals_scripts/animalsEnding3KAZ.py
+
+-
