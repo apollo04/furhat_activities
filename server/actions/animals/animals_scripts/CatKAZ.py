@@ -6,10 +6,10 @@ def run_action(ip: str):
     furhat = FurhatRemoteAPI(ip)
     furhat.set_face(mask="adult", character="Samuel")
     
-    url_list = ["http://novators.kz/audio/Animals/Animals2/AnimalsKAZ/CatKAZ/catKAZ1.wav", "http://novators.kz/audio/Animals/Animals2/AnimalsSounds/cat.wav"]
+    url_list = ["file:///home/furnix/resources/Animals/Animals2/AnimalsKAZ/CatKAZ/catKAZ1.wav", 
+                "file:///home/furnix/resources/Animals/Animals2/AnimalsSounds/cat.wav", 
+                "file:///home/furnix/resources/Animals/Animals1/AnimalsKAZ/CatKAZ/catKAZ2.wav"]
 
     for url in url_list:
         furhat.say(url=url, lipsync=True)
-    url_list2 = ["http://novators.kz/audio/Animals/Animals1/AnimalsKAZ/CatKAZ/catKAZ2.wav"]
-    for url in url_list2:
-        furhat.say(url=url, lipsync=True)
+   
