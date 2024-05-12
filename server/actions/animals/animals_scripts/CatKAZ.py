@@ -10,7 +10,6 @@ def run_action(ip: str):
 
     for url in url_list:
         furhat.say(url=url, lipsync=True)
-    furhat.stopSpeaking(100)
     url_list2 = ["http://novators.kz/audio/Animals/Animals1/AnimalsKAZ/CatKAZ/catKAZ2.wav"]
     for url in url_list2:
         furhat.say(url=url, lipsync=True)
