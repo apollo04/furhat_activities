@@ -51,7 +51,7 @@ file: geography_scripts/KostanayKAZ.py
 
 -
 action: Ақмола облысы 
-icon: geography_icons/astana.jpeg
+icon: geography_icons/akmola.jpeg
 file: geography_scripts/AkmolaKAZ.py
 
 -
