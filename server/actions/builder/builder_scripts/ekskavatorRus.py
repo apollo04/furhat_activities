@@ -9,7 +9,7 @@ def run_action(ip: str):
     furhat.set_face(mask="adult", character="James")
 
     url_list = [
-        'http://novators.kz/audio/BuilderRUS/EkskavatorRUS/EkskavatorRUS.wav',
+        'file:///home/furnix/resources/BuilderRUS/EkskavatorRUS/EkskavatorRUS.wav',
     ]
 
     for url in url_list:

@@ -9,7 +9,7 @@ def run_action(ip: str):
 
     furhat.set_face(mask="adult", character="James")
 
-    random_number = random.randint(1, 4)
+    numbers = random.randint(1, 4)
 
     # Choose a random number from the list
     random_number = random.choice(numbers)
