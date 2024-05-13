@@ -51,7 +51,7 @@ file: geography_scripts/KostanayRUS.py
 
 -
 action:  Акмолинская область
-icon: geography_icons/akmola.jpeg
+icon: geography_icons/kostanay.jpeg
 file: geography_scripts/AkmolaRUS.py
 
 -
