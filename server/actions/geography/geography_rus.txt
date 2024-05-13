@@ -50,3 +50,53 @@ icon: geography_icons/kostanay.jpeg
 file: geography_scripts/KostanayRUS.py
 
 -
+action:  Акмолинская область
+icon: geography_icons/akmola.jpeg
+file: geography_scripts/AkmolaRUS.py
+
+-
+action: Актобе 
+icon: geography_icons/aktobe.jpeg
+file: geography_scripts/AktobeRUS.py
+
+-
+action: Алматинская область 
+icon: geography_icons/alma.jpeg
+file: geography_scripts/AlmaRUS.py
+
+-
+action: Атырау 
+icon: geography_icons/atyrau.jpeg
+file: geography_scripts/AtyrauRUS.py
+
+-
+action: Восточный Казахстан 
+icon: geography_icons/vostok.jpeg
+file: geography_scripts/VostokRUS.py
+
+-
+action: Жамбылская область
+icon: geography_icons/zhambyl.jpeg
+file: geography_scripts/ZhambylRUS.py
+
+-
+action:  Западный Казахстан
+icon: geography_icons/zapad.jpeg
+file: geography_scripts/ZapadRUS.py
+
+-
+action: Караганда 
+icon: geography_icons/karaganda.jpeg
+file: geography_scripts/KaragandaRUS.py
+
+-
+action: Байконур
+icon: geography_icons/baikonur.jpeg
+file: geography_scripts/BaikonurRUS.py
+
+-
+action: Шымкент 
+icon: geography_icons/shymkent.jpeg
+file: geography_scripts/ShymkentRUS.py
+
+-

@@ -9,12 +9,12 @@ def run_action(ip: str):
     furhat.set_face(mask="adult", character="James")
 
     url_list = [
-            'http://novators.kz/audio/BuilderRUS/BuilderIntroRUS/IntroRUS1.wav',
-            'http://novators.kz/audio/BuilderRUS/BuilderIntroRUS/IntroRUS2.wav',
-            'http://novators.kz/audio/BuilderRUS/BuilderIntroRUS/IntroRUS3.wav',
-                    'http://novators.kz/audio/BuilderRUS/BuilderInfoRUS/InfoRUS1.wav',
-        'http://novators.kz/audio/BuilderRUS/BuilderInfoRUS/InfoRUS2.wav',
-        'http://novators.kz/audio/BuilderRUS/BuilderInfoRUS/InfoRUS3.wav'
+            'file:///home/furnix/resources/BuilderRUS/BuilderIntroRUS/IntroRUS1.wav',
+            'file:///home/furnix/resources/BuilderRUS/BuilderIntroRUS/IntroRUS2.wav',
+            'file:///home/furnix/resources/BuilderRUS/BuilderIntroRUS/IntroRUS3.wav',
+            'file:///home/furnix/resources/BuilderRUS/BuilderInfoRUS/InfoRUS1.wav',
+            'file:///home/furnix/resources/BuilderRUS/BuilderInfoRUS/InfoRUS2.wav',
+            'file:///home/furnix/resources/BuilderRUS/BuilderInfoRUS/InfoRUS3.wav'
     ]
 
     for url in url_list:

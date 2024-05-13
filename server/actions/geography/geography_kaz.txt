@@ -50,4 +50,55 @@ icon: geography_icons/kostanay.jpeg
 file: geography_scripts/KostanayKAZ.py
 
 -
+action: Ақмола облысы 
+icon: geography_icons/akmola.jpeg
+file: geography_scripts/AkmolaKAZ.py
+
+-
+action: Ақтөбе
+icon: geography_icons/aktobe.jpeg
+file: geography_scripts/AktobeKAZ.py
+
+-
+action: Алматы облысы 
+icon: geography_icons/alma.jpeg
+file: geography_scripts/AlmaKAZ.py
+
+-
+action: Атырау 
+icon: geography_icons/atyray.jpeg
+file: geography_scripts/AtyrauKAZ.py
+
+-
+action: Шығыс Қазақстан 
+icon: geography_icons/vostok.jpeg
+file: geography_scripts/VostokKAZ.py
+
+-
+action: Жамбыл облысы 
+icon: geography_icons/zhambyl.jpeg
+file: geography_scripts/ZhambylKAZ.py
+
+-
+action: Батыс Қазақстан 
+icon: geography_icons/zapad.jpeg
+file: geography_scripts/ZapadKAZ.py
+
+-
+action: Қарағанды 
+icon: geography_icons/karaganda.jpeg
+file: geography_scripts/KaragandaKAZ.py
+
+-
+action: Байқоңыр 
+icon: geography_icons/baikonur.jpeg
+file: geography_scripts/BaikonurKAZ.py
+
+-
+action: Шымкент 
+icon: geography_icons/shymkent.jpeg
+file: geography_scripts/ShymkentKAZ.py
+
+-
+
 

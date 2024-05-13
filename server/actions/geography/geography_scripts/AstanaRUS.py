@@ -6,7 +6,15 @@ def run_action(ip: str):
     furhat = FurhatRemoteAPI(ip)
     furhat.set_face(mask="adult", character="Yumi")
     
-    url_list = ["http://novators.kz/audio/KazakhstanMapRUS/AstanaRUS/Astana1.wav", "http://novators.kz/audio/KazakhstanMapRUS/AstanaRUS/Astana2.wav", "http://novators.kz/audio/KazakhstanMapRUS/AstanaRUS/Astana3.wav", "http://novators.kz/audio/KazakhstanMapRUS/AstanaRUS/Astana4.wav", "http://novators.kz/audio/KazakhstanMapRUS/AstanaRUS/Astana5.wav", "http://novators.kz/audio/KazakhstanMapRUS/AstanaRUS/Astana6.wav", "http://novators.kz/audio/KazakhstanMapRUS/AstanaRUS/Astana7.wav", "http://novators.kz/audio/KazakhstanMapRUS/AstanaRUS/Astana8.wav", "http://novators.kz/audio/KazakhstanMapRUS/AstanaRUS/Astana9.wav"]
+    url_list = ["file:///home/furnix/resources/KazakhstanMapRUS/AstanaRUS/Astana1.wav", 
+                "file:///home/furnix/resources/KazakhstanMapRUS/AstanaRUS/Astana2.wav", 
+                "file:///home/furnix/resources/KazakhstanMapRUS/AstanaRUS/Astana3.wav", 
+                "file:///home/furnix/resources/KazakhstanMapRUS/AstanaRUS/Astana4.wav", 
+                "file:///home/furnix/resources/KazakhstanMapRUS/AstanaRUS/Astana5.wav", 
+                "file:///home/furnix/resources/KazakhstanMapRUS/AstanaRUS/Astana6.wav", 
+                "file:///home/furnix/resources/KazakhstanMapRUS/AstanaRUS/Astana7.wav", 
+                "file:///home/furnix/resources/KazakhstanMapRUS/AstanaRUS/Astana8.wav", 
+                "file:///home/furnix/resources/KazakhstanMapRUS/AstanaRUS/Astana9.wav"]
 
     for url in url_list:
         furhat.say(url=url, lipsync=True)

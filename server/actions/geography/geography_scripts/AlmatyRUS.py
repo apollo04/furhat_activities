@@ -6,7 +6,19 @@ def run_action(ip: str):
     furhat = FurhatRemoteAPI(ip)
     furhat.set_face(mask="adult", character="Yumi")
     
-    url_list = ["http://novators.kz/audio/KazakhstanMapRUS/AlmatyRUS/Almaty1.wav", "http://novators.kz/audio/KazakhstanMapRUS/AlmatyRUS/Almaty2.wav", "http://novators.kz/audio/KazakhstanMapRUS/AlmatyRUS/Almaty3.wav", "http://novators.kz/audio/KazakhstanMapRUS/AlmatyRUS/Almaty4.wav", "http://novators.kz/audio/KazakhstanMapRUS/AlmatyRUS/Almaty5.wav", "http://novators.kz/audio/KazakhstanMapRUS/AlmatyRUS/Almaty6.wav", "http://novators.kz/audio/KazakhstanMapRUS/AlmatyRUS/Almaty7.wav", "http://novators.kz/audio/KazakhstanMapRUS/AlmatyRUS/Almaty8.wav", "http://novators.kz/audio/KazakhstanMapRUS/AlmatyRUS/Almaty9.wav", "http://novators.kz/audio/KazakhstanMapRUS/AlmatyRUS/Almaty10.wav", "http://novators.kz/audio/KazakhstanMapRUS/AlmatyRUS/Almaty11.wav", "http://novators.kz/audio/KazakhstanMapRUS/AlmatyRUS/Almaty12.wav", "http://novators.kz/audio/KazakhstanMapRUS/AlmatyRUS/Almaty13.wav"]
+    url_list = ["file:///home/furnix/resources/KazakhstanMapRUS/AlmatyRUS/Almaty1.wav", 
+                "file:///home/furnix/resources/KazakhstanMapRUS/AlmatyRUS/Almaty2.wav", 
+                "file:///home/furnix/resources/KazakhstanMapRUS/AlmatyRUS/Almaty3.wav", 
+                "file:///home/furnix/resources/KazakhstanMapRUS/AlmatyRUS/Almaty4.wav", 
+                "file:///home/furnix/resources/KazakhstanMapRUS/AlmatyRUS/Almaty5.wav", 
+                "file:///home/furnix/resources/KazakhstanMapRUS/AlmatyRUS/Almaty6.wav", 
+                "file:///home/furnix/resources/KazakhstanMapRUS/AlmatyRUS/Almaty7.wav", 
+                "file:///home/furnix/resources/KazakhstanMapRUS/AlmatyRUS/Almaty8.wav", 
+                "file:///home/furnix/resources/KazakhstanMapRUS/AlmatyRUS/Almaty9.wav", 
+                "file:///home/furnix/resources/KazakhstanMapRUS/AlmatyRUS/Almaty10.wav", 
+                "file:///home/furnix/resources/KazakhstanMapRUS/AlmatyRUS/Almaty11.wav", 
+                "file:///home/furnix/resources/KazakhstanMapRUS/AlmatyRUS/Almaty12.wav", 
+                "file:///home/furnix/resources/KazakhstanMapRUS/AlmatyRUS/Almaty13.wav"]
 
     for url in url_list:
         furhat.say(url=url, lipsync=True)
