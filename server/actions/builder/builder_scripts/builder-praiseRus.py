@@ -9,14 +9,14 @@ def run_action(ip: str):
 
     furhat.set_face(mask="adult", character="James")
 
-    numbers = random.randint(1, 4)
+    random_number = random.randint(1, 4)
 
     # Choose a random number from the list
     random_number = random.choice(numbers)
 
 
     url_list = [
-        'file:///home/furnix/resources/BuilderRUS/BuilderPraiseCorrectRUS/BuilderPraiseCorrectRUS' + str(random_number) + '.wav'
+        'http://novators.kz/audio/BuilderRUS/BuilderPraiseCorrectRUS/BuilderPraiseCorrectRUS' + str(random_number) + '.wav'
     ]
 
     for url in url_list:

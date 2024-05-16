@@ -10,7 +10,6 @@ def run_action(ip: str):
 
     url_list = [
         'http://novators.kz/audio/BuilderRUS/PloskogubcyRUS/PloskogubcyRUS.wav',
-        'file:///home/furnix/resources/BuilderRUS/builderInstrumentsEndingRUS'
     ]
 
     for url in url_list:

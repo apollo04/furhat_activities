@@ -6,15 +6,15 @@ def run_action(ip: str):
     furhat = FurhatRemoteAPI(ip)
     furhat.set_face(mask="adult", character="Alex")
     
-    url_list = ["http://novators.kz/audio/SuperheroesRUS/HulkRUS/HulkRUS1.wav",
-                "http://novators.kz/audio/SuperheroesRUS/HulkRUS/HulkRUS2.wav", 
-                "http://novators.kz/audio/SuperheroesRUS/HulkRUS/HulkRUS3.wav", 
-                "http://novators.kz/audio/SuperheroesRUS/HulkRUS/HulkRUS4.wav", 
-                "http://novators.kz/audio/SuperheroesRUS/HulkRUS/HulkRUS5.wav", 
-                "http://novators.kz/audio/SuperheroesRUS/HulkRUS/HulkRUS6.wav", 
-                "http://novators.kz/audio/SuperheroesRUS/HulkRUS/HulkRUS7.wav", 
-                "http://novators.kz/audio/SuperheroesRUS/HulkRUS/HulkRUS8.wav", 
-                "http://novators.kz/audio/SuperheroesRUS/HulkRUS/HulkRUS9.wav"]
+    url_list = ["file:///home/furnix/resources/SuperheroesRUS/HulkRUS/HulkRUS1.wav",
+                "file:///home/furnix/resources/SuperheroesRUS/HulkRUS/HulkRUS2.wav", 
+                "file:///home/furnix/resources/SuperheroesRUS/HulkRUS/HulkRUS3.wav", 
+                "file:///home/furnix/resources/SuperheroesRUS/HulkRUS/HulkRUS4.wav", 
+                "file:///home/furnix/resources/SuperheroesRUS/HulkRUS/HulkRUS5.wav", 
+                "file:///home/furnix/resources/SuperheroesRUS/HulkRUS/HulkRUS6.wav", 
+                "file:///home/furnix/resources/SuperheroesRUS/HulkRUS/HulkRUS7.wav", 
+                "file:///home/furnix/resources/SuperheroesRUS/HulkRUS/HulkRUS8.wav", 
+                "file:///home/furnix/resources/SuperheroesRUS/HulkRUS/HulkRUS9.wav"]
 
     for url in url_list:
         furhat.say(url=url, lipsync=True)

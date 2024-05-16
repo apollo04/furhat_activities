@@ -6,7 +6,7 @@ def run_action(ip: str):
     furhat = FurhatRemoteAPI(ip)
     furhat.set_face(mask="adult", character="James")
     
-    url_list = ["http://novators.kz/audio/LearnToReadRUS/MamaRUS/MamaRUS.wav"]
+    url_list = ["file:///home/furnix/resources/LearnToReadRUS/MamaRUS/MamaRUS.wav"]
 
     for url in url_list:
         furhat.say(url=url, lipsync=True)

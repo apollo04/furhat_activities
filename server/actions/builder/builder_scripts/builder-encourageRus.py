@@ -16,7 +16,7 @@ def run_action(ip: str):
 
 
     url_list = [
-        'file:///home/furnix/resources/BuilderRUS/BuilderPraiseIncorrectRUS/BuilderPraiseInorrectRUS' + str(random_number) + '.wav'
+        'http://novators.kz/audio/BuilderRUS/BuilderPraiseIncorrectRUS/BuilderPraiseInorrectRUS' + str(random_number) + '.wav'
     ]
 
     for url in url_list:

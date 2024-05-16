@@ -6,7 +6,8 @@ def run_action(ip: str):
     furhat = FurhatRemoteAPI(ip)
     furhat.set_face(mask="adult", character="Jane")
     
-    url_list = ["http://novators.kz/audio/DoctorKAZ/MaskaKAZ/MaskaKAZ1.wav", "http://novators.kz/audio/DoctorKAZ/MaskaKAZ/MaskaKAZ2.wav"]
+    url_list = ["file:///home/furnix/resources/DoctorKAZ/MaskaKAZ/MaskaKAZ1_n.wav", 
+                "file:///home/furnix/resources/DoctorKAZ/MaskaKAZ/MaskaKAZ2_n.wav"]
 
     for url in url_list:
         furhat.say(url=url, lipsync=True)

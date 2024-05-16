@@ -23,26 +23,18 @@ action: Маска
 icon: doctor_icons/medicalmask.webp
 file: doctor_scripts/MaskaKAZ.py
 -
-action: Сұрақ 1
+action: Сұрақтар
 icon: doctor_icons/question.webp
-file: doctor_scripts/Questions1KAZ.py
--
-action: Сұрақ 2
-icon: doctor_icons/question.webp
-file: doctor_scripts/Questions2KAZ.py
-- 
-action: Сұрақ 3
-icon: doctor_icons/question.webp
-file: doctor_scripts/Questions3KAZ.py
-- 
-action: Сұрақ 4
-icon: doctor_icons/question.webp
-file: doctor_scripts/Questions4KAZ.py
-- 
-action: Сұрақ 5
-icon: doctor_icons/question.webp
-file: doctor_scripts/Questions5KAZ.py
+file: doctor_scripts/QuestionsKAZ.py
 -
 action: Сау бол
 icon: doctor_icons/goodbye.webp
 file: doctor_scripts/OutroKAZ.py
+-
+action: Дұрыс
+icon: doctor_icons/success.webp
+file: doctor_scripts/PraiseCorrectKAZ.py
+-
+action: Бұрыс
+icon: doctor_icons/support.webp
+file: doctor_scripts/PraiseIncorrectKAZ.py

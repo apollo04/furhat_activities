@@ -6,7 +6,16 @@ def run_action(ip: str):
     furhat = FurhatRemoteAPI(ip)
     furhat.set_face(mask="adult", character="Alex")
     
-    url_list = ["http://novators.kz/audio/SuperheroesKAZ/BatmanKAZ/Batman1.wav", "http://novators.kz/audio/SuperheroesKAZ/BatmanKAZ/Batman2.wav", "http://novators.kz/audio/SuperheroesKAZ/BatmanKAZ/Batman3.wav", "http://novators.kz/audio/SuperheroesKAZ/BatmanKAZ/Batman4.wav", "http://novators.kz/audio/SuperheroesKAZ/BatmanKAZ/Batman5.wav", "http://novators.kz/audio/SuperheroesKAZ/BatmanKAZ/Batman6.wav", "http://novators.kz/audio/SuperheroesKAZ/BatmanKAZ/Batman7.wav", "http://novators.kz/audio/SuperheroesKAZ/BatmanKAZ/Batman8.wav", "http://novators.kz/audio/SuperheroesKAZ/BatmanKAZ/Batman9.wav", "http://novators.kz/audio/SuperheroesKAZ/BatmanKAZ/Batman10.wav"]
+    url_list = ["file:///home/furnix/resources/SuperheroesKAZ/BatmanKAZ/Batman1.wav", 
+                "file:///home/furnix/resources/SuperheroesKAZ/BatmanKAZ/Batman2.wav", 
+                "file:///home/furnix/resources/SuperheroesKAZ/BatmanKAZ/Batman3.wav", 
+                "file:///home/furnix/resources/SuperheroesKAZ/BatmanKAZ/Batman4.wav", 
+                "file:///home/furnix/resources/SuperheroesKAZ/BatmanKAZ/Batman5.wav", 
+                "file:///home/furnix/resources/SuperheroesKAZ/BatmanKAZ/Batman6.wav", 
+                "file:///home/furnix/resources/SuperheroesKAZ/BatmanKAZ/Batman7.wav", 
+                "file:///home/furnix/resources/SuperheroesKAZ/BatmanKAZ/Batman8.wav", 
+                "file:///home/furnix/resources/SuperheroesKAZ/BatmanKAZ/Batman9.wav", 
+                "file:///home/furnix/resources/SuperheroesKAZ/BatmanKAZ/Batman10.wav"]
 
     for url in url_list:
         furhat.say(url=url, lipsync=True)
