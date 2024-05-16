@@ -7,9 +7,9 @@ def run_action(ip: str):
     furhat = FurhatRemoteAPI(ip)
 
     furhat.set_face(mask="adult", character="James")
-
+    furhat.say(url='http://novators.kz/audio/PolicemanRUS/PolicemanGameRUS/Policeman16.wav', lipsync=True)
+    time.sleep(20)
     url_list = [
-        'http://novators.kz/audio/PolicemanRUS/PolicemanGameRUS/Policeman16.wav',
         'http://novators.kz/audio/PolicemanRUS/PolicemanGameRUS/Policeman17.wav',
         'http://novators.kz/audio/PolicemanRUS/PolicemanGameRUS/Policeman18.wav',
         'http://novators.kz/audio/PolicemanRUS/PolicemanGameRUS/Policeman19.wav',
