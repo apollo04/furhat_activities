@@ -14,6 +14,8 @@ def run_action(ip: str):
         'http://novators.kz/audio/PolicemanKAZ/ZhetonKAZ/Policeman5.wav',
     ]
 
-    for url in url_list:
-        furhat.say(url=url, lipsync=True)
-        time.sleep(10)
+    furhat.say(url='http://novators.kz/audio/PolicemanKAZ/ZhetonKAZ/Policeman3.wav', lipsync=True)
+    time.sleep(5)
+    furhat.say(url='http://novators.kz/audio/PolicemanKAZ/ZhetonKAZ/Policeman4.wav', lipsync=True)
+    time.sleep(5)
+    furhat.say(url='http://novators.kz/audio/PolicemanKAZ/ZhetonKAZ/Policeman5.wav', lipsync=True)
