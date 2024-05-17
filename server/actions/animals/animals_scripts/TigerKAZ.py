@@ -7,6 +7,8 @@ def run_action(ip: str):
     furhat.set_face(mask="adult", character="Samuel")
     
     url_list = ["file:///home/furnix/resources/Animals/Animals2/AnimalsKAZ/TigerKAZ/tigerKAZ1.wav", 
+                "file:///home/furnix/resources/Animals/Animals2/AnimalsSounds/tiger.wav",
+                "file:///home/furnix/resources/Animals/Animals2/AnimalsSounds/tiger.wav",
                 "file:///home/furnix/resources/Animals/Animals2/AnimalsSounds/tiger.wav", 
                 "file:///home/furnix/resources/Animals/Animals1/AnimalsKAZ/TigerKAZ/tigerKAZ2.wav"]
 

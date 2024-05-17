@@ -8,18 +8,21 @@ def run_action(ip: str):
 
     furhat.set_face(mask="adult", character="Rania")
 
-    url_list = [
-        'http://novators.kz/audio/Cook/Cook_NauryzKozhe_KAZ/cook-nauryz-kozhe-1-KAZ.wav',
-        'http://novators.kz/audio/Cook/Cook_NauryzKozhe_KAZ/cook-nauryz-kozhe-2-KAZ.wav',
-        'http://novators.kz/audio/Cook/Cook_NauryzKozhe_KAZ/cook-nauryz-kozhe-3-KAZ.wav',
-        'http://novators.kz/audio/Cook/Cook_NauryzKozhe_KAZ/cook-nauryz-kozhe-4-KAZ.wav',
-        'http://novators.kz/audio/Cook/Cook_NauryzKozhe_KAZ/cook-nauryz-kozhe-5-KAZ.wav',
-        'http://novators.kz/audio/Cook/Cook_NauryzKozhe_KAZ/cook-nauryz-kozhe-6-KAZ.wav',
-        'http://novators.kz/audio/Cook/Cook_NauryzKozhe_KAZ/cook-nauryz-kozhe-7-KAZ.wav',
-        'http://novators.kz/audio/Cook/Cook_NauryzKozhe_KAZ/cook-nauryz-kozhe-8-KAZ.wav',
-        'http://novators.kz/audio/Cook/Cook_NauryzKozhe_KAZ/cook-nauryz-kozhe-9-KAZ.wav',
-    ]
+    furhat.say(url='file:///home/furnix/resources/Cook/Cook_NauryzKozhe_KAZ/cook-nauryz-kozhe-1-KAZ.wav', lipsync=True)
+    furhat.say(url='file:///home/furnix/resources/Cook/Cook_NauryzKozhe_KAZ/cook-nauryz-kozhe-2-KAZ.wav', lipsync=True)
+    time.sleep(35)
+    furhat.say(url='file:///home/furnix/resources/Cook/Cook_NauryzKozhe_KAZ/cook-nauryz-kozhe-3-KAZ.wav', lipsync=True)
+    time.sleep(25)
+    furhat.say(url='file:///home/furnix/resources/Cook/Cook_NauryzKozhe_KAZ/cook-nauryz-kozhe-4-KAZ.wav', lipsync=True)
+    time.sleep(35)
+    furhat.say(url='file:///home/furnix/resources/Cook/Cook_NauryzKozhe_KAZ/cook-nauryz-kozhe-5-KAZ.wav', lipsync=True)
+    time.sleep(30)
+    furhat.say(url='file:///home/furnix/resources/Cook/Cook_NauryzKozhe_KAZ/cook-nauryz-kozhe-6-KAZ.wav', lipsync=True)
+    time.sleep(30)
+    furhat.say(url='file:///home/furnix/resources/Cook/Cook_NauryzKozhe_KAZ/cook-nauryz-kozhe-7-KAZ.wav', lipsync=True)
+    time.sleep(30)
+    furhat.say(url='file:///home/furnix/resources/Cook/Cook_NauryzKozhe_KAZ/cook-nauryz-kozhe-8-KAZ.wav', lipsync=True)
+    time.sleep(25)
+    furhat.say(url='file:///home/furnix/resources/Cook/Cook_NauryzKozhe_KAZ/cook-nauryz-kozhe-9-KAZ.wav', lipsync=True)
+    
 
-    for url in url_list:
-        furhat.say(url=url, lipsync=True)
-        time.sleep(5)

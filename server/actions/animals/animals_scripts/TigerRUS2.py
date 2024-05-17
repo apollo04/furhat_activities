@@ -8,6 +8,8 @@ def run_action(ip: str):
     
     url_list = ["file:///home/furnix/resources/Animals/Animals2/AnimalsRUS/TigerRUS/TigerRUS2.wav",
                 "file:///home/furnix/resources/Animals/Animals2/AnimalsRUS/animalsEveryEnding1RUS.wav",
+                "file:///home/furnix/resources/Animals/Animals2/AnimalsSounds/tiger.wav",
+                "file:///home/furnix/resources/Animals/Animals2/AnimalsSounds/tiger.wav",
                 "file:///home/furnix/resources/Animals/Animals2/AnimalsSounds/tiger.wav"]
 
     for url in url_list:

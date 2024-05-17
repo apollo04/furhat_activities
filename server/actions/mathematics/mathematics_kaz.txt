@@ -1,5 +1,10 @@
 
 -
+action: Бастау 
+icon: mathematics_icons/counting.webp
+file: mathematics_scripts/IntroKAZ.py
+
+-
 action: Санау 
 icon: mathematics_icons/counting.webp
 file: mathematics_scripts/countingNumbersKAZ.py

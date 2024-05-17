@@ -8,8 +8,11 @@ def run_action(ip: str):
 
     furhat.set_face(mask="adult", character="Rania")
 
+    furhat.say(url='file:///home/furnix/resources/Cook/Cook_Shelpek_KAZ/cook-shelpek-1-KAZ.wav', lipsync=True)
+    
+
     url_list = [
-        'http://novators.kz/audio/Cook/Cook_Shelpek_KAZ/cook-shelpek-1-KAZ.wav',
+        'file:///home/furnix/resources/Cook/Cook_Shelpek_KAZ/cook-shelpek-1-KAZ.wav',
         'http://novators.kz/audio/Cook/Cook_Shelpek_KAZ/cook-shelpek-2-KAZ.wav',
         'http://novators.kz/audio/Cook/Cook_Shelpek_KAZ/cook-shelpek-3-KAZ.wav',
         'http://novators.kz/audio/Cook/Cook_Shelpek_KAZ/cook-shelpek-4-KAZ.wav',

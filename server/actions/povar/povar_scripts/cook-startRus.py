@@ -8,15 +8,16 @@ def run_action(ip: str):
 
     furhat.set_face(mask="adult", character="Rania")
 
-    url_list = [
-        'http://novators.kz/audio/Cook/Cook_Intro_Rus/cook-intro-1-RUS.wav',
-        'http://novators.kz/audio/Cook/Cook_Intro_Rus/cook-intro-2-RUS.wav',
-        'http://novators.kz/audio/Cook/Cook_Intro_Rus/cook-intro-3-RUS.wav',
-        'http://novators.kz/audio/Cook/Cook_Intro_Rus/cook-intro-4-RUS.wav',
-        'http://novators.kz/audio/Cook/Cook_Intro_Rus/cook-intro-5-RUS.wav',
-        'http://novators.kz/audio/Cook/Cook_Intro_Rus/cook-intro-6-RUS.wav',
-    ]
+    furhat.say(url='file:///home/furnix/resources/Cook/Cook_Intro_Rus/cook-intro-1-RUS.wav', lipsync=True)
+    time.sleep(5)
+    furhat.say(url='file:///home/furnix/resources/Cook/Cook_Intro_Rus/cook-intro-2-RUS.wav', lipsync=True)
+    time.sleep(5)
+    furhat.say(url='file:///home/furnix/resources/Cook/Cook_Intro_Rus/cook-intro-3-RUS.wav', lipsync=True)
+    time.sleep(5)
+    furhat.say(url='file:///home/furnix/resources/Cook/Cook_Intro_Rus/cook-intro-4-RUS.wav', lipsync=True)
+    time.sleep(5)
+    furhat.say(url='file:///home/furnix/resources/Cook/Cook_Intro_Rus/cook-intro-5-RUS.wav', lipsync=True)
+    time.sleep(5)
+    furhat.say(url='file:///home/furnix/resources/Cook/Cook_Intro_Rus/cook-intro-6-RUS.wav', lipsync=True)
 
-    for url in url_list:
-        furhat.say(url=url, lipsync=True)
-        time.sleep(5)
+   

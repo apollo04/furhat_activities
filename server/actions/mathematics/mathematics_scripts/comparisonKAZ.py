@@ -6,18 +6,23 @@ def run_action(ip: str):
     furhat = FurhatRemoteAPI(ip)
     furhat.set_face(mask="adult", character="Yumi")
     
-    url_list = ["file:///home/furnix/resources/Counting/CountingKAZ/ComparisonKAZ/ComparisonKAZ1.wav", 
-                "file:///home/furnix/resources/Counting/CountingKAZ/ComparisonKAZ/ComparisonKAZ2.wav", 
-                "file:///home/furnix/resources/Counting/CountingKAZ/ComparisonKAZ/ComparisonKAZ3.wav", 
-                "file:///home/furnix/resources/Counting/CountingKAZ/ComparisonKAZ/ComparisonKAZ4.wav", 
-                "file:///home/furnix/resources/Counting/CountingKAZ/ComparisonKAZ/ComparisonKAZ5.wav", 
-                "file:///home/furnix/resources/Counting/CountingKAZ/ComparisonKAZ/ComparisonKAZ6.wav", 
-                "file:///home/furnix/resources/Counting/CountingKAZ/ComparisonKAZ/ComparisonKAZ7.wav", 
-                "file:///home/furnix/resources/Counting/CountingKAZ/ComparisonKAZ/ComparisonKAZ8.wav", 
-                "file:///home/furnix/resources/Counting/CountingKAZ/ComparisonKAZ/ComparisonKAZ9.wav", 
-                "file:///home/furnix/resources/Counting/CountingKAZ/ComparisonKAZ/ComparisonKAZ10.wav", 
-                "file:///home/furnix/resources/Counting/CountingKAZ/ComparisonKAZ/ComparisonKAZ11.wav"]
+    furhat.say(url="file:///home/furnix/resources/Counting/CountingKAZ/ComparisonKAZ/ComparisonKAZ1.wav", lipsync=True)
+    furhat.say(url="file:///home/furnix/resources/Counting/CountingKAZ/ComparisonKAZ/ComparisonKAZ2.wav", lipsync=True)
+    time.sleep(20)
+    furhat.say(url="file:///home/furnix/resources/Counting/CountingKAZ/ComparisonKAZ/ComparisonKAZ3.wav", lipsync=True)
+    time.sleep(40)
+    furhat.say(url="file:///home/furnix/resources/Counting/CountingKAZ/ComparisonKAZ/ComparisonKAZ4.wav", lipsync=True)
+    time.sleep(40)
+    furhat.say(url="file:///home/furnix/resources/Counting/CountingKAZ/ComparisonKAZ/ComparisonKAZ5.wav", lipsync=True)
+    time.sleep(15)
+    furhat.say(url="file:///home/furnix/resources/Counting/CountingKAZ/ComparisonKAZ/ComparisonKAZ6.wav", lipsync=True)
+    furhat.say(url="file:///home/furnix/resources/Counting/CountingKAZ/ComparisonKAZ/ComparisonKAZ7.wav", lipsync=True)
+    time.sleep(25)
+    furhat.say(url="file:///home/furnix/resources/Counting/CountingKAZ/ComparisonKAZ/ComparisonKAZ8.wav", lipsync=True)
+    furhat.say(url="file:///home/furnix/resources/Counting/CountingKAZ/ComparisonKAZ/ComparisonKAZ9.wav", lipsync=True)
+    time.sleep(35)
+    furhat.say(url="file:///home/furnix/resources/Counting/CountingKAZ/ComparisonKAZ/ComparisonKAZ11.wav", lipsync=True)
 
-    for url in url_list:
-        furhat.say(url=url, lipsync=True)
-        time.sleep(10)
+   
+
+  

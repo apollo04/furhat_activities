@@ -165,18 +165,22 @@ icon: animals_icons/crocodile.png
 file: animals_scripts/CrocodileKAZ2.py
 
 -
-action: Келесі жануар 1
+action: Келесі жануар 
 icon: animals_icons/animals.jpg
 file: animals_scripts/animalsEnding1KAZ.py
 
 -
-action: Келесі жануар 2
+action: Ойын 
 icon: animals_icons/animals.jpg
-file: animals_scripts/animalsEnding2KAZ.py
+file: animals_scripts/animalsGameKAZ.py
 
 -
-action: Келесі жануар 3
-icon: animals_icons/animals.jpg
-file: animals_scripts/animalsEnding3KAZ.py
-
+action: Мақтау
+icon: builder_icons/success.webp
+file: builder_scripts/builder-praiseKaz.py
+builder_scripts/builder-question5Kaz.py
+-
+action: Қолдау
+icon: builder_icons/support.webp
+file: builder_scripts/builder-encourageKaz.py
 -

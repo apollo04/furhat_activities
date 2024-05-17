@@ -1,5 +1,10 @@
 
 -
+action: Начать
+icon: mathematics_icons/counting.webp
+file: mathematics_scripts/IntroRUS.py
+
+-
 action: Считать
 icon: mathematics_icons/counting.webp
 file: mathematics_scripts/CountingNumbersRUS.py

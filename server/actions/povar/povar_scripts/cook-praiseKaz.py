@@ -13,7 +13,7 @@ def run_action(ip: str):
     random_number = random.randint(1, 4)
 
     url_list = [
-    'http://novators.kz/audio/Cook/Cook_Questions_KAZ/cook-praise-' + str(random_number) + '-KAZ.wav'
+    'file:///home/furnix/resources/Cook/Cook_Questions_KAZ/cook-praise-' + str(random_number) + '-KAZ.wav'
     ]
 
     for url in url_list:

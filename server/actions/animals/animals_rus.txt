@@ -165,18 +165,22 @@ icon: animals_icons/crocodile.png
 file: animals_scripts/CrocodileRUS2.py
 
 -
-action: Следующее животное 1
+action: Следующее животное 
 icon: animals_icons/animals.jpg
 file: animals_scripts/animalsEnding1RUS.py
 
 -
-action: Следующее животное 2
-icon: animals_icons/animals.jpg
-file: animals_scripts/animalsEnding2RUS.py
+action: Игра 
+icon: animals_icons/question.webp
+file: animals_scripts/animalsGameRUS.py
 
 -
-action: Следующее животное 3
-icon: animals_icons/animals.jpg
-file: animals_scripts/animalsEnding3RUS.py
-
+action: Похвала
+icon: animals_icons/success.webp
+file: animals_scripts/praise.py
 -
+action: Поддержка
+icon: animals_icons/support.webp
+file: animals_scripts/support.py
+-
+

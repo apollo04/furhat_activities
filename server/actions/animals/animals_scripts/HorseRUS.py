@@ -8,7 +8,7 @@ def run_action(ip: str):
     
     url_list = ["file:///home/furnix/resources/Animals/Animals2/AnimalsRUS/HorseRUS/HorseRUS1.wav", 
                 "file:///home/furnix/resources/Animals/Animals2/AnimalsSounds/horse.wav", 
-                "file:///home/furnix/resources/Animals/Animals2/AnimalsRUS/HorseRUS/HorseRUS2.wav"]
+                "file:///home/furnix/resources/Animals/Animals1/AnimalsRUS/HorseRUS/HorseRUS2.wav"]
 
     for url in url_list:
         furhat.say(url=url, lipsync=True)
