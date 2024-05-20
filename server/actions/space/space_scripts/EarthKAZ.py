@@ -5,10 +5,9 @@ from furhat_remote_api import FurhatRemoteAPI
 def run_action(ip: str):
     furhat = FurhatRemoteAPI(ip)
     furhat.set_face(mask="adult", character="James")
-    
-    url_list = ["file:///home/furnix/resources/Space/SpaceKAZ/EarthKAZ/earthKAZ1.wav", 
-                "file:///home/furnix/resources/Space/SpaceKAZ/EarthKAZ/earthKAZ2.wav", 
-                "file:///home/furnix/resources/Space/SpaceKAZ/EarthKAZ/endKAZ.wav"]
 
-    for url in url_list:
-        furhat.say(url=url, lipsync=True)
+    furhat.say(url="file:///home/furnix/resources/Space/SpaceKAZ/EarthKAZ/earthKAZ1.wav", lipsync=True)
+    furhat.say(url="file:///home/furnix/resources/Space/SpaceKAZ/EarthKAZ/earthKAZ2.wav", lipsync=True)
+    
+    
+

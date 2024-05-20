@@ -41,3 +41,8 @@ file: space_scripts/UranusKAZ.py
 action: Нептун
 icon: space_icons/neptune.png
 file: space_scripts/NeptuneKAZ.py
+-
+action: Келесі ғаламшар
+icon: space_icons/intro.webp
+file: space_scripts/endKAZ.py
+-

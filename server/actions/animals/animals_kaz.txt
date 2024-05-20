@@ -175,12 +175,14 @@ icon: animals_icons/animals.jpg
 file: animals_scripts/animalsGameKAZ.py
 
 -
-action: Мақтау
-icon: builder_icons/success.webp
-file: builder_scripts/builder-praiseKaz.py
-builder_scripts/builder-question5Kaz.py
+action: Мақтау 
+icon: animals_icons/success.webp
+file: animals_scripts/PraiseKAZ.py
+
 -
-action: Қолдау
-icon: builder_icons/support.webp
-file: builder_scripts/builder-encourageKaz.py
+action: Қолдау 
+icon: animals_icons/support.webp
+file: animals_scripts/SupportKAZ.py
+
 -
+

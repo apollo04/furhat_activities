@@ -41,3 +41,8 @@ file: space_scripts/UranusRUS.py
 action: Нептун
 icon: space_icons/neptune.png
 file: space_scripts/NeptuneRUS.py
+-
+action: Следующая планета
+icon: space_icons/intro.webp
+file: space_scripts/endRUS.py
+-

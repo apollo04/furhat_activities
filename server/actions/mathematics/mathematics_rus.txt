@@ -23,3 +23,5 @@ file: mathematics_scripts/AdditionRUS.py
 action: Вычитание 
 icon: mathematics_icons/minus.png
 file: mathematics_scripts/SubtractionRUS.py
+
+-

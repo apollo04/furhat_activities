@@ -177,10 +177,11 @@ file: animals_scripts/animalsGameRUS.py
 -
 action: Похвала
 icon: animals_icons/success.webp
-file: animals_scripts/praise.py
+file: animals_scripts/PraiseRUS.py
+
 -
 action: Поддержка
 icon: animals_icons/support.webp
-file: animals_scripts/support.py
+file: animals_scripts/SupportRUS.py
 -
 

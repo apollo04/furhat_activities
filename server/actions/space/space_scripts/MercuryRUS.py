@@ -7,7 +7,7 @@ def run_action(ip: str):
     furhat.set_face(mask="adult", character="James")
     
     url_list = ["file:///home/furnix/resources/Space/SpaceRUS/MercuryRUS/mercuryRUS1.wav", 
-                "file:///home/furnix/resources/Space/SpaceRUS/MercuryRUS/mercuryRUS1.wav", 
+                "file:///home/furnix/resources/Space/SpaceRUS/MercuryRUS/mercuryRUS2.wav", 
                 "file:///home/furnix/resources/Space/SpaceRUS/MercuryRUS/endRUS.wav"]
 
     for url in url_list:

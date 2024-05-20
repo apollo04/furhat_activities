@@ -23,3 +23,5 @@ file: mathematics_scripts/additionKAZ.py
 action: Азайту 
 icon: mathematics_icons/minus.png
 file: mathematics_scripts/subtractionKAZ.py
+
+-

@@ -14,7 +14,6 @@ def run_action(ip: str):
                 "file:///home/furnix/resources/SuperheroesRUS/SpidermanRUS/Spiderman6.wav", 
                 "file:///home/furnix/resources/SuperheroesRUS/SpidermanRUS/Spiderman7.wav", 
                 "file:///home/furnix/resources/SuperheroesRUS/SpidermanRUS/Spiderman8.wav", 
-                "file:///home/furnix/resources/SuperheroesRUS/SpidermanRUS/Spiderman9.wav", 
                 "file:///home/furnix/resources/SuperheroesRUS/SpidermanRUS/Spiderman10.wav"]
 
     for url in url_list:
