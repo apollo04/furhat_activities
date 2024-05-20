@@ -6,8 +6,8 @@ def run_action(ip: str):
     furhat = FurhatRemoteAPI(ip)
     furhat.set_face(mask="adult", character="Patricia")
 
-    url_list = ["file:///home/furnix/resources/Animals/Animals2/AnimalsRUS/animalsPraiseRUS1.wav",
-                "file:///home/furnix/resources/Animals/Animals2/AnimalsRUS/animalsPraiseRUS2.wav"
+    url_list = ["file:///home/furnix/resources/Animals/Animals2/AnimalsRUS/PraiseRUS/animalsPraiseRUS1.wav",
+                "file:///home/furnix/resources/Animals/Animals2/AnimalsRUS/PraiseRUS/animalsPraiseRUS2.wav"
                 ]
     
     random_url = random.choice(url_list)
