@@ -4,9 +4,6 @@ from furhat_remote_api import FurhatRemoteAPI
 
 def run_action(ip: str):
     furhat = FurhatRemoteAPI(ip)
-    furhat.set_face(mask="adult", character="Jane")
+    furhat.set_face(mask="adult", character="Chen")
     
-    url_list = ["http://novators.kz/audio/EngTeacherKAZ/Q4KAZ/Q4KAZ.wav", "http://novators.kz/audio/EngTeacherKAZ/Q4KAZ/Q4ENG.wav"]
-
-    for url in url_list:
-        furhat.say(url=url, lipsync=True)
+    furhat.say(url="file:///home/furnix/resources/EnglishTeacherKAZ/longestRiver/19.wav", lipsync=True)
