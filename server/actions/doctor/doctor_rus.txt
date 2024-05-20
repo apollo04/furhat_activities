@@ -23,9 +23,25 @@ action: Маска
 icon: doctor_icons/medicalmask.webp
 file: doctor_scripts/MaskaRUS.py
 -
-action: Вопросы
+action: Вопросы 1
 icon: doctor_icons/question.webp
-file: doctor_scripts/QuestionsRUS.py
+file: doctor_scripts/Questions1RUS.py
+-
+action: Вопросы 2
+icon: doctor_icons/question.webp
+file: doctor_scripts/Questions2RUS.py
+-
+action: Вопросы 3
+icon: doctor_icons/question.webp
+file: doctor_scripts/Questions3RUS.py
+-
+action: Вопросы 4
+icon: doctor_icons/question.webp
+file: doctor_scripts/Questions4RUS.py
+-
+action: Вопросы 5
+icon: doctor_icons/question.webp
+file: doctor_scripts/Questions5RUS.py
 -
 action: Правильно
 icon: doctor_icons/success.webp

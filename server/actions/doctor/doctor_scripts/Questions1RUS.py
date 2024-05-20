@@ -1,5 +1,4 @@
 
-import time
 from furhat_remote_api import FurhatRemoteAPI
 
 def run_action(ip: str):
@@ -7,5 +6,4 @@ def run_action(ip: str):
     furhat.set_face(mask="adult", character="Jane")
     
 
-    furhat.say(url="file:///home/furnix/resources/DoctorRUS/QuestionsRUS/QuestionsRUS5_n.wav", lipsync=True)
-    
+    furhat.say(url="file:///home/furnix/resources/DoctorRUS/QuestionsRUS/QuestionsRUS1_n.wav", lipsync=True)

@@ -12,5 +12,7 @@ def run_action(ip: str):
                 "file:///home/furnix/resources/DoctorRUS/StetoskopRUS/StetoskopRUS4_n.wav", 
                 "file:///home/furnix/resources/DoctorRUS/StetoskopRUS/StetoskopRUS5_n.wav"]
 
-    for url in url_list:
-        furhat.say(url=url, lipsync=True)
+    furhat.say(url="file:///home/furnix/resources/DoctorRUS/StetoskopRUS/StetoskopRUS1_n.wav", lipsync=True)
+    time.sleep(3)
+    furhat.say(url="file:///home/furnix/resources/DoctorRUS/StetoskopRUS/StetoskopRUS5_n.wav", lipsync=True)
+
