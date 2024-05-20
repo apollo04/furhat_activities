@@ -12,3 +12,4 @@ def run_action(ip: str):
 
     for url in url_list:
         furhat.say(url=url, lipsync=True)
+    furhat.say(url="file:///home/furnix/resources/HolidaysRUS/BirthdayRUS/BirthdayRUS11_n.wav", lipsync=True)

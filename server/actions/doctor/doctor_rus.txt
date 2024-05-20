@@ -13,7 +13,7 @@ file: doctor_scripts/ShpritzRUS.py
 -
 action: Термометр 
 icon: doctor_icons/thermometer.webp
-file: doctor_scripts/ThermometeRUS.py
+file: doctor_scripts/TermometerRUS.py
 -
 action: Шпатель 
 icon: doctor_icons/spatula.webp

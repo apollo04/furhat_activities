@@ -16,3 +16,4 @@ def run_action(ip: str):
 
     for url in url_list:
         furhat.say(url=url, lipsync=True)
+    
