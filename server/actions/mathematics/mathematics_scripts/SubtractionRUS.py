@@ -20,7 +20,7 @@ def run_action(ip: str):
     furhat.say(url="file:///home/furnix/resources/Counting/CountingRUS/CountingNumbersRUS/twoRUS.wav", lipsync=True)
     time.sleep(5)
     furhat.say(url="file:///home/furnix/resources/Counting/CountingRUS/CountingNumbersRUS/threeRUS.wav", lipsync=True)
-    time.sleep(25)
+    time.sleep(30)
     furhat.say(url="file:///home/furnix/resources/Counting/CountingRUS/SubtractionRUS/SubtractionRUS6.wav", lipsync=True)
     furhat.say(url="file:///home/furnix/resources/Counting/CountingRUS/SubtractionRUS/SubtractionRUS7.wav", lipsync=True)
     time.sleep(30)

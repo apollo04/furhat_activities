@@ -26,6 +26,8 @@ file: holidays_scripts/NewYearKAZ.py
 action: Ән
 icon: holidays_icons/song.webp
 file: holidays_scripts/SongKAZ.py
+-
+
 
 
 
