@@ -1,5 +1,4 @@
 
-import time
 from furhat_remote_api import FurhatRemoteAPI
 
 def run_action(ip: str):

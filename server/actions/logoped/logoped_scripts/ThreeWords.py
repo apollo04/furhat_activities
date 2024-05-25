@@ -22,5 +22,4 @@ def run_action(ip: str):
                 "file:///home/furnix/resources/LogopedKAZ/ThreeWordsKAZ/ThreeWordsKAZ14.wav", 
                 "file:///home/furnix/resources/LogopedKAZ/ThreeWordsKAZ/ThreeWordsKAZ15.wav"]
 
-    for url in url_list:
-        furhat.say(url=url, lipsync=True)
+    furhat.say(url="file:///home/furnix/resources/LogopedKAZ/ThreeWordsKAZ/ThreeWordsKAZ1.wav", lipsync=True)
